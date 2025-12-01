@@ -1,5 +1,5 @@
 const form = document.getElementById("breweryForm");
-const status = document.getElementById("form-status");
+const status = document.getElementById("form-status") || { textContent: "" };
 
 // Show success modal
 function showSuccessModal() {
