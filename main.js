@@ -1,54 +1,50 @@
 const form = document.getElementById("breweryForm");
-const status = document.getElementById("form-status") || { textContent: "" };
-
-// Show success modal
-function showSuccessModal() {
-  const modal = document.getElementById("successModal");
-  modal.style.display = "flex";
-
-  const closeBtn = document.getElementById("closeModalBtn");
-  closeBtn.addEventListener("click", () => {
-    modal.style.display = "none";
-    form.reset();
-  });
-}
+const status = document.getElementById("form-status");
+const modal = document.getElementById("successModal");
+const closeModal = document.getElementById("closeModal");
 
 form.addEventListener("submit", async (e) => {
   e.preventDefault();
 
-  status.textContent = "Sending…";
+  status.textContent = "Sending...";
 
-  // Honeypot trap
-  if (form.middleName.value.trim() !== "") {
-    status.textContent = "Bot detected. Submission blocked.";
+  // CAPTCHA check
+  const answer = Number(form.captcha.value);
+  if (answer !== 5) {
+    status.textContent = "Captcha incorrect. Please try again.";
     return;
   }
 
-  // Captcha check
-  if (parseInt(form.captcha.value) !== 5) {
-    status.textContent = "Captcha incorrect.";
+  // Honeypot bot trap
+  if (form.middleName.value) {
+    status.textContent = "Bot detected.";
     return;
   }
 
-  // Send to Formspree
+  const formData = new FormData(form);
+
   try {
-    const formData = new FormData(form);
-
     const response = await fetch("https://formspree.io/f/mdkqzojk", {
       method: "POST",
-      body: formData,
-      headers: { Accept: "application/json" }
+      headers: { "Accept": "application/json" },
+      body: formData
     });
 
     if (response.ok) {
       status.textContent = "";
-      showSuccessModal();
+      form.reset();
+      modal.style.display = "flex";
     } else {
       status.textContent = "Submission failed. Please try again.";
+      console.error(await response.text());
     }
   } catch (err) {
     console.error(err);
-    status.textContent = "Error sending form.";
+    status.textContent = "Network error. Please try again.";
   }
 });
 
+// Close modal
+closeModal.addEventListener("click", () => {
+  modal.style.display = "none";
+});
