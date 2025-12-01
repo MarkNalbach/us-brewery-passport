@@ -33,6 +33,14 @@ body {
     margin-top: 15px;
     font-weight: 600;
   }
+
+.form-status {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  color: #c00;
+  font-weight: 600;
+}
+
   
   input[type="text"],
   input[type="email"],
