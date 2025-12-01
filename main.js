@@ -3,6 +3,23 @@ const status = document.getElementById("form-status");
 const modal = document.getElementById("successModal");
 const closeModal = document.getElementById("closeModal");
 
+// Accordion toggle
+const accordionBtn = document.querySelector(".accordion-btn");
+const accordionContent = document.querySelector(".accordion-content");
+
+accordionBtn.addEventListener("click", () => {
+  accordionBtn.classList.toggle("active");
+
+  if (accordionContent.style.maxHeight) {
+    accordionContent.style.maxHeight = null;
+    accordionBtn.textContent = "How It Works ▸";
+  } else {
+    accordionContent.style.maxHeight = accordionContent.scrollHeight + "px";
+    accordionBtn.textContent = "How It Works ▾";
+  }
+});
+
+
 form.addEventListener("submit", async (e) => {
   e.preventDefault();
 
