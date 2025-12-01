@@ -1,34 +1,54 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const form = document.getElementById("breweryForm");
-  const status = document.getElementById("form-status");
+const form = document.getElementById("breweryForm");
+const status = document.getElementById("form-status");
 
-  form.addEventListener("submit", async (e) => {
-    e.preventDefault();
+// Show success modal
+function showSuccessModal() {
+  const modal = document.getElementById("successModal");
+  modal.style.display = "flex";
 
-    status.textContent = "Sending…";
+  const closeBtn = document.getElementById("closeModalBtn");
+  closeBtn.addEventListener("click", () => {
+    modal.style.display = "none";
+    form.reset();
+  });
+}
 
-    try {
-      const formData = new FormData(form);
+form.addEventListener("submit", async (e) => {
+  e.preventDefault();
 
-      // 🔴 IMPORTANT: Replace with YOUR actual Formspree endpoint
-      const response = await fetch("https://formspree.io/f/mdkqzojk", {
-        method: "POST",
-        body: formData,
-        headers: {
-          "Accept": "application/json"
-        }
-      });
+  status.textContent = "Sending…";
 
-      if (response.ok) {
-        form.reset();
-        status.textContent = "Submitted successfully!";
-      } else {
-        status.textContent = "Submission failed. Please try again.";
-      }
+  // Honeypot trap
+  if (form.middleName.value.trim() !== "") {
+    status.textContent = "Bot detected. Submission blocked.";
+    return;
+  }
 
-    } catch (err) {
-      console.error(err);
+  // Captcha check
+  if (parseInt(form.captcha.value) !== 5) {
+    status.textContent = "Captcha incorrect.";
+    return;
+  }
+
+  // Send to Formspree
+  try {
+    const formData = new FormData(form);
+
+    const response = await fetch("https://formspree.io/f/mdkqzojk", {
+      method: "POST",
+      body: formData,
+      headers: { Accept: "application/json" }
+    });
+
+    if (response.ok) {
+      status.textContent = "";
+      showSuccessModal();
+    } else {
       status.textContent = "Submission failed. Please try again.";
     }
-  });
+  } catch (err) {
+    console.error(err);
+    status.textContent = "Error sending form.";
+  }
 });
+
