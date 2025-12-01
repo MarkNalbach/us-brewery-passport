@@ -25,7 +25,7 @@ form.addEventListener("submit", async (e) => {
   const formData = new FormData(form); // includes offerDetails, website, logo, etc.
 
   // Use your Formspree endpoint here – update if needed
-  const response = await fetch("https://formspree.io/f/mkgnolbb", {
+  const response = await fetch("https://formspree.io/f/mdkqzojk", {
     method: "POST",
     body: formData,
   });
