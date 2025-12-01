@@ -150,14 +150,17 @@ a:hover {
   }
 }
 /* Accordion */
+/* ---- ACCORDION ---- */
+
 .accordion {
-  margin: 25px 0;
+  width: 100%;
   max-width: 800px;
-  
+  margin: 25px auto;   /* centers like the form */
 }
 
 .accordion-btn {
-  max-width: 800px;
+  width: 100%;         /* full width inside container */
+  display: block;
   text-align: left;
   background: #1a73e8;
   color: white;
@@ -168,6 +171,7 @@ a:hover {
   cursor: pointer;
   font-weight: 600;
   transition: background 0.2s;
+  box-sizing: border-box;
 }
 
 .accordion-btn:hover {
@@ -179,6 +183,7 @@ a:hover {
 }
 
 .accordion-content {
+  width: 100%;
   background: #f9f5ec;
   border: 1px solid #d0d0d0;
   border-radius: 6px;
@@ -186,6 +191,7 @@ a:hover {
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.25s ease-out;
+  box-sizing: border-box;
 }
 
 .accordion-content p,
@@ -201,4 +207,3 @@ a:hover {
 .accordion-content li {
   margin-bottom: 8px;
 }
-
