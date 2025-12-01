@@ -2,62 +2,61 @@
 body {
   margin: 0;
   padding: 0;
-  background: #101327;
   font-family: system-ui, sans-serif;
-  color: #222;
+  background: #101327;
+  color: #333;
+}
+
+.container {
+  max-width: 800px;
+  background: #f9f5ec;
+  padding: 40px;
+  margin: 30px auto;
+  border-radius: 10px;
 }
 
 h1 {
-  font-size: 6vw; /* Scales down on mobile */
-  max-width: 90%;
+  font-size: 32px;
+  margin-bottom: 10px;
+  color: #222;
 }
 
-p {
-  line-height: 1.5;
-}
-
-/* ---- CONTAINER ---- */
-.container {
-  width: 90%;              /* Fluid width */
-  max-width: 800px;        /* Desktop cap */
-  margin: 20px auto;
-  background: #f9f5ec;
-  padding: 5%;
-  border-radius: 10px;
+.intro-text {
+  font-size: 18px;
+  margin-bottom: 25px;
 }
 
 /* ---- FORM ---- */
 label {
   font-weight: bold;
   display: block;
-  margin: 4% 0 1%;
+  margin-bottom: 6px;
 }
 
 input,
 textarea {
   width: 100%;
-  padding: 3%;
+  padding: 12px;
   border-radius: 6px;
   border: 1px solid #ccc;
-  font-size: 1rem;
-  margin-bottom: 4%;
-  box-sizing: border-box;
+  margin-bottom: 18px;
+  font-size: 16px;
 }
 
 textarea {
-  min-height: 120px;
+  min-height: 100px;
 }
 
 /* ---- BUTTON ---- */
 .submit-btn,
 #closeModal {
   width: 100%;
-  padding: 3.5%;
+  padding: 14px;
   background: #007bff;
   color: white;
+  font-size: 18px;
   border: none;
   border-radius: 6px;
-  font-size: 1.2rem;
   cursor: pointer;
 }
 
@@ -66,71 +65,75 @@ textarea {
   background: #0056d6;
 }
 
-/* ---- STATUS MESSAGE ---- */
+/* ---- STATUS ---- */
 .status {
-  margin-top: 3%;
+  margin-top: 20px;
   font-weight: bold;
-  color: #333;
+  text-align: center;
 }
 
-/* ---- HONEYPOT (hidden) ---- */
+/* ---- HONEYPOT ---- */
 .hp-wrapper {
-  position: absolute;
-  left: -9999px;
-  opacity: 0;
+  display: none;
+}
+
+/* ---- AGREEMENT ---- */
+.agreement-block {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.agreement-block input {
+  width: auto;
+  margin-right: 10px;
+  margin-top: 4px;
 }
 
 /* ---- MODAL ---- */
 .modal {
   display: none;
   position: fixed;
-  z-index: 1000;
-  left: 0;
+  z-index: 999;
   top: 0;
-  width: 100vw;
-  height: 100vh;
-  background: rgba(0,0,0,0.6);
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
 }
 
 .modal-content {
+  background: white;
   width: 90%;
   max-width: 450px;
-  background: white;
-  padding: 6%;
-  margin: 20vh auto;        /* Center on small screens */
+  padding: 25px;
+  margin: 120px auto;
   border-radius: 10px;
   text-align: center;
-  box-sizing: border-box;
 }
 
 /* ---- LINKS ---- */
 a {
   color: #007bff;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
 }
 
-/* ---- RESPONSIVE ---- */
-
-/* Larger screens */
-@media (min-width: 768px) {
-  h1 {
-    font-size: 2.5rem;
-  }
+/* ---- MOBILE ---- */
+@media (max-width: 600px) {
   .container {
-    padding: 40px;
+    padding: 25px;
+    margin: 20px;
   }
-  label {
-    margin-top: 20px;
-  }
-}
 
-/* Extra small screens (iPhone SE, older Android) */
-@media (max-width: 380px) {
   h1 {
-    font-size: 7vw;
+    font-size: 26px;
   }
+
   input,
-  textarea,
-  .submit-btn {
-    font-size: 0.95rem;
+  textarea {
+    font-size: 16px;
   }
 }
