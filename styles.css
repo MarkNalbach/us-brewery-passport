@@ -7,6 +7,18 @@ body {
   color: #333;
 }
 
+.header {
+    text-align: center;
+    padding: 40px 20px;
+    background: #002d62;
+    color: white;
+  }
+  
+  .logo {
+    width: 150px;
+    margin-bottom: 10px;
+  }
+
 .container {
   max-width: 800px;
   background: #f9f5ec;
