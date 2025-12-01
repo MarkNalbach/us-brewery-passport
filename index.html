@@ -1,107 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>US Brew Passport — Brewery Partner Signup</title>
-  <link rel="stylesheet" href="styles.css" />
+  <title>US Brew Passport — Partner Signup</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
 
-  <!-- HEADER -->
-  <header class="header">
-    <img src="assets/logo.png" alt="US Brew Passport" class="logo">
-    <h1>US Brew Passport – Brewery Partner Signup</h1>
-    <p>Join the nationwide brewery passport program and bring more visitors to your taproom.</p>
-  </header>
+  <div class="container">
+    <h1>US Brew Passport — Brewery Partner Application</h1>
+    <p class="intro-text">
+      Join the nationwide brewery passport program and bring more visitors to your taproom!
+    </p>
 
-  <!-- SIGN-UP FORM -->
-  <section class="form-section">
-    <h2>Become a Partner</h2>
-    <p>Fill out the form below. Your submission will be emailed directly to us for review.</p>
+    <!-- SUCCESS MODAL -->
+    <div id="successModal" class="modal">
+      <div class="modal-content">
+        <h2>Application Submitted!</h2>
+        <p>
+          Thank you for partnering with US Brew Passport!  
+          We’ve received your information and will contact you within 24–48 hours.
+        </p>
 
-    <form id="breweryForm" method="POST" enctype="multipart/form-data">
-      <!-- Honeypot anti-bot (hidden) -->
+        <p style="margin-top:15px; font-size:15px; color:#333;">
+          <strong>Want your brewery logo displayed in the app?</strong><br>
+          Email it to <strong>test@gmail.com</strong><br>
+          Accepted formats: PNG or JPG (square preferred).
+        </p>
+
+        <button id="closeModal">Close</button>
+      </div>
+    </div>
+
+    <form id="breweryForm" method="POST">
+
+      <!-- Honeypot -->
       <div class="hp-wrapper">
         <label>Leave this field blank</label>
-        <input type="text" name="middleName" autocomplete="off">
+        <input type="text" name="middleName" autocomplete="off" />
       </div>
 
       <label>Brewery Name *</label>
-      <input type="text" name="breweryName" required>
+      <input type="text" name="breweryName" required />
 
       <label>Street Address *</label>
-      <input type="text" name="address" required>
+      <input type="text" name="address" required />
 
       <label>City *</label>
-      <input type="text" name="city" required>
+      <input type="text" name="city" required />
 
       <label>State *</label>
-      <input type="text" name="state" required>
+      <input type="text" name="state" required />
 
       <label>Contact Name *</label>
-      <input type="text" name="contactName" required>
+      <input type="text" name="contactName" required />
 
       <label>Contact Email *</label>
-      <input type="email" name="email" required>
+      <input type="email" name="email" required />
 
       <label>Contact Phone</label>
-      <input type="tel" name="phone">
+      <input type="tel" name="phone" />
 
       <label>Brewery Website (optional)</label>
-      <input type="url" name="website" placeholder="https://examplebrewery.com">
+      <input type="url" name="website" placeholder="https://examplebrewery.com" />
 
-      <label>Brewery Logo (optional)</label>
-      <input type="file" name="logo" accept="image/*">
+      <!-- LOGO INSTRUCTIONS REMOVED FROM HERE -->
 
-      <label>Offer Details (what are you agreeing to?) *</label>
+      <label>Offer Details (what offer are you agreeing to?) *</label>
       <textarea
         name="offerDetails"
         rows="4"
         required
-        placeholder="Example: Buy one pint, get 50% off the second pint. Valid once per passport holder per year. Not valid with other promotions. Subject to local laws."
+        placeholder="Example: Buy one pint, get 50% off the second pint. Valid once per passport holder per year. Subject to local laws."
       ></textarea>
 
       <label>Verify you’re human — what is 2 + 3? *</label>
-      <input type="number" name="captcha" required>
+      <input type="number" name="captcha" required />
 
       <div class="agreement-block">
-        <input type="checkbox" id="agree" required>
+        <input type="checkbox" id="agree" required />
         <label for="agree">
-          I have read and agree to the US Brew Passport Partner Program Terms.
+          I have read and agree to the <a href="terms.pdf" target="_blank">US Brew Passport Partner Program Terms</a>.
         </label>
       </div>
 
       <label>Your Name (Signature) *</label>
-      <input type="text" name="signature" required>
+      <input type="text" name="signature" required />
 
-      <div id="form-status" class="form-status"></div>
       <button type="submit" class="submit-btn">Submit Application</button>
+
+      <p id="form-status" class="status"></p>
     </form>
-
-    <p id="statusMessage" class="status"></p>
-  </section>
-
-  <!-- TERMS PDF -->
-  <section class="terms-section">
-    <h2>Partner Program Terms</h2>
-    <iframe src="2026-brewery-us-brew-passport-terms.pdf" class="terms-frame" title="US Brew Passport Partner Program Terms"></iframe>
-  </section>
-  
-  <!-- Success Modal -->
-<div id="successModal" class="modal-overlay">
-  <div class="modal-box">
-    <h2>Application Submitted!</h2>
-    <p>
-      Thank you for joining the US Brew Passport partner network.  
-      We’ll review your submission and contact you soon!
-    </p>
-    <button id="closeModalBtn" class="modal-btn">Close</button>
   </div>
-</div>
-<script type="module" src="main.js"></script>
-</body>
 
+  <script type="module" src="main.js"></script>
+</body>
 </html>
