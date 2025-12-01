@@ -14,17 +14,15 @@
   <header class="header">
     <img src="assets/logo.png" alt="US Brew Passport" class="logo">
     <h1>US Brew Passport – Brewery Partner Signup</h1>
-    <p>Join the nationwide brewery passport program.</p>
+    <p>Join the nationwide brewery passport program and bring more visitors to your taproom.</p>
   </header>
-
 
   <!-- SIGN-UP FORM -->
   <section class="form-section">
     <h2>Become a Partner</h2>
-    <p>Fill out the form below. Your submission will be emailed directly to us.</p>
+    <p>Fill out the form below. Your submission will be emailed directly to us for review.</p>
 
     <form id="breweryForm" enctype="multipart/form-data">
-
       <!-- Honeypot anti-bot (hidden) -->
       <div class="hp-wrapper">
         <label>Leave this field blank</label>
@@ -52,35 +50,46 @@
       <label>Contact Phone</label>
       <input type="tel" name="phone">
 
+      <label>Brewery Website (optional)</label>
+      <input type="url" name="website" placeholder="https://examplebrewery.com">
+
       <label>Brewery Logo (optional)</label>
       <input type="file" name="logo" accept="image/*">
+
+      <label>Offer Details (what are you agreeing to?) *</label>
+      <textarea
+        name="offerDetails"
+        rows="4"
+        required
+        placeholder="Example: Buy one pint, get 50% off the second pint. Valid once per passport holder per year. Not valid with other promotions. Subject to local laws."
+      ></textarea>
 
       <label>Verify you’re human — what is 2 + 3? *</label>
       <input type="number" name="captcha" required>
 
       <div class="agreement-block">
         <input type="checkbox" id="agree" required>
-        <label for="agree">I agree to the Partner Program Terms</label>
+        <label for="agree">
+          I have read and agree to the US Brew Passport Partner Program Terms.
+        </label>
       </div>
 
       <label>Your Name (Signature) *</label>
       <input type="text" name="signature" required>
 
       <button type="submit" class="submit-btn">Submit Application</button>
-
     </form>
 
     <p id="statusMessage" class="status"></p>
   </section>
 
-
   <!-- TERMS PDF -->
   <section class="terms-section">
     <h2>Partner Program Terms</h2>
-    <iframe src="terms.pdf" class="terms-frame"></iframe>
+    <iframe src="terms.pdf" class="terms-frame" title="US Brew Passport Partner Program Terms"></iframe>
   </section>
 
   <script type="module" src="main.js"></script>
-
 </body>
+
 </html>
