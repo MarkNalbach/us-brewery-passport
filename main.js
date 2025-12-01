@@ -1,39 +1,34 @@
-// main.js
+document.addEventListener("DOMContentLoaded", () => {
+  const form = document.getElementById("breweryForm");
+  const status = document.getElementById("form-status");
 
-const form = document.getElementById("breweryForm");
-const statusMessage = document.getElementById("statusMessage");
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
 
-form.addEventListener("submit", async (e) => {
-  e.preventDefault();
+    status.textContent = "Sending…";
 
-  statusMessage.textContent = "";
+    try {
+      const formData = new FormData(form);
 
-  // Honeypot check
-  if (form.middleName.value.trim() !== "") {
-    statusMessage.textContent = "Bot submission blocked.";
-    return;
-  }
+      // 🔴 IMPORTANT: Replace with YOUR actual Formspree endpoint
+      const response = await fetch("https://formspree.io/f/mdkqzojk", {
+        method: "POST",
+        body: formData,
+        headers: {
+          "Accept": "application/json"
+        }
+      });
 
-  // Captcha
-  if (parseInt(form.captcha.value, 10) !== 5) {
-    statusMessage.textContent = "Incorrect captcha answer.";
-    return;
-  }
+      if (response.ok) {
+        form.reset();
+        status.textContent = "Submitted successfully!";
+      } else {
+        status.textContent = "Submission failed. Please try again.";
+      }
 
-  statusMessage.textContent = "Submitting...";
-
-  const formData = new FormData(form); // includes offerDetails, website, logo, etc.
-
-  // Use your Formspree endpoint here – update if needed
-  const response = await fetch("https://formspree.io/f/mdkqzojk", {
-    method: "POST",
-    body: formData,
+    } catch (err) {
+      console.error(err);
+      status.textContent = "Submission failed. Please try again.";
+    }
   });
-
-  if (response.ok) {
-    statusMessage.textContent = "Thank you! Your application has been submitted.";
-    form.reset();
-  } else {
-    statusMessage.textContent = "Submission failed. Please try again.";
-  }
 });
