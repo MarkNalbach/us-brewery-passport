@@ -220,8 +220,8 @@ a:hover {
 /* Individual screenshot card */
 .phone-card {
   background: #101327;
-  border: 6px solid #fff;
-  border-radius: 12px; /* slimmer corners */
+  border: 8px solid #fff;
+  border-radius: 24px; /* slimmer corners */
   padding: 8px; /* reduced padding */
   display: flex;
   justify-content: center;
