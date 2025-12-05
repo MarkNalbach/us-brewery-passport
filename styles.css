@@ -219,8 +219,8 @@ a:hover {
 
 /* Individual screenshot card */
 .phone-card {
-  background: #ffffff;
-  border: 1px solid #ccc;
+  background: #101327;
+  border: 6px solid #fff;
   border-radius: 12px; /* slimmer corners */
   padding: 8px; /* reduced padding */
   display: flex;
