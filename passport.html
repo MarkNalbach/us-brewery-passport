@@ -4,12 +4,14 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>US Brew Passport — 2026 Passport</title>
+
+  <!-- Shared site styles -->
   <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
   <header class="header">
-    <img src="assets/logo.png" alt="US Brew Passport" class="logo">
+    <img src="assets/logo.png" alt="US Brew Passport" class="logo" />
     <h1>US Brew Passport — 2026</h1>
     <p>Explore breweries. Track visits. Unlock one-time rewards.</p>
   </header>
@@ -18,14 +20,18 @@
 
     <!-- HOW IT WORKS -->
     <div class="accordion">
-      <button class="accordion-btn">How It Works ▸</button>
-      <div class="accordion-content">
+      <button class="how-accordion-btn">How It Works ▸</button>
+      <div class="how-accordion-content">
+        <p>
+          US Brew Passport is a nationwide digital passport for craft beer lovers.
+        </p>
+
         <ul>
-          <li>Browse participating breweries across the U.S.</li>
-          <li>Visit a brewery in person.</li>
-          <li>Scan their QR code with staff present.</li>
-          <li>Your visit is stamped and locked for the year.</li>
-          <li>Track visits and tasting notes in one place.</li>
+          <li>Browse participating breweries by state</li>
+          <li>Visit breweries in person</li>
+          <li>Scan the brewery’s QR code with staff present</li>
+          <li>Redeem a one-time offer (once per brewery, per year)</li>
+          <li>Track visits and tasting memories</li>
         </ul>
       </div>
     </div>
@@ -34,64 +40,25 @@
     <div class="accordion">
       <button class="accordion-btn">Why Get Premium Access ▸</button>
       <div class="accordion-content">
-        <p>
-          Premium access unlocks the full 2026 passport experience,
-          including one-time offers at participating breweries nationwide.
-        </p>
-        <p>
-          Each brewery can only be redeemed once per year — encouraging real visits
-          and keeping rewards fair.
-        </p>
+        <ul>
+          <li>Access all participating breweries nationwide</li>
+          <li>Redeem exclusive one-time brewery offers</li>
+          <li>Track visited breweries and dates</li>
+          <li>Keep notes on beers you loved</li>
+          <li>New breweries added regularly</li>
+        </ul>
       </div>
     </div>
 
     <!-- PARTICIPATING BREWERIES -->
     <div class="accordion">
-      <button class="accordion-btn breweries-accordion-btn">
-        Participating Breweries ▸
-      </button>
+      <button class="accordion-btn">Participating Breweries ▸</button>
+      <div class="accordion-content">
 
-      <div class="accordion-content breweries-accordion-content">
-        <p class="section-note">
-          New breweries are being added daily across the U.S.
-        </p>
+        <p><strong>New breweries are being added daily.</strong></p>
 
-        <!-- STATE LIST -->
-
-        <div class="state-accordion">
-          <button class="state-accordion-btn">
-            Wisconsin <span class="arrow">▶</span>
-          </button>
-          <div class="state-accordion-content">
-            <ul class="brewery-list">
-              <li>Duesterbeck's Brewing Company</li>
-              <li>Central Waters Brewing</li>
-              <li>Raised Grain Brewing Co.</li>
-              <li>MobCraft Beer</li>
-              <li>Working Draft Beer Company</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="state-accordion">
-          <button class="state-accordion-btn">
-            Colorado <span class="arrow">▶</span>
-          </button>
-          <div class="state-accordion-content">
-            <p class="coming-soon">Breweries coming soon</p>
-          </div>
-        </div>
-
-        <div class="state-accordion">
-          <button class="state-accordion-btn">
-            California <span class="arrow">▶</span>
-          </button>
-          <div class="state-accordion-content">
-            <p class="coming-soon">Breweries coming soon</p>
-          </div>
-        </div>
-
-        <!-- Add more states here -->
+        <!-- STATE LIST RENDER TARGET -->
+        <div id="state-list"></div>
 
       </div>
     </div>
@@ -100,23 +67,30 @@
     <div class="accordion">
       <button class="accordion-btn">FAQ ▸</button>
       <div class="accordion-content">
-        <p><strong>Can I redeem the same brewery twice?</strong><br />
-        No — each brewery can only be redeemed once per year.</p>
 
-        <p><strong>Do I need to buy anything?</strong><br />
-        Each brewery sets its own offer. Most require a purchase.</p>
+        <h3>Can I redeem more than once?</h3>
+        <p>No. Each brewery can be redeemed once per user per year.</p>
 
-        <p><strong>Is this a paper passport?</strong><br />
-        No — US Brew Passport is fully digital.</p>
+        <h3>Do I have to be at the brewery?</h3>
+        <p>Yes. Redemption requires scanning the brewery’s QR code with staff present.</p>
+
+        <h3>Can I see breweries before purchasing?</h3>
+        <p>Yes. You can browse participating breweries before upgrading.</p>
+
       </div>
     </div>
 
-    <p class="support-link">
-      Need help? Visit our <a href="support.html">Support Page</a>.
+    <!-- SUPPORT LINK -->
+    <p style="text-align:center; margin-top:30px;">
+      Need help? <a href="support.html">Visit Support</a>
     </p>
 
   </div>
 
+  <!-- DATA FIRST -->
+  <script src="breweries-data.js"></script>
+
+  <!-- SITE LOGIC -->
   <script src="main.js"></script>
 </body>
 </html>
