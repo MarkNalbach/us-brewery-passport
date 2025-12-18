@@ -348,4 +348,404 @@ a:hover {
     grid-template-columns: 1fr;
   }
 }
+/* ---- GLOBAL ---- */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, sans-serif;
+  background: #101327;
+  color: #333;
+}
+
+.header {
+    text-align: center;
+    padding: 40px 20px;
+    background: #101327;
+    color: white;
+  }
+  
+  .logo {
+    width: 150px;
+    margin-bottom: 10px;
+  }
+
+.container {
+  max-width: 800px;
+  background: #f9f5ec;
+  padding: 40px;
+  margin: 30px auto;
+  border-radius: 10px;
+}
+
+h1 {
+  font-size: 32px;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.intro-text {
+  font-size: 18px;
+  margin-bottom: 25px;
+}
+
+/* ---- FORM ---- */
+label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 6px;
+}
+
+input,
+textarea {
+  width: 96%;
+  padding: 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  margin-bottom: 18px;
+  font-size: 16px;
+}
+
+textarea {
+  min-height: 100px;
+}
+
+/* ---- BUTTON ---- */
+.submit-btn,
+#closeModal {
+  width: 100%;
+  padding: 14px;
+  background: #007bff;
+  color: white;
+  font-size: 18px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.submit-btn:hover,
+#closeModal:hover {
+  background: #0056d6;
+}
+
+/* ---- STATUS ---- */
+.status {
+  margin-top: 20px;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* ---- HONEYPOT ---- */
+.hp-wrapper {
+  display: none;
+}
+
+/* ---- AGREEMENT ---- */
+.agreement-block {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.agreement-block input {
+  width: auto;
+  margin-right: 10px;
+  margin-top: 4px;
+}
+
+/* ---- MODAL ---- */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  background: white;
+  width: 90%;
+  max-width: 450px;
+  padding: 25px;
+  margin: 120px auto;
+  border-radius: 10px;
+  text-align: center;
+}
+
+/* ---- LINKS ---- */
+a {
+  color: #007bff;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+/* ---- MOBILE ---- */
+@media (max-width: 600px) {
+  .container {
+    padding: 25px;
+    margin: 20px;
+  }
+
+  h1 {
+    font-size: 26px;
+  }
+
+  input,
+  textarea {
+    font-size: 16px;
+  }
+}
+/* Accordion */
+/* ---- ACCORDION ---- */
+
+.accordion {
+  width: 100%;
+  max-width: 800px;
+  margin: 25px auto;   /* centers like the form */
+}
+
+.accordion-btn {
+  width: 100%;         /* full width inside container */
+  display: block;
+  text-align: left;
+  background: #1a73e8;
+  color: white;
+  padding: 14px 18px;
+  border: none;
+  border-radius: 6px;
+  font-size: 18px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.2s;
+  box-sizing: border-box;
+}
+
+.accordion-btn:hover {
+  background: #145cc2;
+}
+
+.accordion-btn.active {
+  background: #145cc2;
+}
+
+.accordion-content {
+  width: 100%;
+  background: #f9f5ec;
+  border: 1px solid #d0d0d0;
+  border-radius: 6px;
+  padding: 0 18px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.25s ease-out;
+  box-sizing: border-box;
+}
+
+.accordion-content p,
+.accordion-content ul,
+.accordion-content h3 {
+  margin-bottom: 15px;
+}
+
+.accordion-content ul {
+  padding-left: 20px;
+}
+
+.accordion-content li {
+  margin-bottom: 8px;
+}
+
+
+.how-accordion-btn {
+  width: 100%;         /* full width inside container */
+  display: block;
+  text-align: left;
+  background: #1a73e8;
+  color: white;
+  padding: 14px 18px;
+  border: none;
+  border-radius: 6px;
+  font-size: 18px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.2s;
+  box-sizing: border-box;
+}
+
+.how-accordion-btn:hover {
+  background: #145cc2;
+}
+
+.how-accordion-btn.active {
+  background: #145cc2;
+}
+
+.how-accordion-content {
+  width: 100%;
+  background: #f9f5ec;
+  border: 1px solid #d0d0d0;
+  border-radius: 6px;
+  padding: 0 18px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.25s ease-out;
+  box-sizing: border-box;
+}
+
+.how-accordion-content p,
+.how-accordion-content ul,
+.how-accordion-content h3 {
+  margin-bottom: 15px;
+}
+
+.how-accordion-content ul {
+  padding-left: 20px;
+}
+
+.how-accordion-content li {
+  margin-bottom: 8px;
+}
+
+
+.screens-accordion-btn {
+  width: 100%;         /* full width inside container */
+  display: block;
+  text-align: left;
+  background: #1a73e8;
+  color: white;
+  padding: 14px 18px;
+  border: none;
+  border-radius: 6px;
+  font-size: 18px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.2s;
+  box-sizing: border-box;
+}
+
+.screens-accordion-btn:hover {
+  background: #145cc2;
+}
+
+.screens-accordion-btn.active {
+  background: #145cc2;
+}
+
+.screens-accordion-content {
+  width: 100%;
+  background: #f9f5ec;
+  border: 1px solid #d0d0d0;
+  border-radius: 6px;
+  padding: 0 18px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.25s ease-out;
+  box-sizing: border-box;
+}
+
+.screens-accordion-content p,
+.screens-accordion-content ul,
+.screens-accordion-content h3 {
+  margin-bottom: 15px;
+}
+
+.screens-accordion-content ul {
+  padding-left: 20px;
+}
+
+.screens-accordion-content li {
+  margin-bottom: 8px;
+}
+/* ---- SCREENSHOT GALLERY ---- */
+
+/* Screenshot Grid: 2 columns on desktop, 1 column on mobile */
+.screenshot-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin-top: 15px;
+}
+
+/* Individual screenshot card */
+.phone-card {
+  background: #101327;
+  border: 8px solid #fff;
+  border-radius: 24px; /* slimmer corners */
+  padding: 8px; /* reduced padding */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 4px 12px rgba(0,0,0,0.12);
+}
+
+.phone-card:hover {
+  transform: translateY(-4px);
+}
+
+/* Screenshot images */
+.phone-card img {
+  width: 100%;
+  border-radius: 10px; /* slight softening */
+  display: block;
+}
+
+/* Mobile: switch to 1 column */
+@media (max-width: 600px) {
+  .screenshot-gallery {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ============================
+   STATE ACCORDION (FLOW-BASED)
+   ============================ */
+
+.state-accordion {
+  border-top: 1px solid #ddd;
+}
+
+.state-accordion-btn {
+  width: 100%;
+  background: #f9f5ec;
+  color: #000;
+  padding: 16px 18px;
+  font-size: 20px;
+  font-weight: 700;
+  text-align: left;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.state-accordion-btn:hover {
+  background: #f1eee6;
+}
+
+.state-accordion-btn .arrow {
+  transition: transform 0.2s ease;
+}
+
+.state-accordion-btn.active .arrow {
+  transform: rotate(90deg);
+}
+
+.state-accordion-content {
+  display: none;            /* ← KEY DIFFERENCE */
+  padding: 10px 20px 20px;
+}
+
+.state-accordion-content.open {
+  display: block;           /* ← KEY DIFFERENCE */
+}
+
+.state-brewery {
+  padding: 6px 0;
+  font-size: 16px;
+  color: #444;
+}
 
