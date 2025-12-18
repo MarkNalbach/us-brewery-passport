@@ -80,43 +80,51 @@
 
   <!-- STATE RENDER LOGIC (INLINE, SAFE) -->
   <script>
-    const stateList = document.getElementById("state-list");
+  const stateList = document.getElementById("state-list");
 
-    Object.entries(breweriesByState).forEach(([state, breweries]) => {
-      const wrapper = document.createElement("div");
-      wrapper.className = "accordion";
-      wrapper.style.marginTop = "10px";
+  Object.entries(breweriesByState).forEach(([state, breweries]) => {
+    const wrapper = document.createElement("div");
+    wrapper.style.marginBottom = "8px";
 
-      const btn = document.createElement("button");
-      btn.className = "accordion-btn";
-      btn.innerHTML = `${state} ▸`;
+    const btn = document.createElement("button");
+    btn.className = "state-accordion-btn";
+    btn.innerHTML = `
+      ${state}
+      <span>▸</span>
+    `;
 
-      const content = document.createElement("div");
-      content.className = "accordion-content";
+    const content = document.createElement("div");
+    content.className = "state-accordion-content";
 
-      if (breweries.length === 0) {
-        content.innerHTML = "<p>Coming soon</p>";
-      } else {
-        const ul = document.createElement("ul");
-        breweries.forEach(b => {
-          const li = document.createElement("li");
-          li.textContent = b;
-          ul.appendChild(li);
-        });
-        content.appendChild(ul);
-      }
-
-      btn.addEventListener("click", () => {
-        const open = content.style.maxHeight;
-        content.style.maxHeight = open ? null : content.scrollHeight + "px";
-        btn.classList.toggle("active");
+    if (breweries.length === 0) {
+      content.innerHTML = "<p style='margin:12px 0;'>Coming soon</p>";
+    } else {
+      const ul = document.createElement("ul");
+      breweries.forEach(b => {
+        const li = document.createElement("li");
+        li.textContent = b;
+        ul.appendChild(li);
       });
+      content.appendChild(ul);
+    }
 
-      wrapper.appendChild(btn);
-      wrapper.appendChild(content);
-      stateList.appendChild(wrapper);
+    btn.addEventListener("click", () => {
+      const isOpen = content.style.maxHeight;
+
+      // toggle arrow
+      btn.querySelector("span").textContent = isOpen ? "▸" : "▾";
+
+      content.style.maxHeight = isOpen
+        ? null
+        : content.scrollHeight + "px";
     });
-  </script>
+
+    wrapper.appendChild(btn);
+    wrapper.appendChild(content);
+    stateList.appendChild(wrapper);
+  });
+</script>
+
 
   <!-- MAIN SITE JS -->
   <script src="main.js"></script>
