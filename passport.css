@@ -2,13 +2,13 @@ body {
   margin: 0;
   font-family: system-ui, sans-serif;
   background: #101327;
-  color: #222;
+  color: #1a1a1a;
 }
 
 .header {
   text-align: center;
   padding: 40px 20px;
-  color: white;
+  color: #fff;
 }
 
 .logo {
@@ -19,107 +19,104 @@ body {
 .container {
   max-width: 800px;
   background: #f9f5ec;
-  padding: 40px;
-  margin: 30px auto;
+  padding: 30px;
+  margin: 20px auto;
   border-radius: 12px;
 }
 
-h1 {
-  color: #fff;
-}
-
 h2 {
-  margin-top: 40px;
-}
-
-ul {
-  padding-left: 20px;
-}
-
-li {
-  margin-bottom: 8px;
+  margin-top: 30px;
 }
 
 .subtle {
-  color: #666;
+  color: #555;
+  font-size: 15px;
   margin-bottom: 15px;
 }
 
-/* Premium highlight */
-.premium-section {
-  background: #fff;
-  border-left: 4px solid #1a73e8;
-  padding: 20px;
-  border-radius: 6px;
+/* -------- ACCORDIONS (TOPICS) -------- */
+
+.accordion {
+  margin-bottom: 15px;
 }
 
-/* State list */
-.state {
-  border-bottom: 1px solid #ddd;
-  padding: 8px 0;
-}
-
-.state button {
-  background: none;
-  border: none;
-  font-size: 16px;
-  font-weight: 600;
-  cursor: pointer;
+.accordion-btn {
   width: 100%;
-  text-align: left;
-}
-
-.brewery-list {
-  padding-left: 15px;
-  margin-top: 6px;
-}
-
-/* FAQ (light accordion) */
-details {
-  background: #fff;
+  background: #f1ede2;
   border: 1px solid #ddd;
-  border-radius: 6px;
-  padding: 10px 14px;
-  margin-bottom: 10px;
-}
-
-summary {
-  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 18px;
   font-weight: 600;
-  list-style: none;
+  text-align: left;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-summary::-webkit-details-marker {
-  display: none;
+.accordion-btn .arrow {
+  transition: transform 0.2s ease;
 }
 
-summary::before {
-  content: "▸";
-  margin-right: 8px;
-  display: inline-block;
-}
-
-details[open] summary::before {
+.accordion-btn.active .arrow {
   transform: rotate(90deg);
 }
 
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.25s ease;
+  padding: 0 16px;
+}
+
+.accordion-content p,
+.accordion-content ul {
+  margin: 14px 0;
+}
+
+.accordion-content ul {
+  padding-left: 20px;
+}
+
+/* -------- STATES LIST -------- */
+
+.state {
+  border-bottom: 1px solid #ddd;
+}
+
+.state button {
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 14px 0;
+  font-size: 16px;
+  font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.state .arrow {
+  transition: transform 0.2s ease;
+}
+
+.state.open .arrow {
+  transform: rotate(90deg);
+}
+
+.brewery-list {
+  padding: 0 0 12px 10px;
+  display: none;
+  color: #444;
+}
+
 .support-link {
-  margin-top: 40px;
+  margin-top: 30px;
   text-align: center;
 }
 
-a {
-  color: #1a73e8;
+.support-link a {
+  color: #5a3dbb;
   text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-@media (max-width: 600px) {
-  .container {
-    margin: 20px;
-    padding: 25px;
-  }
 }
