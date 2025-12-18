@@ -99,6 +99,11 @@
     return stateList ? stateList.closest(".accordion-content") : null;
   }
 
+  function resizeAccordion(el) {
+    if (!el) return;
+    el.style.maxHeight = el.scrollHeight + "px";
+  }
+
   // Helper: if the parent accordion is open, resize it to fit new content height
   function expandParentAccordionToFit() {
     const parent = getBreweriesAccordionContent();
@@ -138,21 +143,36 @@
       content.appendChild(ul);
     }
 
+    // btn.addEventListener("click", () => {
+    //   const isOpen = !!content.style.maxHeight;
+
+    //   // Toggle caret
+    //   btn.querySelector(".state-caret").textContent = isOpen ? "▸" : "▾";
+
+    //   // Toggle content
+    //   content.style.maxHeight = isOpen ? null : content.scrollHeight + "px";
+
+    //   // IMPORTANT: update the parent accordion height so it doesn't clip
+    //   // Use rAF to wait for layout after maxHeight change
+    //   requestAnimationFrame(() => {
+    //     expandParentAccordionToFit();
+    //   });
+    // });
     btn.addEventListener("click", () => {
-      const isOpen = !!content.style.maxHeight;
-
-      // Toggle caret
-      btn.querySelector(".state-caret").textContent = isOpen ? "▸" : "▾";
-
-      // Toggle content
-      content.style.maxHeight = isOpen ? null : content.scrollHeight + "px";
-
-      // IMPORTANT: update the parent accordion height so it doesn't clip
-      // Use rAF to wait for layout after maxHeight change
-      requestAnimationFrame(() => {
-        expandParentAccordionToFit();
-      });
-    });
+    const isOpen = content.style.maxHeight;
+  
+    // Toggle caret
+    btn.querySelector(".state-caret").textContent = isOpen ? "▸" : "▾";
+  
+    // Toggle state accordion
+    content.style.maxHeight = isOpen ? null : content.scrollHeight + "px";
+  
+    // 🔑 FORCE parent accordion to re-measure AFTER layout updates
+    setTimeout(() => {
+      const parentAccordion = stateList.closest(".accordion-content");
+      resizeAccordion(parentAccordion);
+    }, 0);
+  });
 
     wrapper.appendChild(btn);
     wrapper.appendChild(content);
