@@ -10,41 +10,28 @@
 <body>
   <header class="header">
     <img src="assets/logo.png" alt="US Brew Passport" class="logo">
-    <h1>US Brew Passport — For Beer Lovers</h1>
-    <p>
-      Discover breweries. Track your visits. Unlock one-time rewards.
-    </p>
+    <h1>US Brew Passport — 2026 Edition</h1>
+    <p>Discover breweries. Unlock rewards. Track every visit.</p>
   </header>
 
   <div class="container">
 
-    <!-- INTRO -->
-    <p class="intro-text">
-      The <strong>2026 US Brew Passport</strong> is a nationwide craft beer passport
-      designed for people who love exploring breweries.
-      One app. One passport. Breweries across the U.S.
-    </p>
-
     <!-- HOW IT WORKS -->
     <div class="accordion">
-      <button class="how-accordion-btn">How It Works ▸</button>
-      <div class="how-accordion-content">
-
-        <h3>Using the Passport is Simple</h3>
+      <button class="accordion-btn">How It Works ▸</button>
+      <div class="accordion-content">
         <ul>
-          <li>Download the US Brew Passport app</li>
           <li>Browse participating breweries by state or map</li>
           <li>Visit a brewery in person</li>
+          <li>Tap “Redeem Offer” inside the app</li>
           <li>Scan the brewery’s QR code with staff present</li>
-          <li>Show the confirmation screen to redeem your reward</li>
-          <li>The visit is stamped with date & time — one redemption per year</li>
+          <li>Your visit is stamped with date & time</li>
         </ul>
 
         <p>
-          Each brewery sets its own reward — typically a BOGO, percentage off,
-          or a fun house perk.
+          Each brewery can be redeemed <strong>once per year</strong>.
+          No paper passport. No cheating.
         </p>
-
       </div>
     </div>
 
@@ -52,86 +39,100 @@
     <div class="accordion">
       <button class="accordion-btn">Why Get Premium Access ▸</button>
       <div class="accordion-content">
-
-        <h3>Premium Access Unlocks:</h3>
         <ul>
-          <li>Access to all participating breweries nationwide</li>
-          <li>One-time rewards at each brewery per year</li>
-          <li>Visit tracking with digital stamps</li>
-          <li>Notes for your favorite beers & breweries</li>
-          <li>No paper passport to lose</li>
+          <li>Unlock brewery rewards nationwide</li>
+          <li>Track visited breweries automatically</li>
+          <li>One-time redemptions enforced digitally</li>
+          <li>Keep tasting notes on beers you love</li>
+          <li>Perfect for travel, vacations, and beer weekends</li>
         </ul>
 
         <p>
-          Whether you’re traveling, visiting family, or exploring your hometown,
-          the US Brew Passport helps you find your next great beer.
+          Premium access pays for itself after just a few visits.
         </p>
-
       </div>
     </div>
 
-    <!-- SCREENSHOTS -->
-    <div class="accordion">
-      <button class="screens-accordion-btn">See the App ▸</button>
-      <div class="screens-accordion-content">
-
-        <p>
-          Here’s a preview of what you’ll see inside the 2026 US Brew Passport app:
-        </p>
-
-        <div class="screenshot-gallery">
-          <div class="phone-card">
-            <img src="assets/shot1.png" alt="App Screenshot">
-          </div>
-          <div class="phone-card">
-            <img src="assets/shot2.png" alt="App Screenshot">
-          </div>
-          <div class="phone-card">
-            <img src="assets/shot5.png" alt="App Screenshot">
-          </div>
-        </div>
-
-      </div>
-    </div>
-
-    <!-- PARTICIPATING BREWERIES -->
+    <!-- BREWERIES -->
     <div class="accordion">
       <button class="accordion-btn">Participating Breweries ▸</button>
       <div class="accordion-content">
+        <div id="brewery-list">
+          <!-- Populated by JS -->
+        </div>
 
-        <p>
-          Breweries continue to join leading up to 2026.
-          Below is a snapshot of participating states.
+        <p style="font-size: 14px; margin-top: 15px;">
+          Breweries are added regularly leading into 2026.
+          The in-app list is always the most up to date.
         </p>
-
-        <h3>States Currently Participating</h3>
-        <ul>
-          <li><strong>Idaho</strong> — 3 Breweries</li>
-          <li><strong>Colorado</strong> — Coming Soon</li>
-          <li><strong>California</strong> — Coming Soon</li>
-          <li><strong>Oregon</strong> — Coming Soon</li>
-        </ul>
-
-        <p style="font-size: 15px;">
-          The in-app brewery list is always the most up-to-date.
-        </p>
-
       </div>
     </div>
 
-    <!-- CTA -->
-    <div style="margin-top: 40px; text-align: center;">
-      <h3>Ready to Start Exploring?</h3>
-      <p>
-        Download the app and unlock Premium Access for the 2026 US Brew Passport.
-      </p>
-      <p>
-        Available on iOS and Android.
-      </p>
+    <!-- FAQ -->
+    <div class="accordion">
+      <button class="accordion-btn">Frequently Asked Questions ▸</button>
+      <div class="accordion-content">
+
+        <h3>Can I redeem the same brewery twice?</h3>
+        <p>No. Each brewery can be redeemed once per year.</p>
+
+        <h3>Do I need Premium to browse breweries?</h3>
+        <p>No. Browsing is free. Premium is required to redeem offers.</p>
+
+        <h3>Is this a physical passport?</h3>
+        <p>No — US Brew Passport is fully digital.</p>
+
+        <h3>Does this replace local paper passports?</h3>
+        <p>No. It works alongside them.</p>
+
+      </div>
     </div>
 
   </div>
 
-  <script type="module" src="main.js"></script>
+  <!-- DATA + LOGIC -->
+  <script src="breweries-data.js"></script>
+
+  <script>
+    // Accordion logic
+    document.querySelectorAll('.accordion-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        btn.classList.toggle('active');
+        const content = btn.nextElementSibling;
+
+        if (content.style.maxHeight) {
+          content.style.maxHeight = null;
+        } else {
+          content.style.maxHeight = content.scrollHeight + "px";
+        }
+      });
+    });
+
+    // Render brewery list
+    const container = document.getElementById('brewery-list');
+
+    Object.entries(BREWERIES_BY_STATE).forEach(([state, breweries]) => {
+      const stateHeader = document.createElement('h3');
+      stateHeader.textContent = state;
+      container.appendChild(stateHeader);
+
+      if (!breweries.length) {
+        const p = document.createElement('p');
+        p.textContent = "Coming soon";
+        container.appendChild(p);
+        return;
+      }
+
+      const ul = document.createElement('ul');
+      breweries.forEach(b => {
+        const li = document.createElement('li');
+        li.textContent = `🍺 ${b.name} — ${b.city}`;
+        ul.appendChild(li);
+      });
+
+      container.appendChild(ul);
+    });
+  </script>
+
 </body>
 </html>
