@@ -4,23 +4,21 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>US Brew Passport — 2026 Passport</title>
-  <link rel="stylesheet" href="passport.css" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
   <header class="header">
-    <img src="assets/logo.png" alt="US Brew Passport" class="logo" />
-    <h1>2026 US Brew Passport</h1>
+    <img src="assets/logo.png" alt="US Brew Passport" class="logo">
+    <h1>US Brew Passport — 2026</h1>
     <p>Explore breweries. Track visits. Unlock one-time rewards.</p>
   </header>
 
-  <main class="container">
+  <div class="container">
 
     <!-- HOW IT WORKS -->
     <div class="accordion">
-      <button class="accordion-btn">
-        How It Works <span class="arrow">▸</span>
-      </button>
+      <button class="accordion-btn">How It Works ▸</button>
       <div class="accordion-content">
         <ul>
           <li>Browse participating breweries across the U.S.</li>
@@ -34,45 +32,81 @@
 
     <!-- WHY PREMIUM -->
     <div class="accordion">
-      <button class="accordion-btn">
-        Why Get Premium Access <span class="arrow">▸</span>
-      </button>
+      <button class="accordion-btn">Why Get Premium Access ▸</button>
       <div class="accordion-content">
         <p>
-          Premium access unlocks the full 2026 US Brew Passport experience,
+          Premium access unlocks the full 2026 passport experience,
           including one-time offers at participating breweries nationwide.
         </p>
         <p>
-          Each brewery can only be redeemed once per year, encouraging real
-          taproom visits and fair participation.
+          Each brewery can only be redeemed once per year — encouraging real visits
+          and keeping rewards fair.
         </p>
       </div>
     </div>
 
     <!-- PARTICIPATING BREWERIES -->
     <div class="accordion">
-      <button class="accordion-btn">
-        Participating Breweries <span class="arrow">▸</span>
+      <button class="accordion-btn breweries-accordion-btn">
+        Participating Breweries ▸
       </button>
-      <div class="accordion-content">
-        <p class="subtle">New breweries are being added daily.</p>
-        <div id="states-container"></div>
+
+      <div class="accordion-content breweries-accordion-content">
+        <p class="section-note">
+          New breweries are being added daily across the U.S.
+        </p>
+
+        <!-- STATE LIST -->
+
+        <div class="state-accordion">
+          <button class="state-accordion-btn">
+            Wisconsin <span class="arrow">▶</span>
+          </button>
+          <div class="state-accordion-content">
+            <ul class="brewery-list">
+              <li>Duesterbeck's Brewing Company</li>
+              <li>Central Waters Brewing</li>
+              <li>Raised Grain Brewing Co.</li>
+              <li>MobCraft Beer</li>
+              <li>Working Draft Beer Company</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="state-accordion">
+          <button class="state-accordion-btn">
+            Colorado <span class="arrow">▶</span>
+          </button>
+          <div class="state-accordion-content">
+            <p class="coming-soon">Breweries coming soon</p>
+          </div>
+        </div>
+
+        <div class="state-accordion">
+          <button class="state-accordion-btn">
+            California <span class="arrow">▶</span>
+          </button>
+          <div class="state-accordion-content">
+            <p class="coming-soon">Breweries coming soon</p>
+          </div>
+        </div>
+
+        <!-- Add more states here -->
+
       </div>
     </div>
 
     <!-- FAQ -->
     <div class="accordion">
-      <button class="accordion-btn">
-        FAQ <span class="arrow">▸</span>
-      </button>
+      <button class="accordion-btn">FAQ ▸</button>
       <div class="accordion-content">
-        <p><strong>Can I redeem the same brewery twice?</strong><br>
-        No. Each brewery can only be redeemed once per year.</p>
+        <p><strong>Can I redeem the same brewery twice?</strong><br />
+        No — each brewery can only be redeemed once per year.</p>
 
-        <p><strong>Do I need to buy anything?</strong><br>
-        Offers vary by brewery and are shown before redemption.</p>
+        <p><strong>Do I need to buy anything?</strong><br />
+        Each brewery sets its own offer. Most require a purchase.</p>
 
-        <p><strong>Is this a paper passport?</strong><br>
+        <p><strong>Is this a paper passport?</strong><br />
         No — US Brew Passport is fully digital.</p>
       </div>
     </div>
@@ -81,10 +115,8 @@
       Need help? Visit our <a href="support.html">Support Page</a>.
     </p>
 
-  </main>
+  </div>
 
-  <script src="breweries-data.js"></script>
-  <script src="passport.js"></script>
+  <script src="main.js"></script>
 </body>
 </html>
-
