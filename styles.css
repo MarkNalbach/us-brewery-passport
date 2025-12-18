@@ -558,6 +558,12 @@ a:hover {
   margin-bottom: 8px;
 }
 
+/* Allow nested accordions to expand naturally */
+.accordion-content.is-open {
+  max-height: none !important;
+  overflow: visible !important;
+}
+
 
 .how-accordion-btn {
   width: 100%;         /* full width inside container */
