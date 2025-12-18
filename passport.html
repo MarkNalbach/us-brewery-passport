@@ -86,10 +86,12 @@
     const wrapper = document.createElement("div");
     wrapper.style.marginBottom = "8px";
 
+    const count = breweries.length;
+
     const btn = document.createElement("button");
     btn.className = "state-accordion-btn";
     btn.innerHTML = `
-      ${state}
+      ${state} <span style="opacity:.7">(${count})</span>
       <span>▸</span>
     `;
 
