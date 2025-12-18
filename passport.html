@@ -10,8 +10,8 @@
 <body>
   <header class="header">
     <img src="assets/logo.png" alt="US Brew Passport" class="logo" />
-    <h1>The 2026 US Brew Passport</h1>
-    <p>Explore breweries nationwide. Redeem once-per-year offers. Track every visit.</p>
+    <h1>2026 US Brew Passport</h1>
+    <p>Explore breweries. Track visits. Unlock one-time rewards.</p>
   </header>
 
   <main class="container">
@@ -27,25 +27,25 @@
       </ul>
     </section>
 
-    <section>
+    <section class="premium-section">
       <h2>Why Get Premium Access</h2>
       <p>
         Premium access unlocks the full 2026 passport experience, including
         one-time offers at participating breweries nationwide.
       </p>
       <p>
-        Breweries can only be redeemed once per year, ensuring fairness and
-        encouraging real taproom visits.
+        Each brewery can only be redeemed once per year, encouraging real
+        taproom visits and fair use.
       </p>
     </section>
 
-    <section class="brewery-section">
+    <section>
       <h2>Participating Breweries</h2>
-      <p class="brewery-note">
+      <p class="subtle">
         New breweries are being added daily across the U.S.
       </p>
 
-      <div id="breweryList"></div>
+      <div id="states-container"></div>
     </section>
 
     <section>
@@ -53,31 +53,28 @@
 
       <details>
         <summary>Can I redeem the same brewery twice?</summary>
-        <p>No. Each brewery can be redeemed once per user per year.</p>
+        <p>No. Each brewery can only be redeemed once per year.</p>
       </details>
 
       <details>
         <summary>Do I need to buy anything?</summary>
-        <p>Most users purchase beyond the reward, but it’s up to you.</p>
+        <p>
+          Offers vary by brewery and may require a purchase.
+          Details are always shown before redeeming.
+        </p>
       </details>
 
       <details>
         <summary>Is this a paper passport?</summary>
-        <p>No — US Brew Passport is fully digital.</p>
+        <p>No — US Brew Passport is a fully digital experience.</p>
       </details>
     </section>
 
-    <section class="support-link">
-      <p>
-        Need help? Visit our <a href="support.html">Support Page</a>.
-      </p>
-    </section>
+    <p class="support-link">
+      Need help? Visit our <a href="support.html">Support Page</a>.
+    </p>
 
   </main>
-
-  <footer class="footer">
-    <p>© 2026 US Brew Passport</p>
-  </footer>
 
   <script src="breweries-data.js"></script>
   <script src="passport.js"></script>
