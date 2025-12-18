@@ -1,17 +1,10 @@
-// breweries-data.js
-// Static data source for user-facing brewery list
-
 window.BREWERIES_BY_STATE = {
   Alabama: [],
   Alaska: [],
   Arizona: [],
   Arkansas: [],
   California: [],
-  Colorado: [
-    "Example Brewing Co",
-    "Mountain Ale Works",
-    "High Plains Brewery"
-  ],
+  Colorado: ["Example Brewing Co", "Mountain Ale Works"],
   Connecticut: [],
   Delaware: [],
   Florida: [],
@@ -57,4 +50,3 @@ window.BREWERIES_BY_STATE = {
   Wisconsin: [],
   Wyoming: []
 };
-
