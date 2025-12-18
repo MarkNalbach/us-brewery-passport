@@ -16,52 +16,65 @@
 
   <main class="container">
 
-    <section>
-      <h2>How It Works</h2>
-      <ul>
-        <li>Browse participating breweries across the U.S.</li>
-        <li>Visit a brewery in person.</li>
-        <li>Scan their QR code with staff present.</li>
-        <li>Your visit is stamped and locked for the year.</li>
-        <li>Track visits and tasting notes in one place.</li>
-      </ul>
-    </section>
-
-    <section class="premium-section">
-      <h2>Why Get Premium Access</h2>
-      <p>
-        Premium access unlocks the full 2026 passport experience with one-time
-        brewery rewards nationwide.
-      </p>
-    </section>
-
-    <section>
-      <h2>Participating Breweries</h2>
-      <p class="subtle">New breweries are being added daily across the U.S.</p>
-
-      <!-- THIS WAS NEVER POPULATING BEFORE -->
-      <div id="states-container">
-        <p class="loading">Loading brewery list…</p>
+    <!-- HOW IT WORKS -->
+    <section class="accordion">
+      <button class="accordion-btn">
+        How It Works
+        <span class="arrow">▸</span>
+      </button>
+      <div class="accordion-content">
+        <ul>
+          <li>Browse participating breweries across the U.S.</li>
+          <li>Visit a brewery in person.</li>
+          <li>Scan their QR code with staff present.</li>
+          <li>Your visit is stamped and locked for the year.</li>
+          <li>Track visits and tasting notes in one place.</li>
+        </ul>
       </div>
     </section>
 
+    <!-- WHY PREMIUM -->
+    <section class="accordion">
+      <button class="accordion-btn">
+        Why Get Premium Access
+        <span class="arrow">▸</span>
+      </button>
+      <div class="accordion-content">
+        <p>
+          Premium access unlocks the full 2026 US Brew Passport experience,
+          including one-time offers at participating breweries nationwide.
+        </p>
+        <p>
+          Each brewery can only be redeemed once per year, encouraging real
+          taproom visits and fair participation.
+        </p>
+      </div>
+    </section>
+
+    <!-- PARTICIPATING BREWERIES -->
     <section>
-      <h2>FAQ</h2>
+      <h2>Participating Breweries</h2>
+      <p class="subtle">New breweries are being added daily.</p>
 
-      <details>
-        <summary>Can I redeem the same brewery twice?</summary>
-        <p>No — each brewery can only be redeemed once per year.</p>
-      </details>
+      <div id="states-container"></div>
+    </section>
 
-      <details>
-        <summary>Do I need to buy anything?</summary>
-        <p>Offers vary by brewery and are shown before redemption.</p>
-      </details>
+    <!-- FAQ -->
+    <section class="accordion">
+      <button class="accordion-btn">
+        FAQ
+        <span class="arrow">▸</span>
+      </button>
+      <div class="accordion-content">
+        <p><strong>Can I redeem the same brewery twice?</strong><br>
+        No. Each brewery can only be redeemed once per year.</p>
 
-      <details>
-        <summary>Is this a paper passport?</summary>
-        <p>No. This is a fully digital passport.</p>
-      </details>
+        <p><strong>Do I need to buy anything?</strong><br>
+        Offers vary by brewery and are shown before redemption.</p>
+
+        <p><strong>Is this a paper passport?</strong><br>
+        No — US Brew Passport is fully digital.</p>
+      </div>
     </section>
 
     <p class="support-link">
@@ -70,7 +83,6 @@
 
   </main>
 
-  <!-- MUST BE IN THIS ORDER -->
   <script src="breweries-data.js"></script>
   <script src="passport.js"></script>
 </body>
