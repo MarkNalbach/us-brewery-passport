@@ -30,11 +30,11 @@ body {
 }
 
 .accordion-btn {
+  background-color: #1a73e8 !important;
+  color: #ffffff !important;
+  border: none !important;
   width: 100%;
-  background: #1a73e8;
-  color: white;
   padding: 14px 18px;
-  border: none;
   border-radius: 8px;
   font-size: 18px;
   font-weight: 600;
