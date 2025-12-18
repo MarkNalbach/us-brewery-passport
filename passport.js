@@ -1,40 +1,31 @@
-const list = document.getElementById("breweryList");
+const container = document.getElementById("states-container");
 
-Object.entries(window.BREWERIES_BY_STATE).forEach(([state, breweries]) => {
-  const row = document.createElement("div");
-  row.className = "state-row";
+Object.keys(BREWERIES_BY_STATE).forEach(state => {
+  const stateDiv = document.createElement("div");
+  stateDiv.className = "state";
 
-  const toggle = document.createElement("button");
-  toggle.className = "state-toggle";
-  toggle.innerHTML = `
-    <span>${state}</span>
-    <span>${breweries.length ? breweries.length : "Coming soon"}</span>
-  `;
+  const button = document.createElement("button");
+  button.textContent = state;
 
-  const content = document.createElement("div");
-  content.className = "state-content";
+  const list = document.createElement("div");
+  list.className = "brewery-list";
+  list.style.display = "none";
 
-  if (breweries.length) {
-    const ul = document.createElement("ul");
-    breweries.forEach(b => {
-      const li = document.createElement("li");
-      li.textContent = b;
-      ul.appendChild(li);
-    });
-    content.appendChild(ul);
+  if (BREWERIES_BY_STATE[state].length === 0) {
+    list.innerHTML = "<em>Coming soon</em>";
   } else {
-    const p = document.createElement("p");
-    p.className = "coming-soon";
-    p.textContent = "Breweries coming soon.";
-    content.appendChild(p);
+    BREWERIES_BY_STATE[state].forEach(brewery => {
+      const p = document.createElement("p");
+      p.textContent = brewery;
+      list.appendChild(p);
+    });
   }
 
-  toggle.addEventListener("click", () => {
-    content.style.display =
-      content.style.display === "block" ? "none" : "block";
-  });
+  button.onclick = () => {
+    list.style.display = list.style.display === "none" ? "block" : "none";
+  };
 
-  row.appendChild(toggle);
-  row.appendChild(content);
-  list.appendChild(row);
+  stateDiv.appendChild(button);
+  stateDiv.appendChild(list);
+  container.appendChild(stateDiv);
 });
