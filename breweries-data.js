@@ -1,14 +1,60 @@
 // breweries-data.js
-const BREWERIES_BY_STATE = {
-  Idaho: [
-    { name: "Example Brewing Co", city: "Boise" },
-    { name: "Sample Taproom", city: "Coeur d'Alene" },
-    { name: "Demo Brewery", city: "Idaho Falls" },
-  ],
+// Static data source for user-facing brewery list
+
+window.BREWERIES_BY_STATE = {
+  Alabama: [],
+  Alaska: [],
+  Arizona: [],
+  Arkansas: [],
+  California: [],
   Colorado: [
-    // Coming soon
+    "Example Brewing Co",
+    "Mountain Ale Works",
+    "High Plains Brewery"
   ],
-  California: [
-    // Coming soon
-  ],
+  Connecticut: [],
+  Delaware: [],
+  Florida: [],
+  Georgia: [],
+  Hawaii: [],
+  Idaho: [],
+  Illinois: [],
+  Indiana: [],
+  Iowa: [],
+  Kansas: [],
+  Kentucky: [],
+  Louisiana: [],
+  Maine: [],
+  Maryland: [],
+  Massachusetts: [],
+  Michigan: [],
+  Minnesota: [],
+  Mississippi: [],
+  Missouri: [],
+  Montana: [],
+  Nebraska: [],
+  Nevada: [],
+  New Hampshire: [],
+  New Jersey: [],
+  New Mexico: [],
+  New York: [],
+  North Carolina: [],
+  North Dakota: [],
+  Ohio: [],
+  Oklahoma: [],
+  Oregon: [],
+  Pennsylvania: [],
+  Rhode Island: [],
+  South Carolina: [],
+  South Dakota: [],
+  Tennessee: [],
+  Texas: [],
+  Utah: [],
+  Vermont: [],
+  Virginia: [],
+  Washington: [],
+  West Virginia: [],
+  Wisconsin: [],
+  Wyoming: []
 };
+
