@@ -82,6 +82,22 @@
   <script>
   const stateList = document.getElementById("state-list");
 
+  // Helper: find the parent accordion-content that holds the state list
+  function getBreweriesAccordionContent() {
+    return stateList ? stateList.closest(".accordion-content") : null;
+  }
+
+  // Helper: if the parent accordion is open, resize it to fit new content height
+  function expandParentAccordionToFit() {
+    const parent = getBreweriesAccordionContent();
+    if (!parent) return;
+
+    // Only adjust if the accordion is open (maxHeight is set)
+    if (parent.style.maxHeight && parent.style.maxHeight !== "0px") {
+      parent.style.maxHeight = parent.scrollHeight + "px";
+    }
+  }
+
   Object.entries(breweriesByState).forEach(([state, breweries]) => {
     const wrapper = document.createElement("div");
     wrapper.style.marginBottom = "8px";
@@ -91,8 +107,8 @@
     const btn = document.createElement("button");
     btn.className = "state-accordion-btn";
     btn.innerHTML = `
-      ${state} (${count})
-      <span>▸</span>
+      <span class="state-title">${state} (${count})</span>
+      <span class="state-caret">▸</span>
     `;
 
     const content = document.createElement("div");
@@ -102,7 +118,7 @@
       content.innerHTML = "<p style='margin:12px 0;'>Coming soon</p>";
     } else {
       const ul = document.createElement("ul");
-      breweries.forEach(b => {
+      breweries.forEach((b) => {
         const li = document.createElement("li");
         li.textContent = b;
         ul.appendChild(li);
@@ -111,20 +127,28 @@
     }
 
     btn.addEventListener("click", () => {
-      const isOpen = content.style.maxHeight;
+      const isOpen = !!content.style.maxHeight;
 
-      // toggle arrow
-      btn.querySelector("span").textContent = isOpen ? "▸" : "▾";
+      // Toggle caret
+      btn.querySelector(".state-caret").textContent = isOpen ? "▸" : "▾";
 
-      content.style.maxHeight = isOpen
-        ? null
-        : content.scrollHeight + "px";
+      // Toggle content
+      content.style.maxHeight = isOpen ? null : content.scrollHeight + "px";
+
+      // IMPORTANT: update the parent accordion height so it doesn't clip
+      // Use rAF to wait for layout after maxHeight change
+      requestAnimationFrame(() => {
+        expandParentAccordionToFit();
+      });
     });
 
     wrapper.appendChild(btn);
     wrapper.appendChild(content);
     stateList.appendChild(wrapper);
   });
+
+  // If user opens Participating Breweries first, then opens states, this handles it.
+  // If user opens states after opening, we update on each click above.
 </script>
 
 
