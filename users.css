@@ -1,0 +1,86 @@
+/* ---- USER PAGE ADDITIONS ---- */
+
+.brewery-section {
+  margin-top: 40px;
+}
+
+.section-subtext {
+  font-size: 15px;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+/* ---- State List ---- */
+.state-list {
+  border-top: 1px solid #ddd;
+}
+
+/* ---- Individual State ---- */
+.state-item {
+  border-bottom: 1px solid #ddd;
+}
+
+/* ---- Toggle ---- */
+.state-toggle {
+  all: unset;
+  width: 100%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 6px;
+  font-size: 17px;
+  font-weight: 500;
+}
+
+.state-toggle:hover {
+  background: rgba(0,0,0,0.04);
+}
+
+/* ---- Badge ---- */
+.badge {
+  font-size: 12px;
+  padding: 3px 8px;
+  border-radius: 12px;
+  font-weight: 600;
+}
+
+.badge.live {
+  background: #e6f4ea;
+  color: #1e7f43;
+}
+
+.badge.coming {
+  background: #f1f1f1;
+  color: #777;
+}
+
+/* ---- Chevron ---- */
+.chevron {
+  margin-left: auto;
+  font-size: 14px;
+  transition: transform 0.2s ease;
+}
+
+/* ---- Content ---- */
+.state-content {
+  max-height: 0;
+  overflow: hidden;
+  padding-left: 10px;
+  transition: max-height 0.25s ease;
+}
+
+.state-content ul {
+  padding: 10px 0 15px 20px;
+  margin: 0;
+}
+
+.state-content li {
+  margin-bottom: 6px;
+}
+
+.coming-text {
+  padding: 10px 0 15px 10px;
+  font-size: 14px;
+  color: #666;
+}
