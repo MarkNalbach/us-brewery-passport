@@ -775,3 +775,16 @@ a:hover {
   max-height: none !important;
   overflow: visible !important;
 }
+
+/* Caret rotation */
+.accordion-caret {
+  transition: transform 0.2s ease;
+}
+
+/* Rotate caret when open */
+.accordion-btn.active .accordion-caret,
+.how-accordion-btn.active .accordion-caret,
+.screens-accordion-btn.active .accordion-caret,
+.state-accordion-btn.active .accordion-caret {
+  transform: rotate(90deg);
+}
