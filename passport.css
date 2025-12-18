@@ -8,7 +8,7 @@ body {
 .header {
   text-align: center;
   padding: 40px 20px;
-  color: #fff;
+  color: white;
 }
 
 .logo {
@@ -19,17 +19,17 @@ body {
 .container {
   max-width: 800px;
   background: #f9f5ec;
-  margin: 20px auto;
   padding: 40px;
-  border-radius: 10px;
+  margin: 30px auto;
+  border-radius: 12px;
 }
 
 h1 {
-  margin-bottom: 10px;
+  color: #fff;
 }
 
 h2 {
-  margin-top: 30px;
+  margin-top: 40px;
 }
 
 ul {
@@ -40,65 +40,86 @@ li {
   margin-bottom: 8px;
 }
 
-/* Brewery list */
-
-.brewery-note {
-  font-size: 14px;
-  color: #555;
-  margin-bottom: 20px;
+.subtle {
+  color: #666;
+  margin-bottom: 15px;
 }
 
-.state-row {
-  border-top: 1px solid #ddd;
-  padding: 10px 0;
+/* Premium highlight */
+.premium-section {
+  background: #fff;
+  border-left: 4px solid #1a73e8;
+  padding: 20px;
+  border-radius: 6px;
 }
 
-.state-toggle {
+/* State list */
+.state {
+  border-bottom: 1px solid #ddd;
+  padding: 8px 0;
+}
+
+.state button {
   background: none;
   border: none;
-  width: 100%;
-  text-align: left;
   font-size: 16px;
   font-weight: 600;
   cursor: pointer;
-  display: flex;
-  justify-content: space-between;
+  width: 100%;
+  text-align: left;
 }
 
-.state-content {
-  display: none;
-  padding-top: 8px;
+.brewery-list {
+  padding-left: 15px;
+  margin-top: 6px;
 }
 
-.state-content ul {
-  padding-left: 18px;
-}
-
-.coming-soon {
-  font-size: 14px;
-  color: #777;
-  font-style: italic;
-}
-
-/* FAQ */
-
+/* FAQ (light accordion) */
 details {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 10px 14px;
   margin-bottom: 10px;
 }
 
 summary {
   cursor: pointer;
   font-weight: 600;
+  list-style: none;
 }
 
-/* Footer */
+summary::-webkit-details-marker {
+  display: none;
+}
 
-.footer {
-  text-align: center;
-  padding: 20px;
-  color: #aaa;
+summary::before {
+  content: "▸";
+  margin-right: 8px;
+  display: inline-block;
+}
+
+details[open] summary::before {
+  transform: rotate(90deg);
 }
 
 .support-link {
-  margin-top: 30px;
+  margin-top: 40px;
+  text-align: center;
+}
+
+a {
+  color: #1a73e8;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+  .container {
+    margin: 20px;
+    padding: 25px;
+  }
 }
