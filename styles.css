@@ -771,10 +771,10 @@ a:hover {
 }
 
 /* ---- FIX: Allow state accordions to expand fully ---- */
-.breweries-container {
+/* .breweries-container {
   max-height: none !important;
   overflow: visible !important;
-}
+} */
 
 /* Caret rotation */
 .accordion-caret {
