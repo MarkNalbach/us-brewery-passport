@@ -70,59 +70,53 @@ if (closeModal && modal) {
 // -------------------------------
 // ACCORDIONS (ALL PAGES)
 // -------------------------------
-document.querySelectorAll(".accordion-btn").forEach((btn) => {
-  // Ensure there's a caret span we can toggle (but don't require it)
-  let caret = btn.querySelector(".accordion-caret");
-  if (!caret) {
-    // If your button text already contains ▸ / ▾, you can skip auto-inject
-    // This injects a caret at the end safely.
-    caret = document.createElement("span");
-    caret.className = "accordion-caret";
-    caret.textContent = "▸";
-    caret.style.float = "right";
-    caret.style.fontWeight = "700";
-    caret.style.marginLeft = "12px";
-    btn.appendChild(caret);
-  }
+// document.querySelectorAll(".accordion-btn").forEach((btn) => {
+//   // Ensure there's a caret span we can toggle (but don't require it)
+//   let caret = btn.querySelector(".accordion-caret");
+//   if (!caret) {
+//     // If your button text already contains ▸ / ▾, you can skip auto-inject
+//     // This injects a caret at the end safely.
+//     caret = document.createElement("span");
+//     caret.className = "accordion-caret";
+//     caret.textContent = "▸";
+//     caret.style.float = "right";
+//     caret.style.fontWeight = "700";
+//     caret.style.marginLeft = "12px";
+//     btn.appendChild(caret);
+//   }
 
+//   btn.addEventListener("click", () => {
+//     btn.classList.toggle("active");
+//     const content = btn.nextElementSibling;
+//     if (!content) return;
+
+//     const isOpen = !!content.style.maxHeight;
+
+//     // Toggle content height
+//     if (isOpen) {
+//       content.style.maxHeight = null;
+//     } else {
+//       content.style.maxHeight = content.scrollHeight + "px";
+//     }
+
+//     // Toggle caret safely
+//     const c = btn.querySelector(".accordion-caret");
+//     if (c) c.textContent = isOpen ? "▸" : "▾";
+//   });
+// });
+
+document.querySelectorAll(".accordion-btn").forEach((btn) => {
   btn.addEventListener("click", () => {
     btn.classList.toggle("active");
     const content = btn.nextElementSibling;
     if (!content) return;
-
-    const isOpen = !!content.style.maxHeight;
-
-    // Toggle content height
-    if (isOpen) {
+    if (content.style.maxHeight) {
       content.style.maxHeight = null;
     } else {
       content.style.maxHeight = content.scrollHeight + "px";
     }
-
-    // Toggle caret safely
-    const c = btn.querySelector(".accordion-caret");
-    if (c) c.textContent = isOpen ? "▸" : "▾";
   });
 });
-
-// document.querySelectorAll(".accordion-btn").forEach((btn) => {
-//   btn.addEventListener("click", () => {
-//     btn.classList.toggle("active");
-
-//     const content = btn.nextElementSibling;
-
-
-//     if (!content) return;
-
-//     if (content.style.maxHeight) {
-//       content.style.maxHeight = null;
-//     } else {
-//       content.style.maxHeight = content.scrollHeight + "px";
-
-
-//     }
-//   });
-// });
 
 // -------------------------------
 // LEGACY ACCORDIONS (Index Page)
