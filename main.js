@@ -70,17 +70,25 @@ if (closeModal && modal) {
 // -------------------------------
 // ACCORDIONS (ALL PAGES)
 // -------------------------------
-document.querySelectorAll(".accordion-btn").forEach((btn) => {
+document.querySelectorAll(".accordion-btn, .how-accordion-btn, .screens-accordion-btn").forEach((btn) => {
   btn.addEventListener("click", () => {
     btn.classList.toggle("active");
+
     const content = btn.nextElementSibling;
+    const caret = btn.querySelector(".accordion-caret");
 
     if (!content) return;
 
-    if (content.style.maxHeight) {
-      content.style.maxHeight = null;
-    } else {
-      content.style.maxHeight = content.scrollHeight + "px";
+    const isOpen = !!content.style.maxHeight;
+
+    // Toggle height
+    content.style.maxHeight = isOpen
+      ? null
+      : content.scrollHeight + "px";
+
+    // Toggle arrow
+    if (caret) {
+      caret.textContent = isOpen ? "▸" : "▾";
     }
   });
 });
