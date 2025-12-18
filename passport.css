@@ -125,3 +125,8 @@ body {
   color: #5a3dbb;
   text-decoration: none;
 }
+.participating-breweries,
+.participating-content {
+  overflow: visible !important;
+}
+
