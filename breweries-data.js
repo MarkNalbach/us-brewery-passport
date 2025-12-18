@@ -1,4 +1,4 @@
-const BREWERIES_BY_STATE = {
+const breweriesByState = {
   "Alabama": [],
   "Alaska": [],
   "Arizona": [],
