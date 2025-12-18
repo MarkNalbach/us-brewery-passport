@@ -12,6 +12,13 @@ const status = byId("form-status");
 const modal = byId("successModal");
 const closeModal = byId("closeModal");
 
+function expandToFit(contentEl) {
+  // Only adjust if it's currently open
+  if (contentEl && contentEl.style.maxHeight && contentEl.style.maxHeight !== "0px") {
+    contentEl.style.maxHeight = contentEl.scrollHeight + "px";
+  }
+}
+
 if (form) {
   form.addEventListener("submit", async (e) => {
     e.preventDefault();
