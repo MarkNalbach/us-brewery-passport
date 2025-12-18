@@ -3,86 +3,83 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>US Brew Passport — For Beer Lovers</title>
-
-  <link rel="stylesheet" href="styles.css" />
-  <link rel="stylesheet" href="users.css" />
+  <title>US Brew Passport — 2026 Passport</title>
+  <link rel="stylesheet" href="passport.css" />
 </head>
 
 <body>
   <header class="header">
-    <img src="assets/logo.png" alt="US Brew Passport" class="logo">
-    <h1>US Brew Passport — 2026</h1>
-    <p>Explore breweries, track visits, and unlock one-time rewards.</p>
+    <img src="assets/logo.png" alt="US Brew Passport" class="logo" />
+    <h1>The 2026 US Brew Passport</h1>
+    <p>Explore breweries nationwide. Redeem once-per-year offers. Track every visit.</p>
   </header>
 
-  <div class="container">
+  <main class="container">
 
-    <!-- WHY PREMIUM -->
     <section>
-      <h2>Why Get Premium Access?</h2>
-      <p>
-        US Brew Passport Premium unlocks access to participating breweries nationwide.
-        Visit new taprooms, redeem one-time offers, and keep track of your journey —
-        all in one place.
-      </p>
-
+      <h2>How It Works</h2>
       <ul>
-        <li>🍺 Discover breweries across the U.S.</li>
-        <li>📍 Track visits by state and map</li>
-        <li>🎟 Redeem one-time brewery rewards</li>
-        <li>📝 Keep tasting notes on beers you love</li>
-        <li>🏆 Never redeem the same brewery twice</li>
+        <li>Browse participating breweries across the U.S.</li>
+        <li>Visit a brewery in person.</li>
+        <li>Scan their QR code with staff present.</li>
+        <li>Your visit is stamped and locked for the year.</li>
+        <li>Track visits and tasting notes in one place.</li>
       </ul>
     </section>
 
-    <!-- HOW IT WORKS (LIGHT) -->
     <section>
-      <h2>How It Works</h2>
-      <ol>
-        <li>Browse participating breweries in the app</li>
-        <li>Visit a brewery in person</li>
-        <li>Scan their QR code with staff present</li>
-        <li>Show the confirmation screen to redeem</li>
-        <li>Your visit is stamped and saved</li>
-      </ol>
-    </section>
-
-    <!-- BREWERIES / STATES -->
-   <section class="brewery-section">
-  <h2>Participating Breweries</h2>
-  <p class="brewery-note">
-    New breweries are being added daily across the U.S.
-  </p>
-
-  <div id="breweryList" class="state-list"></div>
-</section>
-
-    <!-- FAQ -->
-    <section>
-      <h2>Frequently Asked Questions</h2>
-
-      <p><strong>Can I see breweries without buying?</strong><br>
-      Yes — you can browse participating breweries before purchasing.</p>
-
-      <p><strong>Can I redeem the same brewery twice?</strong><br>
-      No. Each brewery can be redeemed once per year.</p>
-
-      <p><strong>Is this a physical passport?</strong><br>
-      No — US Brew Passport is fully digital.</p>
-    </section>
-
-    <!-- SUPPORT -->
-    <section>
-      <h2>Need Help?</h2>
+      <h2>Why Get Premium Access</h2>
       <p>
-        Visit our <a href="support.html">Support Page</a> or email us at
-        <strong>usbrewpassport@gmail.com</strong>.
+        Premium access unlocks the full 2026 passport experience, including
+        one-time offers at participating breweries nationwide.
+      </p>
+      <p>
+        Breweries can only be redeemed once per year, ensuring fairness and
+        encouraging real taproom visits.
       </p>
     </section>
 
-  </div>
+    <section class="brewery-section">
+      <h2>Participating Breweries</h2>
+      <p class="brewery-note">
+        New breweries are being added daily across the U.S.
+      </p>
 
-  <script src="users.js"></script>
+      <div id="breweryList"></div>
+    </section>
+
+    <section>
+      <h2>FAQ</h2>
+
+      <details>
+        <summary>Can I redeem the same brewery twice?</summary>
+        <p>No. Each brewery can be redeemed once per user per year.</p>
+      </details>
+
+      <details>
+        <summary>Do I need to buy anything?</summary>
+        <p>Most users purchase beyond the reward, but it’s up to you.</p>
+      </details>
+
+      <details>
+        <summary>Is this a paper passport?</summary>
+        <p>No — US Brew Passport is fully digital.</p>
+      </details>
+    </section>
+
+    <section class="support-link">
+      <p>
+        Need help? Visit our <a href="support.html">Support Page</a>.
+      </p>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p>© 2026 US Brew Passport</p>
+  </footer>
+
+  <script src="breweries-data.js"></script>
+  <script src="passport.js"></script>
 </body>
 </html>
