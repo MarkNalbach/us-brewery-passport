@@ -30,22 +30,19 @@
     <section class="premium-section">
       <h2>Why Get Premium Access</h2>
       <p>
-        Premium access unlocks the full 2026 passport experience, including
-        one-time offers at participating breweries nationwide.
-      </p>
-      <p>
-        Each brewery can only be redeemed once per year, encouraging real
-        taproom visits and fair use.
+        Premium access unlocks the full 2026 passport experience with one-time
+        brewery rewards nationwide.
       </p>
     </section>
 
     <section>
       <h2>Participating Breweries</h2>
-      <p class="subtle">
-        New breweries are being added daily across the U.S.
-      </p>
+      <p class="subtle">New breweries are being added daily across the U.S.</p>
 
-      <div id="states-container"></div>
+      <!-- THIS WAS NEVER POPULATING BEFORE -->
+      <div id="states-container">
+        <p class="loading">Loading brewery list…</p>
+      </div>
     </section>
 
     <section>
@@ -53,20 +50,17 @@
 
       <details>
         <summary>Can I redeem the same brewery twice?</summary>
-        <p>No. Each brewery can only be redeemed once per year.</p>
+        <p>No — each brewery can only be redeemed once per year.</p>
       </details>
 
       <details>
         <summary>Do I need to buy anything?</summary>
-        <p>
-          Offers vary by brewery and may require a purchase.
-          Details are always shown before redeeming.
-        </p>
+        <p>Offers vary by brewery and are shown before redemption.</p>
       </details>
 
       <details>
         <summary>Is this a paper passport?</summary>
-        <p>No — US Brew Passport is a fully digital experience.</p>
+        <p>No. This is a fully digital passport.</p>
       </details>
     </section>
 
@@ -76,6 +70,7 @@
 
   </main>
 
+  <!-- MUST BE IN THIS ORDER -->
   <script src="breweries-data.js"></script>
   <script src="passport.js"></script>
 </body>
