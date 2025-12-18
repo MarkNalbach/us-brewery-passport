@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>US Brew Passport — 2026 Passport</title>
 
-  <!-- Shared site styles -->
   <link rel="stylesheet" href="styles.css" />
 </head>
 
@@ -22,16 +21,12 @@
     <div class="accordion">
       <button class="how-accordion-btn">How It Works ▸</button>
       <div class="how-accordion-content">
-        <p>
-          US Brew Passport is a nationwide digital passport for craft beer lovers.
-        </p>
-
         <ul>
           <li>Browse participating breweries by state</li>
           <li>Visit breweries in person</li>
           <li>Scan the brewery’s QR code with staff present</li>
           <li>Redeem a one-time offer (once per brewery, per year)</li>
-          <li>Track visits and tasting memories</li>
+          <li>Track visits and tasting notes</li>
         </ul>
       </div>
     </div>
@@ -41,10 +36,10 @@
       <button class="accordion-btn">Why Get Premium Access ▸</button>
       <div class="accordion-content">
         <ul>
-          <li>Access all participating breweries nationwide</li>
-          <li>Redeem exclusive one-time brewery offers</li>
-          <li>Track visited breweries and dates</li>
-          <li>Keep notes on beers you loved</li>
+          <li>Nationwide brewery access</li>
+          <li>One-time in-taproom rewards</li>
+          <li>Visit tracking & timestamps</li>
+          <li>Beer tasting notes</li>
           <li>New breweries added regularly</li>
         </ul>
       </div>
@@ -54,12 +49,8 @@
     <div class="accordion">
       <button class="accordion-btn">Participating Breweries ▸</button>
       <div class="accordion-content">
-
         <p><strong>New breweries are being added daily.</strong></p>
-
-        <!-- STATE LIST RENDER TARGET -->
         <div id="state-list"></div>
-
       </div>
     </div>
 
@@ -67,30 +58,67 @@
     <div class="accordion">
       <button class="accordion-btn">FAQ ▸</button>
       <div class="accordion-content">
-
         <h3>Can I redeem more than once?</h3>
-        <p>No. Each brewery can be redeemed once per user per year.</p>
+        <p>No. Each brewery can be redeemed once per year.</p>
 
-        <h3>Do I have to be at the brewery?</h3>
-        <p>Yes. Redemption requires scanning the brewery’s QR code with staff present.</p>
+        <h3>Do I need to be at the brewery?</h3>
+        <p>Yes — redemption requires scanning their QR code on site.</p>
 
-        <h3>Can I see breweries before purchasing?</h3>
-        <p>Yes. You can browse participating breweries before upgrading.</p>
-
+        <h3>Can I browse before buying?</h3>
+        <p>Yes. You can view participating breweries without upgrading.</p>
       </div>
     </div>
 
-    <!-- SUPPORT LINK -->
     <p style="text-align:center; margin-top:30px;">
       Need help? <a href="support.html">Visit Support</a>
     </p>
 
   </div>
 
-  <!-- DATA FIRST -->
+  <!-- DATA -->
   <script src="breweries-data.js"></script>
 
-  <!-- SITE LOGIC -->
+  <!-- STATE RENDER LOGIC (INLINE, SAFE) -->
+  <script>
+    const stateList = document.getElementById("state-list");
+
+    Object.entries(breweriesByState).forEach(([state, breweries]) => {
+      const wrapper = document.createElement("div");
+      wrapper.className = "accordion";
+      wrapper.style.marginTop = "10px";
+
+      const btn = document.createElement("button");
+      btn.className = "accordion-btn";
+      btn.innerHTML = `${state} ▸`;
+
+      const content = document.createElement("div");
+      content.className = "accordion-content";
+
+      if (breweries.length === 0) {
+        content.innerHTML = "<p>Coming soon</p>";
+      } else {
+        const ul = document.createElement("ul");
+        breweries.forEach(b => {
+          const li = document.createElement("li");
+          li.textContent = b;
+          ul.appendChild(li);
+        });
+        content.appendChild(ul);
+      }
+
+      btn.addEventListener("click", () => {
+        const open = content.style.maxHeight;
+        content.style.maxHeight = open ? null : content.scrollHeight + "px";
+        btn.classList.toggle("active");
+      });
+
+      wrapper.appendChild(btn);
+      wrapper.appendChild(content);
+      stateList.appendChild(wrapper);
+    });
+  </script>
+
+  <!-- MAIN SITE JS -->
   <script src="main.js"></script>
 </body>
 </html>
