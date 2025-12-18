@@ -110,10 +110,16 @@ document.querySelectorAll(".accordion-btn").forEach((btn) => {
     btn.classList.toggle("active");
     const content = btn.nextElementSibling;
     if (!content) return;
+    // if (content.style.maxHeight) {
+    //   content.style.maxHeight = null;
+    // } else {
+    //   content.style.maxHeight = content.scrollHeight + "px";
+    // }
+
     if (content.style.maxHeight) {
       content.style.maxHeight = null;
     } else {
-      content.style.maxHeight = content.scrollHeight + "px";
+      resizeAccordion(content);
     }
   });
 });
