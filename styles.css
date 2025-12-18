@@ -770,4 +770,8 @@ a:hover {
   color: #444;
 }
 
-
+/* ---- FIX: Allow state accordions to expand fully ---- */
+.breweries-container {
+  max-height: none !important;
+  overflow: visible !important;
+}
