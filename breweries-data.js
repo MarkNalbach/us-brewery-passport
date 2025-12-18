@@ -3,7 +3,7 @@ const BREWERIES_BY_STATE = {
   "Alaska": [],
   "Arizona": [],
   "Arkansas": [],
-  "California": ["Sample Brewing Co"],
+  "California": [],
   "Colorado": [],
   "Connecticut": [],
   "Delaware": [],
@@ -47,6 +47,6 @@ const BREWERIES_BY_STATE = {
   "Virginia": [],
   "Washington": [],
   "West Virginia": [],
-  "Wisconsin": [],
+  "Wisconsin": ["Duesterbeck's Brewing Company","Lakefront Brewery","Herbiery Brewing","Stubborn Brothers Brewery","Stillmank Brewing Co."],
   "Wyoming": []
 };
