@@ -44,8 +44,8 @@ const breweriesByState = {
   "Texas": [],
   "Utah": [],
   "Vermont": [],
-  "Virginia": [],
-  "Washington": [],
+  "Virginia": ["Chef Life Brewery"],
+  "Washington": ["Bardic Brewing and Cider - Spokane","Bardic Brewing and Cider - Spokane Valley"],
   "West Virginia": [],
   "Wisconsin": ["Duesterbeck's Brewing Company","Lakefront Brewery","Herbiery Brewing","Stubborn Brothers Brewery","Stillmank Brewing Co."],
   "Wyoming": []
