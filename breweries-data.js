@@ -41,12 +41,12 @@ const breweriesByState = {
   "South Carolina": [],
   "South Dakota": [],
   "Tennessee": [],
-  "Texas": [],
+  "Texas": ["Cactus Land Brewing Co.","Dr. Jeckyll's Beer Lab"],
   "Utah": [],
   "Vermont": [],
-  "Virginia": ["Chef Life Brewery"],
+  "Virginia": ["Chef Life Brewery","Rockfish Brewing Company"],
   "Washington": ["Bardic Brewing and Cider - Spokane","Bardic Brewing and Cider - Spokane Valley"],
   "West Virginia": [],
-  "Wisconsin": ["Duesterbeck's Brewing Company","Lakefront Brewery","Herbiery Brewing","Stubborn Brothers Brewery","Stillmank Brewing Co."],
+  "Wisconsin": ["Duesterbeck's Brewing Company","Fifth Ward Brewing Company","Lakefront Brewery","Herbiery Brewing","Stubborn Brothers Brewery","Stillmank Brewing Co."],
   "Wyoming": []
 };
