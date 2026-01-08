@@ -41,7 +41,7 @@ const breweriesByState = {
   "South Carolina": [],
   "South Dakota": [],
   "Tennessee": ["Twisted Copper Brewing Company - Columbia","Twisted Copper Brewing Company - Mt. Pleasant"],
-  "Texas": ["Cactus Land Brewing Co.","Celestial Beerworks","Dr. Jeckyll's Beer Lab","Highway 71 Brewing"],
+  "Texas": ["Cactus Land Brewing Co.","Celestial Beerworks","Dr. Jeckyll's Beer Lab","Forney Brewing Company","Highway 71 Brewing"],
   "Utah": [],
   "Vermont": [],
   "Virginia": ["Chef Life Brewery","Rockfish Brewing Company"],
