@@ -1,5 +1,5 @@
 const breweriesByState = {
-  "Alabama": [],
+  "Alabama": ["Goat Island Brewing"],
   "Alaska": [],
   "Arizona": [],
   "Arkansas": [],
@@ -40,8 +40,8 @@ const breweriesByState = {
   "Rhode Island": [],
   "South Carolina": [],
   "South Dakota": [],
-  "Tennessee": [],
-  "Texas": ["Cactus Land Brewing Co.","Dr. Jeckyll's Beer Lab"],
+  "Tennessee": ["Twisted Copper Brewing Company - Columbia","Twisted Copper Brewing Company - Mt. Pleasant"],
+  "Texas": ["Cactus Land Brewing Co.","Celestial Beerworks","Dr. Jeckyll's Beer Lab","Highway 71 Brewing"],
   "Utah": [],
   "Vermont": [],
   "Virginia": ["Chef Life Brewery","Rockfish Brewing Company"],
