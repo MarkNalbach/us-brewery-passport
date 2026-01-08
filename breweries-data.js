@@ -1,5 +1,5 @@
 const breweriesByState = {
-  "Alabama": ["Goat Island Brewing"],
+  "Alabama": ["Goat Island Brewing","Iron Hand Brewing, LLC"],
   "Alaska": [],
   "Arizona": ["Button Brew House"],
   "Arkansas": [],
