@@ -1,9 +1,9 @@
 const breweriesByState = {
   "Alabama": ["Goat Island Brewing","Iron Hand Brewing, LLC"],
-  "Alaska": [],
+  "Alaska": ["Southern Tail Brewing"],
   "Arizona": ["Button Brew House"],
   "Arkansas": [],
-  "California": [],
+  "California": ["All Points Brewing Co.","AudioGraph Beer Co.","Lincoln Beer Company","Porchlight Brewing Company"],
   "Colorado": [],
   "Connecticut": [],
   "Delaware": [],
