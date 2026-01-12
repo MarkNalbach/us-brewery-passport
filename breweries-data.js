@@ -34,7 +34,7 @@ const breweriesByState = {
   "North Carolina": [],
   "North Dakota": [],
   "Ohio": [],
-  "Oklahoma": [],
+  "Oklahoma": ["Stonecloud Brewing"],
   "Oregon": [],
   "Pennsylvania": ["Rural City Beer Company","Vault Brewing Co - Easton","Vault Brewing Co - Yardley","Vortex Brewing Company"],
   "Rhode Island": [],
