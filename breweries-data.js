@@ -30,7 +30,7 @@ const breweriesByState = {
   "New Hampshire": [],
   "New Jersey": [],
   "New Mexico": [],
-  "New York": ["Apex Brewery"],
+  "New York": ["Apex Brewery","Catskill Brewery"],
   "North Carolina": [],
   "North Dakota": [],
   "Ohio": ["Combustion Brewery & Taproom - Clintonville","Combustion Brewery & Taproom - Pickerington"],
