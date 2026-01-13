@@ -33,7 +33,7 @@ const breweriesByState = {
   "New York": ["Apex Brewery"],
   "North Carolina": [],
   "North Dakota": [],
-  "Ohio": [],
+  "Ohio": ["Combustion Brewery & Taproom - Clintonville","Combustion Brewery & Taproom - Pickerington"],
   "Oklahoma": ["Stonecloud Brewing"],
   "Oregon": [],
   "Pennsylvania": ["Rural City Beer Company","ShawneeCraft Brewing Company","Vault Brewing Co - Easton","Vault Brewing Co - Yardley","Vortex Brewing Company","Whiskers Brewing Inc"],
