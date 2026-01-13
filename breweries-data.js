@@ -37,7 +37,7 @@ const breweriesByState = {
   "Oklahoma": ["Stonecloud Brewing"],
   "Oregon": [],
   "Pennsylvania": ["Rural City Beer Company","ShawneeCraft Brewing Company","Vault Brewing Co - Easton","Vault Brewing Co - Yardley","Vortex Brewing Company","Whiskers Brewing Inc"],
-  "Rhode Island": [],
+  "Rhode Island": ["Apponaug Brewing Company"],
   "South Carolina": [],
   "South Dakota": [],
   "Tennessee": ["Cedar Glade Brews","Soul & Spirits Brewery","Twisted Copper Brewing Company - Columbia","Twisted Copper Brewing Company - Mt. Pleasant"],
