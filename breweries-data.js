@@ -40,7 +40,7 @@ const breweriesByState = {
   "Rhode Island": [],
   "South Carolina": [],
   "South Dakota": [],
-  "Tennessee": ["Soul & Spirits Brewery","Twisted Copper Brewing Company - Columbia","Twisted Copper Brewing Company - Mt. Pleasant"],
+  "Tennessee": ["Cedar Glade Brews","Soul & Spirits Brewery","Twisted Copper Brewing Company - Columbia","Twisted Copper Brewing Company - Mt. Pleasant"],
   "Texas": ["Bankhead Brewpub - Farmers Branch","Bankhead Brewpub - Rowlett","Cactus Land Brewing Co.","Celestial Beerworks","Dr. Jeckyll's Beer Lab","Forney Brewing Company","Highway 71 Brewing"],
   "Utah": [],
   "Vermont": [],
