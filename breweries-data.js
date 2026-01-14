@@ -36,7 +36,7 @@ const breweriesByState = {
   "Ohio": ["Combustion Brewery & Taproom - Clintonville","Combustion Brewery & Taproom - Pickerington"],
   "Oklahoma": ["Stonecloud Brewing"],
   "Oregon": [],
-  "Pennsylvania": ["Rural City Beer Company","ShawneeCraft Brewing Company","Vault Brewing Co - Easton","Vault Brewing Co - Yardley","Vortex Brewing Company","Whiskers Brewing Inc"],
+  "Pennsylvania": ["Rock God Brewing Co.","Rural City Beer Company","ShawneeCraft Brewing Company","Vault Brewing Co - Easton","Vault Brewing Co - Yardley","Vortex Brewing Company","Whiskers Brewing Inc"],
   "Rhode Island": ["Apponaug Brewing Company"],
   "South Carolina": [],
   "South Dakota": [],
