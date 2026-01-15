@@ -7,7 +7,7 @@ const breweriesByState = {
   "Colorado": ["Grimm Brothers","Wanderment Brewing","Westminster Brewing Company"],
   "Connecticut": ["Twelvenote Brew Co"],
   "Delaware": [],
-  "Florida": ["Lake Tribe Brewing"],
+  "Florida": ["Lake Tribe Brewing","Mocama Beer Company"],
   "Georgia": [],
   "Hawaii": [],
   "Idaho": [],
