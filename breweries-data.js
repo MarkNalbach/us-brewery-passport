@@ -30,7 +30,7 @@ const breweriesByState = {
   "New Hampshire": [],
   "New Jersey": [],
   "New Mexico": [],
-  "New York": ["Apex Brewery","Catskill Brewery","Gardiner Brewing Company"],
+  "New York": ["Apex Brewery","Catskill Brewery","Gardiner Brewing Company","Singlecut Beersmiths","South Shore Craft Brewery"],
   "North Carolina": [],
   "North Dakota": [],
   "Ohio": ["Combustion Brewery & Taproom - Clintonville","Combustion Brewery & Taproom - Pickerington"],
