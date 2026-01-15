@@ -8,7 +8,7 @@ const breweriesByState = {
   "Connecticut": ["Twelvenote Brew Co"],
   "Delaware": [],
   "Florida": ["Lake Tribe Brewing","Mocama Beer Company"],
-  "Georgia": [],
+  "Georgia": ["Six Bridges Brewing - Johns Creek","Six Bridges Brewing - Milton"],
   "Hawaii": [],
   "Idaho": [],
   "Illinois": [],
