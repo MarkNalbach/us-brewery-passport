@@ -34,7 +34,7 @@ const breweriesByState = {
   "North Carolina": [],
   "North Dakota": [],
   "Ohio": ["Combustion Brewery & Taproom - Clintonville","Combustion Brewery & Taproom - Pickerington","Hearth Brewing","Twin Oast Brewing"],
-  "Oklahoma": ["Stonecloud Brewing"],
+  "Oklahoma": ["Guthrie Brewing Company","Stonecloud Brewing"],
   "Oregon": [],
   "Pennsylvania": ["Rock God Brewing Co.","Rural City Beer Company","ShawneeCraft Brewing Company","Vault Brewing Co - Easton","Vault Brewing Co - Yardley","Vortex Brewing Company","Whiskers Brewing Inc"],
   "Rhode Island": ["Apponaug Brewing Company"],
