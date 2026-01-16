@@ -30,7 +30,7 @@ const breweriesByState = {
   "New Hampshire": [],
   "New Jersey": ["Seven Sons Brewing","Toms River Brewing"],
   "New Mexico": [],
-  "New York": ["Apex Brewery","Catskill Brewery","Bitters & Bones","Gardiner Brewing Company","Simple Brewing","Singlecut Beersmiths","South Shore Craft Brewery","The Ridge West Seneca"],
+  "New York": ["Apex Brewery","Catskill Brewery","Bitters & Bones","Gardiner Brewing Company","Simple Brewing","Singlecut Beersmiths","South Shore Craft Brewery","The Ridge West Seneca","Twisted Rail Brewing Company - Canandaigua","Twisted Rail Brewing Company - Geneva","Twisted Rail Brewing Company - Honeoye","Twisted Rail Brewing Company - Manchester"],
   "North Carolina": [],
   "North Dakota": [],
   "Ohio": ["Combustion Brewery & Taproom - Clintonville","Combustion Brewery & Taproom - Pickerington","Twin Oast Brewing"],
