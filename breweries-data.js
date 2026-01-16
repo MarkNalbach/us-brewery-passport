@@ -27,7 +27,7 @@ const breweriesByState = {
   "Montana": [],
   "Nebraska": [],
   "Nevada": [],
-  "New Hampshire": [],
+  "New Hampshire": ["Republic Brewing Company"],
   "New Jersey": ["Seven Sons Brewing","Toms River Brewing"],
   "New Mexico": [],
   "New York": ["Apex Brewery","Catskill Brewery","Bitters & Bones","Gardiner Brewing Company","Simple Brewing","Singlecut Beersmiths","South Shore Craft Brewery","The Ridge West Seneca","Twisted Rail Brewing Company - Canandaigua","Twisted Rail Brewing Company - Geneva","Twisted Rail Brewing Company - Honeoye","Twisted Rail Brewing Company - Manchester"],
