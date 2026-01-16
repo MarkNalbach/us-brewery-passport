@@ -3,7 +3,7 @@ const breweriesByState = {
   "Alaska": ["Southern Tail Brewing"],
   "Arizona": ["Button Brew House"],
   "Arkansas": ["Southern Tail Brewing"],
-  "California": ["All Points Brewing Co.","AudioGraph Beer Co.","Lincoln Beer Company","Porchlight Brewing Company","TapRoom Beer Co.","The Keg Stand Brewing Co."],
+  "California": ["All Points Brewing Co.","AudioGraph Beer Co.","Farmers Brewing Co - Chico","Farmers Brewing Co - Princeton","Lincoln Beer Company","Porchlight Brewing Company","TapRoom Beer Co.","The Keg Stand Brewing Co."],
   "Colorado": ["Busey Brews Smokehouse & Brewery","Grimm Brothers","Otherwise Brewing","Peculier Brewing Co","Wanderment Brewing","Westminster Brewing Company"],
   "Connecticut": ["Twelvenote Brew Co"],
   "Delaware": [],
