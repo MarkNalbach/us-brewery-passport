@@ -33,7 +33,7 @@ const breweriesByState = {
   "New York": ["Apex Brewery","Catskill Brewery","Bitters & Bones","Gardiner Brewing Company","Simple Brewing","Singlecut Beersmiths","South Shore Craft Brewery","The Ridge West Seneca","Twisted Rail Brewing Company - Canandaigua","Twisted Rail Brewing Company - Geneva","Twisted Rail Brewing Company - Honeoye","Twisted Rail Brewing Company - Manchester"],
   "North Carolina": [],
   "North Dakota": [],
-  "Ohio": ["Combustion Brewery & Taproom - Clintonville","Combustion Brewery & Taproom - Pickerington","Twin Oast Brewing"],
+  "Ohio": ["Combustion Brewery & Taproom - Clintonville","Combustion Brewery & Taproom - Pickerington","Hearth Brewing","Twin Oast Brewing"],
   "Oklahoma": ["Stonecloud Brewing"],
   "Oregon": [],
   "Pennsylvania": ["Rock God Brewing Co.","Rural City Beer Company","ShawneeCraft Brewing Company","Vault Brewing Co - Easton","Vault Brewing Co - Yardley","Vortex Brewing Company","Whiskers Brewing Inc"],
