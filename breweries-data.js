@@ -28,7 +28,7 @@ const breweriesByState = {
   "Nebraska": [],
   "Nevada": [],
   "New Hampshire": [],
-  "New Jersey": ["Seven Sons Brewing"],
+  "New Jersey": ["Seven Sons Brewing","Toms River Brewing"],
   "New Mexico": [],
   "New York": ["Apex Brewery","Catskill Brewery","Bitters & Bones","Gardiner Brewing Company","Singlecut Beersmiths","South Shore Craft Brewery","The Ridge West Seneca"],
   "North Carolina": [],
