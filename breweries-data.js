@@ -10,7 +10,7 @@ const breweriesByState = {
   "Florida": ["Lake Tribe Brewing","Mocama Beer Company"],
   "Georgia": ["Six Bridges Brewing - Johns Creek","Six Bridges Brewing - Milton"],
   "Hawaii": [],
-  "Idaho": [],
+  "Idaho": ["Timber Town Beer Company"],
   "Illinois": [],
   "Indiana": [],
   "Iowa": ["Firetrucker Brewery"],
