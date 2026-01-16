@@ -1,5 +1,5 @@
 const breweriesByState = {
-  "Alabama": ["Goat Island Brewing","Iron Hand Brewing, LLC"],
+  "Alabama": ["Birmingham District Brewing Company","Goat Island Brewing","Iron Hand Brewing, LLC"],
   "Alaska": ["Southern Tail Brewing"],
   "Arizona": ["Button Brew House"],
   "Arkansas": ["Southern Tail Brewing"],
@@ -30,7 +30,7 @@ const breweriesByState = {
   "New Hampshire": [],
   "New Jersey": ["Seven Sons Brewing","Toms River Brewing"],
   "New Mexico": [],
-  "New York": ["Apex Brewery","Catskill Brewery","Bitters & Bones","Gardiner Brewing Company","Singlecut Beersmiths","South Shore Craft Brewery","The Ridge West Seneca"],
+  "New York": ["Apex Brewery","Catskill Brewery","Bitters & Bones","Gardiner Brewing Company","Simple Brewing","Singlecut Beersmiths","South Shore Craft Brewery","The Ridge West Seneca"],
   "North Carolina": [],
   "North Dakota": [],
   "Ohio": ["Combustion Brewery & Taproom - Clintonville","Combustion Brewery & Taproom - Pickerington","Twin Oast Brewing"],
