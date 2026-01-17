@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>US Brew Passport — Download</title>
+  <link rel="stylesheet" href="../styles.css" />
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-NGS6LT43VP"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-NGS6LT43VP');
+  </script>
+
+  <script>
+    // Paste these later when you have store links:
+    const IOS_URL = "";     // e.g. https://apps.apple.com/app/id1234567890
+    const ANDROID_URL = ""; // e.g. https://play.google.com/store/apps/details?id=com.yourapp
+
+    function isAndroid() {
+      return /android/i.test(navigator.userAgent || "");
+    }
+    function isIOS() {
+      return /iPad|iPhone|iPod/.test(navigator.userAgent || "") ||
+        (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
+    }
+
+    // Auto-redirect only when links exist
+    window.addEventListener("DOMContentLoaded", () => {
+      const statusEl = document.getElementById("download-status");
+
+      if (isIOS() && IOS_URL) {
+        statusEl.textContent = "Sending you to the App Store…";
+        window.location.replace(IOS_URL);
+        return;
+      }
+
+      if (isAndroid() && ANDROID_URL) {
+        statusEl.textContent = "Sending you to Google Play…";
+        window.location.replace(ANDROID_URL);
+        return;
+      }
+
+      // No store links yet / desktop / unknown device
+      statusEl.textContent = "The app is launching soon. Check back here when it goes live.";
+    });
+  </script>
+</head>
+
+<body>
+  <header class="header">
+    <img src="../assets/logo.png" alt="US Brew Passport" class="logo">
+    <h1>Download US Brew Passport</h1>
+    <p id="download-status">Loading…</p>
+  </header>
+
+  <div class="container">
+    <p class="form-intro" style="text-align:center;">
+      This page will automatically send you to the correct app store once the download links are live.
+    </p>
+
+    <div style="max-width:520px; margin: 0 auto;">
+      <a class="submit-btn" href="/">Back to the website</a>
+
+      <div style="height: 12px;"></div>
+
+      <a class="submit-btn" style="background:#1a73e8;" href="mailto:usbrewpassport@gmail.com?subject=App%20Launch%20Notification">
+        Email me when the app is live
+      </a>
+
+      <p class="status" style="margin-top:18px;">
+        QR code should point to <strong>usbrewerypassport.com/download</strong>
+      </p>
+    </div>
+  </div>
+</body>
+</html>
