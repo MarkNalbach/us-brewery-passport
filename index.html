@@ -182,13 +182,35 @@
 
       <!-- LOGO INSTRUCTIONS REMOVED FROM HERE -->
 
-      <label>Offer Details (what offer are you agreeing to?) *</label>
+      <!-- <label>Offer Details (what offer are you agreeing to?) *</label>
       <textarea
         name="offerDetails"
         rows="4"
         required
         placeholder="Example: Buy one pint, get one FREE! Valid once per passport holder per year."
-      ></textarea>
+      ></textarea> -->
+      <label>Offer Details (what offer are you agreeing to?) *</label>
+
+      <select id="offerSelect" name="offerSelect" required>
+        <option value="" selected disabled>Select an offer…</option>
+        <option value="Buy one beer, get one beer FREE (once per user per year)">BOGO (Buy one beer, get one FREE)</option>
+        <option value="50% off 2 beers (once per user per year)">50% off the 2 beers</option>
+        <option value="50% off second beer (once per user per year)">50% off the second beer</option>
+        <option value="CUSTOM">Other (enter custom offer)</option>
+      </select>
+      
+      <div id="customOfferWrap" style="display:none;">
+        <label style="margin-top:12px;">Custom Offer *</label>
+        <input
+          type="text"
+          id="customOfferInput"
+          placeholder="Example: $2 off one pint, or free pretzel with purchase"
+        />
+      </div>
+      
+      <!-- This is the single field your backend already expects -->
+      <input type="hidden" id="offerDetails" name="offerDetails" />
+
 
       <label>Verify you’re human — what is 2 + 3? *</label>
       <input type="number" name="captcha" required />
