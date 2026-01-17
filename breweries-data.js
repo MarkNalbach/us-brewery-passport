@@ -29,7 +29,7 @@ const breweriesByState = {
   "Nevada": [],
   "New Hampshire": ["Republic Brewing Company"],
   "New Jersey": ["Bent Iron Brewing Co.","Seven Sons Brewing","Toms River Brewing"],
-  "New Mexico": [],
+  "New Mexico": ["Rowley Farmhouse Ales"],
   "New York": ["Apex Brewery","Catskill Brewery","Bitters & Bones","Gardiner Brewing Company","Simple Brewing","Singlecut Beersmiths","South Shore Craft Brewery","The Ridge West Seneca","Twisted Rail Brewing Company - Canandaigua","Twisted Rail Brewing Company - Geneva","Twisted Rail Brewing Company - Honeoye","Twisted Rail Brewing Company - Manchester"],
   "North Carolina": [],
   "North Dakota": ["Dialectic Brewing & Ciderhouse"],
