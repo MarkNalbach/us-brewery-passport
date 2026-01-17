@@ -8,6 +8,40 @@ const byClass = (cls) => document.querySelector(cls);
 // FORM HANDLING (Partner Page)
 // -------------------------------
 const form = byId("breweryForm");
+
+// -------------------------------
+// OFFER DROPDOWN -> offerDetails
+// -------------------------------
+const offerSelect = byId("offerSelect");
+const customOfferWrap = byId("customOfferWrap");
+const customOfferInput = byId("customOfferInput");
+const offerDetailsHidden = byId("offerDetails");
+
+function syncOfferDetails() {
+  if (!offerSelect || !offerDetailsHidden) return;
+
+  const selected = offerSelect.value;
+
+  if (selected === "CUSTOM") {
+    if (customOfferWrap) customOfferWrap.style.display = "block";
+    if (customOfferInput) customOfferInput.required = true;
+
+    offerDetailsHidden.value = (customOfferInput?.value || "").trim();
+  } else {
+    if (customOfferWrap) customOfferWrap.style.display = "none";
+    if (customOfferInput) {
+      customOfferInput.required = false;
+      customOfferInput.value = "";
+    }
+
+    offerDetailsHidden.value = selected || "";
+  }
+}
+
+if (offerSelect) offerSelect.addEventListener("change", syncOfferDetails);
+if (customOfferInput) customOfferInput.addEventListener("input", syncOfferDetails);
+
+//
 const status = byId("form-status");
 const modal = byId("successModal");
 const closeModal = byId("closeModal");
