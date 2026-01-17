@@ -57,6 +57,18 @@ if (form) {
   form.addEventListener("submit", async (e) => {
     e.preventDefault();
 
+    //
+        // Ensure offerDetails is set before FormData is created
+    syncOfferDetails();
+
+    // If they chose custom, require a value
+    if (offerSelect && offerSelect.value === "CUSTOM" && !offerDetailsHidden?.value) {
+      status.textContent = "Please enter your custom offer.";
+      customOfferInput?.focus();
+      return;
+    }
+  //
+
     status.textContent = "Sending...";
 
     // CAPTCHA
