@@ -20,7 +20,7 @@ const breweriesByState = {
   "Maine": [],
   "Maryland": [],
   "Massachusetts": [],
-  "Michigan": [],
+  "Michigan": ["HomeGrown Brew Co"],
   "Minnesota": ["August Schell Brewing Company"],
   "Mississippi": [],
   "Missouri": [],
