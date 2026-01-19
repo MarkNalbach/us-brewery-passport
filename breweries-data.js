@@ -21,7 +21,7 @@ const breweriesByState = {
   "Maryland": [],
   "Massachusetts": [],
   "Michigan": [],
-  "Minnesota": [],
+  "Minnesota": ["August Schell Brewing Company"],
   "Mississippi": [],
   "Missouri": [],
   "Montana": [],
