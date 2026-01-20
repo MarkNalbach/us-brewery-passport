@@ -14,7 +14,7 @@ const breweriesByState = {
   "Illinois": [],
   "Indiana": [],
   "Iowa": ["Firetrucker Brewery"],
-  "Kansas": [],
+  "Kansas": ["Force of Nature Brewing"],
   "Kentucky": [],
   "Louisiana": [],
   "Maine": [],
