@@ -27,7 +27,7 @@ const breweriesByState = {
   "Montana": [],
   "Nebraska": [],
   "Nevada": [],
-  "New Hampshire": ["Republic Brewing Company"],
+  "New Hampshire": ["Republic Brewing Company","White Mountain Brewing Company"],
   "New Jersey": ["Bent Iron Brewing Co.","Bullhide Brewery","Seven Sons Brewing","Toms River Brewing"],
   "New Mexico": ["Rowley Farmhouse Ales"],
   "New York": ["Apex Brewery","Catskill Brewery","Bitters & Bones","Dancing Grain Farm Brewery","Gardiner Brewing Company","Simple Brewing","Singlecut Beersmiths","Six Harbors Brewimg Company","South Shore Craft Brewery","Take Two Brewery","The Ridge West Seneca","Twisted Rail Brewing Company - Canandaigua","Twisted Rail Brewing Company - Geneva","Twisted Rail Brewing Company - Honeoye","Twisted Rail Brewing Company - Manchester"],
