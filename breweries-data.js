@@ -25,7 +25,7 @@ const breweriesByState = {
   "Mississippi": [],
   "Missouri": [],
   "Montana": [],
-  "Nebraska": [],
+  "Nebraska": ["Boss City Brewing Co."],
   "Nevada": [],
   "New Hampshire": ["Republic Brewing Company","White Mountain Brewing Company"],
   "New Jersey": ["Bent Iron Brewing Co.","Bullhide Brewery","Seven Sons Brewing","Toms River Brewing"],
