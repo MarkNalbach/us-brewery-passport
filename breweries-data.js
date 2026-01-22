@@ -17,7 +17,7 @@ const breweriesByState = {
   "Kansas": ["Force of Nature Brewing"],
   "Kentucky": [],
   "Louisiana": [],
-  "Maine": [],
+  "Maine": ["Rail Yard Brewing & Rusty Rail Taproom","Two Knights Brewing Co. (TKB)"],
   "Maryland": [],
   "Massachusetts": ["Fieldcrest Brewing Company","Vanished Valley Brewing"],
   "Michigan": ["Austin Brothers Beer Co.","ConfluxCity Brewing Company","HomeGrown Brew Co","Lansing Brewing Company","Upper Peninsula Brewing Company"],
