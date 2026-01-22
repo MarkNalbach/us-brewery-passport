@@ -5,7 +5,7 @@ const breweriesByState = {
   "Arkansas": ["Southern Tail Brewing"],
   "California": ["All Points Brewing Co.","AudioGraph Beer Co.","Backyard Brewery","Farmers Brewing Co - Chico","Farmers Brewing Co - Princeton","Lincoln Beer Company","Oak and Otter Brewing Co.","Porchlight Brewing Company","Strum Brewing Company","TapRoom Beer Co.","The Keg Stand Brewing Co."],
   "Colorado": ["Busey Brews Smokehouse & Brewery","Grimm Brothers","Otherwise Brewing","Peculier Brewing Co","Salida Brewing Company","Wanderment Brewing","Westminster Brewing Company"],
-  "Connecticut": ["Twelvenote Brew Co"],
+  "Connecticut": ["Hops on the Hill Brewery","Twelvenote Brew Co"],
   "Delaware": [],
   "Florida": ["Lake Tribe Brewing","Mocama Beer Company"],
   "Georgia": ["Six Bridges Brewing - Johns Creek","Six Bridges Brewing - Milton"],
