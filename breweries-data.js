@@ -42,7 +42,7 @@ const breweriesByState = {
   "South Dakota": [],
   "Tennessee": ["Cedar Glade Brews","Soul & Spirits Brewery","Twisted Copper Brewing Company - Columbia","Twisted Copper Brewing Company - Mt. Pleasant"],
   "Texas": ["Bankhead Brewpub - Farmers Branch","Bankhead Brewpub - Rowlett","Cactus Land Brewing Co.","Celestial Beerworks","Dr. Jeckyll's Beer Lab","Forney Brewing Company","Highway 71 Brewing"],
-  "Utah": [],
+  "Utah": ["Hopkins Brewing Company"],
   "Vermont": [],
   "Virginia": ["Chef Life Brewery","Rockfish Brewing Company"],
   "Washington": ["Bardic Brewing and Cider - Spokane","Bardic Brewing and Cider - Spokane Valley"],
