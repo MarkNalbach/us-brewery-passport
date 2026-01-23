@@ -19,7 +19,7 @@ const breweriesByState = {
   "Louisiana": [],
   "Maine": ["Rail Yard Brewing & Rusty Rail Taproom","Two Knights Brewing Co. (TKB)"],
   "Maryland": [],
-  "Massachusetts": ["Fieldcrest Brewing Company","Vanished Valley Brewing"],
+  "Massachusetts": ["Arcpoint Brewing Company","Fieldcrest Brewing Company","Vanished Valley Brewing"],
   "Michigan": ["Austin Brothers Beer Co.","ConfluxCity Brewing Company","HomeGrown Brew Co","Lansing Brewing Company","Upper Peninsula Brewing Company"],
   "Minnesota": ["August Schell Brewing Company","Talking Waters Brewing Co."],
   "Mississippi": [],
