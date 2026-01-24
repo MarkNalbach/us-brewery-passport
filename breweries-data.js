@@ -7,7 +7,7 @@ const breweriesByState = {
   "Colorado": ["Busey Brews Smokehouse & Brewery","Grimm Brothers","Otherwise Brewing","Peculier Brewing Co","Salida Brewing Company","San Luis Valley Brewing Company","Wanderment Brewing","Westminster Brewing Company"],
   "Connecticut": ["Hops on the Hill Brewery","Twelvenote Brew Co"],
   "Delaware": [],
-  "Florida": ["Lake Tribe Brewing","Mocama Beer Company"],
+  "Florida": ["GREAT CHICAGO FIRE BREWERY","Lake Tribe Brewing","Mocama Beer Company"],
   "Georgia": ["Six Bridges Brewing - Johns Creek","Six Bridges Brewing - Milton"],
   "Hawaii": [],
   "Idaho": ["Timber Town Beer Company"],
