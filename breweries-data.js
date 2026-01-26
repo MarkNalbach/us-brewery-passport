@@ -47,6 +47,6 @@ const breweriesByState = {
   "Virginia": ["Chef Life Brewery","Rockfish Brewing Company"],
   "Washington": ["Bardic Brewing and Cider - Spokane","Bardic Brewing and Cider - Spokane Valley"],
   "West Virginia": [],
-  "Wisconsin": ["Duesterbeck's Brewing Company","Fifth Ward Brewing Company","Fond du Lac Beer Company","Lakefront Brewery","Herbiery Brewing","Stubborn Brothers Brewery","Stillmank Brewing Co."],
+  "Wisconsin": ["Duesterbeck's Brewing Company","Fifth Ward Brewing Company","Fond du Lac Beer Company","Lakefront Brewery","Herbiery Brewing","Stubborn Brothers Brewery","Stillmank Brewing Co.","The Grumpy Troll"],
   "Wyoming": []
 };
