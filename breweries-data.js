@@ -11,7 +11,7 @@ const breweriesByState = {
   "Georgia": ["Six Bridges Brewing - Johns Creek","Six Bridges Brewing - Milton"],
   "Hawaii": [],
   "Idaho": ["Timber Town Beer Company"],
-  "Illinois": ["Cary Alehouse & Brewing Company","Off Hours Beer Co.","Soundgrowler Brewing Company"],
+  "Illinois": ["Cary Alehouse & Brewing Company","Off Hours Beer Co.","Riverlands Brewing Company","Soundgrowler Brewing Company"],
   "Indiana": [],
   "Iowa": ["Firetrucker Brewery"],
   "Kansas": ["Force of Nature Brewing"],
