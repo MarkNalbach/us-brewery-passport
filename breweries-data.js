@@ -23,7 +23,7 @@ const breweriesByState = {
   "Michigan": ["Austin Brothers Beer Co.","ConfluxCity Brewing Company","HomeGrown Brew Co","Lansing Brewing Company","Upper Peninsula Brewing Company"],
   "Minnesota": ["August Schell Brewing Company","Old No. 1 Brewhouse","Talking Waters Brewing Co."],
   "Mississippi": [],
-  "Missouri": ["Bluewood Brewing"],
+  "Missouri": ["Bluewood Brewing","Trail Stop Brewery"],
   "Montana": [],
   "Nebraska": ["Boss City Brewing Co."],
   "Nevada": ["Bad Beat Brewing"],
