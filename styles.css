@@ -812,3 +812,22 @@ select {
   font-size: 16px;
   background: white;
 }
+
+.form-row {
+  display: flex;
+  gap: 16px;
+  width: 100%;
+}
+
+.form-group {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Mobile fallback */
+@media (max-width: 600px) {
+  .form-row {
+    flex-direction: column;
+  }
+}
