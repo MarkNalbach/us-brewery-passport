@@ -21,7 +21,7 @@ const breweriesByState = {
   "Maryland": ["1623 Brewing Co."],
   "Massachusetts": ["Arcpoint Brewing Company","Fieldcrest Brewing Company","Vanished Valley Brewing"],
   "Michigan": ["Austin Brothers Beer Co.","ConfluxCity Brewing Company","HomeGrown Brew Co","Lansing Brewing Company","Upper Peninsula Brewing Company"],
-  "Minnesota": ["August Schell Brewing Company","Old No. 1 Brewhouse","Paddlefish Brewing Co.","Talking Waters Brewing Co."],
+  "Minnesota": ["August Schell Brewing Company","Hayes' Public House","Old No. 1 Brewhouse","Paddlefish Brewing Co.","Talking Waters Brewing Co."],
   "Mississippi": [],
   "Missouri": ["Bluewood Brewing","Trail Stop Brewery"],
   "Montana": [],
