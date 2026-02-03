@@ -38,7 +38,7 @@ const breweriesByState = {
   "Oregon": ["Vision Brewing Co. / FOB TAPROOM"],
   "Pennsylvania": ["Aviator Brew Hub","Cartesian Brewing","Rock God Brewing Co.","Rural City Beer Company","ShawneeCraft Brewing Company","Vault Brewing Co - Easton","Vault Brewing Co - Yardley","Vortex Brewing Company","Well Crafted Beer Co","Whiskers Brewing Inc"],
   "Rhode Island": ["Apponaug Brewing Company"],
-  "South Carolina": [],
+  "South Carolina": ["Angry Fish Brewing Company"],
   "South Dakota": [],
   "Tennessee": ["Cedar Glade Brews","Soul & Spirits Brewery","Twisted Copper Brewing Company - Columbia","Twisted Copper Brewing Company - Mt. Pleasant"],
   "Texas": ["Bankhead Brewpub - Farmers Branch","Bankhead Brewpub - Rowlett","Cactus Land Brewing Co.","Celestial Beerworks","Dr. Jeckyll's Beer Lab","Forney Brewing Company","Highway 71 Brewing"],
