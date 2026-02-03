@@ -831,3 +831,17 @@ select {
     flex-direction: column;
   }
 }
+
+.accordion-title {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.accordion-hint {
+  font-size: 12px;
+  font-weight: 400;
+  color: #777;
+  margin-top: 2px;
+}
+
