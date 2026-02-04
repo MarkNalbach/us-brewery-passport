@@ -13,7 +13,7 @@ const breweriesByState = {
   "Idaho": ["Timber Town Beer Company"],
   "Illinois": ["Cary Alehouse & Brewing Company","Off Hours Beer Co.","Riverlands Brewing Company","Soundgrowler Brewing Company"],
   "Indiana": [],
-  "Iowa": ["Firetrucker Brewery"],
+  "Iowa": ["Firetrucker Brewery","River Ridge Brewing"],
   "Kansas": ["Force of Nature Brewing"],
   "Kentucky": [],
   "Louisiana": [],
