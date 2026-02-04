@@ -15,7 +15,7 @@ const breweriesByState = {
   "Indiana": [],
   "Iowa": ["Firetrucker Brewery","River Ridge Brewing"],
   "Kansas": ["Force of Nature Brewing"],
-  "Kentucky": [],
+  "Kentucky": ["Versailles Brewing Company"],
   "Louisiana": [],
   "Maine": ["Rail Yard Brewing & Rusty Rail Taproom","Two Knights Brewing Co. (TKB)"],
   "Maryland": ["1623 Brewing Co."],
