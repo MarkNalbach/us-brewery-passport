@@ -10,7 +10,7 @@ const breweriesByState = {
   "Florida": ["Cayo Hueso Brewing","Coastal Dayz Brewery","GREAT CHICAGO FIRE BREWERY","Lake Tribe Brewing","Mocama Beer Company"],
   "Georgia": ["Six Bridges Brewing - Johns Creek","Six Bridges Brewing - Milton"],
   "Hawaii": [],
-  "Idaho": ["Timber Town Beer Company"],
+  "Idaho": ["Timber Town Beer Company","Two Saints Brewing Company"],
   "Illinois": ["Buffalo Creek Brewing","Cary Alehouse & Brewing Company","Nik & Ivy Brewing Company","Off Hours Beer Co.","Riverlands Brewing Company","Soundgrowler Brewing Company"],
   "Indiana": [],
   "Iowa": ["Firetrucker Brewery","River Ridge Brewing"],
