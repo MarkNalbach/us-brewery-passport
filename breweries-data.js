@@ -1,6 +1,6 @@
 const breweriesByState = {
   "Alabama": ["Birmingham District Brewing Company","Goat Island Brewing","Iron Hand Brewing, LLC"],
-  "Alaska": ["Southern Tail Brewing"],
+  "Alaska": [],
   "Arizona": ["Button Brew House"],
   "Arkansas": ["Southern Tail Brewing"],
   "California": ["All Points Brewing Co.","AudioGraph Beer Co.","Backyard Brewery","Farmers Brewing Co - Chico","Farmers Brewing Co - Princeton","Lincoln Beer Company","New Glory Craft Brewery","Noble Ale Works","Oak and Otter Brewing Co.","Porchlight Brewing Company","Protector Brewery","Protector Brewery Hide Site","Strum Brewing Company","TapRoom Beer Co.","The Brewhouse","The Keg Stand Brewing Co."],
