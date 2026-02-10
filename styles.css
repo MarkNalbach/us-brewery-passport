@@ -847,6 +847,7 @@ select {
 
 .download-cta {
   text-align: center;
+  align-items: center; 
   background: #f7f7f7;
   border: 1px solid #e5e5e5;
   padding: 16px;
