@@ -14,7 +14,7 @@ const breweriesByState = {
   "Illinois": ["Buffalo Creek Brewing","Cary Alehouse & Brewing Company","Nik & Ivy Brewing Company","Off Hours Beer Co.","Riverlands Brewing Company","Soundgrowler Brewing Company"],
   "Indiana": [],
   "Iowa": ["Firetrucker Brewery","River Ridge Brewing"],
-  "Kansas": ["Force of Nature Brewing"],
+  "Kansas": ["ExBEERiment Brewing","Force of Nature Brewing"],
   "Kentucky": ["Versailles Brewing Company"],
   "Louisiana": [],
   "Maine": ["Rail Yard Brewing & Rusty Rail Taproom","Two Knights Brewing Co. (TKB)"],
