@@ -28,7 +28,7 @@ const breweriesByState = {
   "Nebraska": ["Boss City Brewing Co."],
   "Nevada": ["Bad Beat Brewing"],
   "New Hampshire": ["Republic Brewing Company","White Mountain Brewing Company"],
-  "New Jersey": ["Bent Iron Brewing Co.","Bullhide Brewery","Seven Sons Brewing","Toms River Brewing"],
+  "New Jersey": ["Bent Iron Brewing Co.","Bullhide Brewery","Raccoon Pubhaus - Swedesboro Brewing Company","Raccoon Taproom - Swedesboro Brewing Company","Seven Sons Brewing","Swedesboro Brewing Company","Toms River Brewing"],
   "New Mexico": ["Rowley Farmhouse Ales"],
   "New York": ["Abandon Brewing Company","Active Ingredient Brewing Company","Apex Brewery","Battle Hill Brewing Company","Catskill Brewery","Bitters & Bones","Dancing Grain Farm Brewery","Gardiner Brewing Company","Simple Brewing","Singlecut Beersmiths","Six Harbors Brewimg Company","South Shore Craft Brewery","Take Two Brewery","The Ridge West Seneca","Twisted Rail Brewing Company - Canandaigua","Twisted Rail Brewing Company - Geneva","Twisted Rail Brewing Company - Honeoye","Twisted Rail Brewing Company - Manchester"],
   "North Carolina": ["Eleven Lakes Brewing Company","Flying Bull Restaurant and Brewery","Flying Bull Taproom and Coffee Bar","NC Beer Factory","Red Buffalo Brewing Company"],
