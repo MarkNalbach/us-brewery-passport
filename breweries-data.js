@@ -24,7 +24,7 @@ const breweriesByState = {
   "Minnesota": ["August Schell Brewing Company","Hayes' Public House","Old No. 1 Brewhouse","Paddlefish Brewing Co.","Talking Waters Brewing Co."],
   "Mississippi": [],
   "Missouri": ["Bluewood Brewing","Trail Stop Brewery"],
-  "Montana": ["FLATHEAD LAKE BREWING COMPANY PUBHOUSE"],
+  "Montana": ["FLATHEAD LAKE BREWING COMPANY PUBHOUSE","Outlaw Brewing"],
   "Nebraska": ["Boss City Brewing Co."],
   "Nevada": ["Bad Beat Brewing"],
   "New Hampshire": ["Republic Brewing Company","White Mountain Brewing Company"],
