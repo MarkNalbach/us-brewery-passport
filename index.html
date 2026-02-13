@@ -299,40 +299,85 @@
 <script>
   let ytPlayer;
   let stopTimer;
+  const VIDEO_ID = "M0Q5QvIyd3c";
 
   function onYouTubeIframeAPIReady() {
     ytPlayer = new YT.Player("yt-player", {
-      videoId: "M0Q5QvIyd3c",
+      videoId: VIDEO_ID,
       playerVars: {
         rel: 0,
         modestbranding: 1,
         playsinline: 1
       },
       events: {
+        onReady: () => {
+          // Park on the first frame (no autoplay)
+          ytPlayer.cueVideoById(VIDEO_ID, 0);
+          bindAccordionReset();
+        },
         onStateChange: onYTStateChange
       }
     });
   }
 
+  function resetToStart() {
+    if (!ytPlayer) return;
+
+    if (stopTimer) {
+      clearInterval(stopTimer);
+      stopTimer = null;
+    }
+
+    // Stop, then FORCE desktop to repaint the first frame
+    ytPlayer.stopVideo();
+    setTimeout(() => {
+      ytPlayer.cueVideoById(VIDEO_ID, 0);
+      ytPlayer.pauseVideo();
+    }, 50);
+  }
+
   function onYTStateChange(event) {
-    // Clear any prior timer
     if (stopTimer) clearInterval(stopTimer);
 
-    // When playing, poll time and stop just before end
     if (event.data === YT.PlayerState.PLAYING) {
       stopTimer = setInterval(() => {
         const duration = ytPlayer.getDuration();
         const current = ytPlayer.getCurrentTime();
 
-        // Stop ~0.8s before the end to avoid end screen
+        // Stop ~0.8s before the end to avoid end screens
         if (duration && duration - current <= 0.8) {
-          ytPlayer.stopVideo(); // resets to the first frame / poster in the player
-          clearInterval(stopTimer);
+          resetToStart();
         }
       }, 200);
     }
+
+    // Fallback if it reaches the end
+    if (event.data === YT.PlayerState.ENDED) {
+      resetToStart();
+    }
+  }
+
+  function bindAccordionReset() {
+    const btn = document.querySelector(".redemption-accordion-btn");
+    const content = document.querySelector(".redemption-accordion-content");
+    if (!btn || !content) return;
+
+    // We don't know your main.js toggle logic, so we detect open/closed by height.
+    // After click, wait a tick, then if it's closed, reset.
+    btn.addEventListener("click", () => {
+      setTimeout(() => {
+        const isOpen = content.scrollHeight > 0 && content.offsetHeight > 0;
+        if (!isOpen) {
+          resetToStart();
+        } else {
+          // Optional: on open, cue to start (prevents showing end frame)
+          ytPlayer.cueVideoById(VIDEO_ID, 0);
+        }
+      }, 150);
+    });
   }
 </script>
+
 
 </body>
 </html>
