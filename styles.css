@@ -875,13 +875,22 @@ select {
 }
 
 .video-embed {
+  position: relative;
   width: 100%;
-  max-width: 900px;       /* optional — keeps it from getting too wide on large screens */
-  margin: 20px auto 10px; /* auto centers it */
-  aspect-ratio: 16 / 9;   /* modern cleaner way */
+  aspect-ratio: 16 / 9;
+  margin: 16px auto 10px;
   border-radius: 10px;
   overflow: hidden;
   background: #000;
+}
+
+/* The API creates an iframe inside #yt-player */
+#yt-player,
+#yt-player iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
 }
 
 .video-embed iframe {
