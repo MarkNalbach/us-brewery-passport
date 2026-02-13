@@ -29,14 +29,17 @@
 
   <div class="accordion-content redemption-accordion-content">
     <div class="video-embed">
-      <iframe
+      <div class="video-embed">
+        <div id="yt-player"></div>
+      </div>
+      <!-- <iframe
         src="https://www.youtube.com/embed/M0Q5QvIyd3c?si=FBADm_e7R4voUXZn?rel=0&modestbranding=1"
         title="Redemption Demo"
         frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         referrerpolicy="strict-origin-when-cross-origin"
         allowfullscreen
-      ></iframe>
+      ></iframe> -->
     </div>
 
     <!-- Space for text under the video -->
@@ -279,5 +282,44 @@
   </div>
 
   <script type="module" src="main.js"></script>
+  <script src="https://www.youtube.com/iframe_api"></script>
+<script>
+  let ytPlayer;
+  let stopTimer;
+
+  function onYouTubeIframeAPIReady() {
+    ytPlayer = new YT.Player("yt-player", {
+      videoId: "M0Q5QvIyd3c",
+      playerVars: {
+        rel: 0,
+        modestbranding: 1,
+        playsinline: 1
+      },
+      events: {
+        onStateChange: onYTStateChange
+      }
+    });
+  }
+
+  function onYTStateChange(event) {
+    // Clear any prior timer
+    if (stopTimer) clearInterval(stopTimer);
+
+    // When playing, poll time and stop just before end
+    if (event.data === YT.PlayerState.PLAYING) {
+      stopTimer = setInterval(() => {
+        const duration = ytPlayer.getDuration();
+        const current = ytPlayer.getCurrentTime();
+
+        // Stop ~0.8s before the end to avoid end screen
+        if (duration && duration - current <= 0.8) {
+          ytPlayer.stopVideo(); // resets to the first frame / poster in the player
+          clearInterval(stopTimer);
+        }
+      }, 200);
+    }
+  }
+</script>
+
 </body>
 </html>
