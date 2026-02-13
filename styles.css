@@ -875,22 +875,22 @@ select {
 }
 
 .video-embed {
-  position: relative;
   width: 100%;
-  padding-top: 56.25%; /* 16:9 */
-  margin: 16px 0 10px;
+  max-width: 900px;       /* optional — keeps it from getting too wide on large screens */
+  margin: 20px auto 10px; /* auto centers it */
+  aspect-ratio: 16 / 9;   /* modern cleaner way */
   border-radius: 10px;
   overflow: hidden;
   background: #000;
 }
 
 .video-embed iframe {
-  position: absolute;
-  inset: 0;
   width: 100%;
   height: 100%;
   border: 0;
+  display: block;
 }
+
 
 .video-text {
   margin-top: 10px;
