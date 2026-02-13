@@ -905,3 +905,28 @@ select {
   margin-top: 10px;
 }
 
+.video-bullets {
+  margin: 16px 0 12px;
+  padding-left: 0;
+  list-style: none;
+}
+
+.video-bullets li {
+  position: relative;
+  padding-left: 28px;
+  margin-bottom: 10px;
+  line-height: 1.5;
+  color: #333;
+}
+
+/* Custom blue bullet */
+.video-bullets li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #1a73e8;
+  font-weight: bold;
+}
+
+
