@@ -33,7 +33,7 @@ const breweriesByState = {
   "New York": ["Abandon Brewing Company","Active Ingredient Brewing Company","Apex Brewery","Battle Hill Brewing Company","Catskill Brewery","Bitters & Bones","Dancing Grain Farm Brewery","Gardiner Brewing Company","Simple Brewing","Singlecut Beersmiths","Six Harbors Brewimg Company","South Shore Craft Brewery","Take Two Brewery","The Ridge West Seneca","Twisted Rail Brewing Company - Canandaigua","Twisted Rail Brewing Company - Geneva","Twisted Rail Brewing Company - Honeoye","Twisted Rail Brewing Company - Manchester"],
   "North Carolina": ["Eleven Lakes Brewing Company","Flying Bull Restaurant and Brewery","Flying Bull Taproom and Coffee Bar","NC Beer Factory","Red Buffalo Brewing Company"],
   "North Dakota": ["Black Paws Brewing Company","Dialectic Brewing & Ciderhouse"],
-  "Ohio": ["Brighten Brew Co.","Combustion Brewery & Taproom - Clintonville","Combustion Brewery & Taproom - Pickerington","Hearth Brewing","Honest Friend Brewing","North High Brewing Dublin","North High Brewing Westerville","Twin Oast Brewing"],
+  "Ohio": ["Brighten Brew Co.","Combustion Brewery & Taproom - Clintonville","Combustion Brewery & Taproom - Pickerington","Hearth Brewing","Honest Friend Brewing","North High Brewing Dublin","North High Brewing Westerville","Sons of Toil Brewing LLC","Twin Oast Brewing"],
   "Oklahoma": ["Guthrie Brewing Company","Stonecloud Brewing"],
   "Oregon": ["Vision Brewing Co. / FOB TAPROOM"],
   "Pennsylvania": ["Aviator Brew Hub","Cartesian Brewing","Rock God Brewing Co.","Rural City Beer Company","ShawneeCraft Brewing Company","Vault Brewing Co - Easton","Vault Brewing Co - Yardley","Vortex Brewing Company","Well Crafted Beer Co","Whiskers Brewing Inc"],
