@@ -19,6 +19,16 @@ body {
     margin-bottom: 10px;
   }
 
+.brewery-note{
+  text-align:center;
+  max-width: 780px;
+  margin: 12px auto 0;
+  font-size: 14px;
+  line-height: 1.4;
+  color: #444;
+}
+.brewery-note strong{ color:#111; }
+
 .container {
   max-width: 800px;
   background: #f9f5ec;
