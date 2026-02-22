@@ -231,12 +231,9 @@
   let ytPlayer;
   let stopTimer;
 
-  const VIDEO_ID = "M0Q5QvIyd3c";
-  const STOP_BEFORE_END_SEC = 1.0;
-
   function onYouTubeIframeAPIReady() {
     ytPlayer = new YT.Player("yt-player", {
-      videoId: VIDEO_ID,
+      videoId: "M0Q5QvIyd3c",
       playerVars: {
         rel: 0,
         modestbranding: 1,
@@ -245,57 +242,48 @@
       events: {
         onReady: () => {
           bindRedemptionAccordionReset();
-          bindRepaintOnOpen(); // optional but helps on some reloads
+          bindRepaintOnOpen();
         },
         onStateChange: onYTStateChange
       }
     });
   }
 
-  // ✅ Clean reset: returns to the initial “preview thumbnail” state with no spinner.
-  function resetToPreview() {
+  // ✅ Reverted behavior, but no spinner:
+  // IMPORTANT: do NOT call stopVideo()
+  function resetToStart() {
     if (!ytPlayer) return;
-
     if (stopTimer) {
       clearInterval(stopTimer);
       stopTimer = null;
     }
 
     try {
-      // cueVideoById restores the preview-style state (no loading spinner)
-      ytPlayer.cueVideoById(VIDEO_ID);
+      ytPlayer.pauseVideo();
+      ytPlayer.seekTo(0, true);
     } catch (e) {}
   }
 
   function onYTStateChange(event) {
-    if (!ytPlayer) return;
+    if (stopTimer) clearInterval(stopTimer);
 
-    // Clear any previous polling timer
-    if (stopTimer) {
-      clearInterval(stopTimer);
-      stopTimer = null;
-    }
-
-    // When playing, poll time and stop ~1s before end
     if (event.data === YT.PlayerState.PLAYING) {
       stopTimer = setInterval(() => {
-        try {
-          const duration = ytPlayer.getDuration();
-          const current = ytPlayer.getCurrentTime();
-          if (duration && duration - current <= STOP_BEFORE_END_SEC) {
-            resetToPreview();
-          }
-        } catch (e) {}
+        const duration = ytPlayer.getDuration();
+        const current = ytPlayer.getCurrentTime();
+
+        // Stop ~0.8s before end to avoid end screen
+        if (duration && duration - current <= 0.8) {
+          resetToStart();
+        }
       }, 200);
     }
 
-    // Fallback: if it ever reaches ENDED, reset immediately
     if (event.data === YT.PlayerState.ENDED) {
-      resetToPreview();
+      resetToStart();
     }
   }
 
-  // Reset when the accordion closes
   function bindRedemptionAccordionReset() {
     const btn = document.querySelector(".redemption-accordion-btn");
     const content = document.querySelector(".redemption-accordion-content");
@@ -308,12 +296,11 @@
         const isClosed =
           display === "none" || maxH === "0px" || content.offsetHeight === 0;
 
-        if (isClosed) resetToPreview();
+        if (isClosed) resetToStart();
       }, 250);
     });
   }
 
-  // Optional: helps if an iframe ever paints black after reload
   function bindRepaintOnOpen() {
     const btn = document.querySelector(".redemption-accordion-btn");
     const content = document.querySelector(".redemption-accordion-content");
