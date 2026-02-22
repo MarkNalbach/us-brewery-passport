@@ -227,22 +227,29 @@
 
   <!-- MAIN SITE JS -->
   <script src="main.js"></script>
-  
-  <script>
+<script src="https://www.youtube.com/iframe_api"></script>
+
+<script>
   let ytPlayer;
   let stopTimer;
+  let ytApiReady = false;
 
+  // called by the YouTube API when it's ready
   function onYouTubeIframeAPIReady() {
+    ytApiReady = true;
+  }
+
+  function ensurePlayer() {
+    // already created
+    if (ytPlayer || !ytApiReady) return;
+
     ytPlayer = new YT.Player("yt-player", {
       videoId: "M0Q5QvIyd3c",
-      playerVars: {
-        rel: 0,
-        modestbranding: 1,
-        playsinline: 1
-      },
+      playerVars: { rel: 0, modestbranding: 1, playsinline: 1 },
       events: {
         onReady: () => {
-          bindRedemptionAccordionReset();
+          // force a resize/reflow after player mounts
+          setTimeout(() => ytPlayer && ytPlayer.setSize && ytPlayer.setSize("100%", "100%"), 0);
         },
         onStateChange: onYTStateChange
       }
@@ -255,8 +262,10 @@
 
     ytPlayer.stopVideo();
     setTimeout(() => {
-      ytPlayer.seekTo(0, true);
-      ytPlayer.pauseVideo();
+      try {
+        ytPlayer.seekTo(0, true);
+        ytPlayer.pauseVideo();
+      } catch (e) {}
     }, 50);
   }
 
@@ -267,35 +276,43 @@
       stopTimer = setInterval(() => {
         const duration = ytPlayer.getDuration();
         const current = ytPlayer.getCurrentTime();
-
-        if (duration && duration - current <= 0.8) {
-          resetToStart();
-        }
+        if (duration && duration - current <= 0.8) resetToStart();
       }, 200);
     }
 
-    if (event.data === YT.PlayerState.ENDED) {
-      resetToStart();
-    }
+    if (event.data === YT.PlayerState.ENDED) resetToStart();
   }
 
-  function bindRedemptionAccordionReset() {
+  // Create player only when accordion opens, and nudge it to repaint
+  (function bindRedemptionAccordion() {
     const btn = document.querySelector(".redemption-accordion-btn");
     const content = document.querySelector(".redemption-accordion-content");
     if (!btn || !content) return;
 
     btn.addEventListener("click", () => {
       setTimeout(() => {
-        const display = getComputedStyle(content).display;
         const maxH = getComputedStyle(content).maxHeight;
-        const isClosed =
-          display === "none" || maxH === "0px" || content.offsetHeight === 0;
+        const isOpen = maxH !== "0px" && content.offsetHeight > 0;
 
-        if (isClosed) resetToStart();
+        if (isOpen) {
+          ensurePlayer();
+
+          // repaint fix: YouTube iframes sometimes need a resize tick after becoming visible
+          setTimeout(() => {
+            if (ytPlayer && ytPlayer.getIframe) {
+              const iframe = ytPlayer.getIframe();
+              iframe.style.display = "none";
+              // force reflow
+              void iframe.offsetHeight;
+              iframe.style.display = "";
+            }
+          }, 50);
+        } else {
+          resetToStart();
+        }
       }, 250);
     });
-  }
+  })();
 </script>
-  <script src="https://www.youtube.com/iframe_api"></script>
 </body>
 </html>
