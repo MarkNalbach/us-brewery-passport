@@ -236,5 +236,73 @@
   <!-- MAIN SITE JS -->
   <script src="main.js"></script>
   <script src="https://www.youtube.com/iframe_api"></script>
+  <script>
+  let ytPlayer;
+  let stopTimer;
+
+  function onYouTubeIframeAPIReady() {
+    ytPlayer = new YT.Player("yt-player", {
+      videoId: "M0Q5QvIyd3c",
+      playerVars: {
+        rel: 0,
+        modestbranding: 1,
+        playsinline: 1
+      },
+      events: {
+        onReady: () => {
+          bindRedemptionAccordionReset();
+        },
+        onStateChange: onYTStateChange
+      }
+    });
+  }
+
+  function resetToStart() {
+    if (!ytPlayer) return;
+    if (stopTimer) clearInterval(stopTimer);
+
+    ytPlayer.stopVideo();
+    setTimeout(() => {
+      ytPlayer.seekTo(0, true);
+      ytPlayer.pauseVideo();
+    }, 50);
+  }
+
+  function onYTStateChange(event) {
+    if (stopTimer) clearInterval(stopTimer);
+
+    if (event.data === YT.PlayerState.PLAYING) {
+      stopTimer = setInterval(() => {
+        const duration = ytPlayer.getDuration();
+        const current = ytPlayer.getCurrentTime();
+
+        if (duration && duration - current <= 0.8) {
+          resetToStart();
+        }
+      }, 200);
+    }
+
+    if (event.data === YT.PlayerState.ENDED) {
+      resetToStart();
+    }
+  }
+
+  function bindRedemptionAccordionReset() {
+    const btn = document.querySelector(".redemption-accordion-btn");
+    const content = document.querySelector(".redemption-accordion-content");
+    if (!btn || !content) return;
+
+    btn.addEventListener("click", () => {
+      setTimeout(() => {
+        const display = getComputedStyle(content).display;
+        const maxH = getComputedStyle(content).maxHeight;
+        const isClosed =
+          display === "none" || maxH === "0px" || content.offsetHeight === 0;
+
+        if (isClosed) resetToStart();
+      }, 250);
+    });
+  }
+</script>
 </body>
 </html>
