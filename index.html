@@ -310,36 +310,38 @@
   <script type="module" src="main.js"></script>
   <script src="https://www.youtube.com/iframe_api"></script>
 <script>
-  let ytPlayer;
-  let stopTimer;
+  let ytPlayer = null;
+  let ytApiReady = false;
+  let stopTimer = null;
 
   function onYouTubeIframeAPIReady() {
+    ytApiReady = true;
+  }
+
+  function createPlayerIfNeeded() {
+    if (!ytApiReady || ytPlayer) return;
+
     ytPlayer = new YT.Player("yt-player", {
       videoId: "M0Q5QvIyd3c",
-      playerVars: {
-        rel: 0,
-        modestbranding: 1,
-        playsinline: 1
-      },
-      events: {
-        onReady: () => {
-          // Hook accordion AFTER player exists
-          bindRedemptionAccordionReset();
-        },
-        onStateChange: onYTStateChange
-      }
+      playerVars: { rel: 0, modestbranding: 1, playsinline: 1 },
+      events: { onStateChange: onYTStateChange }
     });
+
+    // repaint nudge (helps with “black” render)
+    setTimeout(() => {
+      try {
+        const iframe = ytPlayer.getIframe();
+        iframe.style.display = "none";
+        void iframe.offsetHeight; // force reflow
+        iframe.style.display = "";
+      } catch (e) {}
+    }, 50);
   }
 
   function resetToStart() {
     if (!ytPlayer) return;
-    if (stopTimer) {
-      clearInterval(stopTimer);
-      stopTimer = null;
-    }
+    if (stopTimer) clearInterval(stopTimer);
 
-    // Stop playback and force time back to 0.
-    // (More reliable than cueVideoById in some layouts)
     ytPlayer.stopVideo();
     setTimeout(() => {
       try {
@@ -356,37 +358,29 @@
       stopTimer = setInterval(() => {
         const duration = ytPlayer.getDuration();
         const current = ytPlayer.getCurrentTime();
-
-        // Stop ~0.8s before the end to avoid end screen
-        if (duration && duration - current <= 0.8) {
-          resetToStart();
-        }
+        if (duration && duration - current <= 0.8) resetToStart();
       }, 200);
     }
 
-    // Fallback
-    if (event.data === YT.PlayerState.ENDED) {
-      resetToStart();
-    }
+    if (event.data === YT.PlayerState.ENDED) resetToStart();
   }
 
-  function bindRedemptionAccordionReset() {
+  // Bind to accordion button: create player ONLY when open
+  window.addEventListener("DOMContentLoaded", () => {
     const btn = document.querySelector(".redemption-accordion-btn");
     const content = document.querySelector(".redemption-accordion-content");
     if (!btn || !content) return;
 
-    // After the click toggles the accordion (your main.js does this),
-    // check whether the content is closed; if closed, reset the video.
     btn.addEventListener("click", () => {
       setTimeout(() => {
-        const display = getComputedStyle(content).display;
         const maxH = getComputedStyle(content).maxHeight;
-        const isClosed = display === "none" || maxH === "0px" || content.offsetHeight === 0;
+        const isOpen = maxH !== "0px" && content.offsetHeight > 0;
 
-        if (isClosed) resetToStart();
+        if (isOpen) createPlayerIfNeeded();
+        else resetToStart();
       }, 250);
     });
-  }
+  });
 </script>
 
 
