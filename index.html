@@ -302,12 +302,23 @@
   <script type="module" src="main.js"></script>
   <script src="https://www.youtube.com/iframe_api"></script>
 <script>
-  let ytApiReady = false;
   let ytPlayer = null;
   let stopTimer = null;
+  let ytReadyInterval = null;
 
-  function onYouTubeIframeAPIReady() {
-    ytApiReady = true;
+  function waitForYT(cb) {
+    if (window.YT && YT.Player) return cb();
+
+    // prevent stacking multiple intervals if this runs twice
+    if (ytReadyInterval) return;
+
+    ytReadyInterval = setInterval(() => {
+      if (window.YT && YT.Player) {
+        clearInterval(ytReadyInterval);
+        ytReadyInterval = null;
+        cb();
+      }
+    }, 50);
   }
 
   function destroyPlayer() {
@@ -320,25 +331,28 @@
     }
     ytPlayer = null;
 
-    // Re-create the container div so YouTube always gets a fresh mount point
     const host = document.getElementById("yt-player");
     if (host) host.replaceWith(Object.assign(document.createElement("div"), { id: "yt-player" }));
   }
 
   function createPlayer() {
-    if (!ytApiReady || ytPlayer) return;
+    if (ytPlayer) return;
 
     ytPlayer = new YT.Player("yt-player", {
       videoId: "M0Q5QvIyd3c",
-      playerVars: {
-        rel: 0,
-        modestbranding: 1,
-        playsinline: 1
-      },
-      events: {
-        onStateChange: onYTStateChange
-      }
+      playerVars: { rel: 0, modestbranding: 1, playsinline: 1 },
+      events: { onStateChange: onYTStateChange }
     });
+
+    // repaint nudge
+    setTimeout(() => {
+      try {
+        const iframe = ytPlayer.getIframe();
+        iframe.style.visibility = "hidden";
+        void iframe.offsetHeight;
+        iframe.style.visibility = "visible";
+      } catch (e) {}
+    }, 80);
   }
 
   function resetToStart() {
@@ -368,12 +382,12 @@
     if (event.data === YT.PlayerState.ENDED) resetToStart();
   }
 
-  function openCheck(contentEl) {
-    // Works regardless of whether you use display:none, max-height, visibility, etc.
-    const rect = contentEl.getBoundingClientRect();
-    const visible = rect.height > 5 && rect.width > 5;
-    const notDisplayNone = getComputedStyle(contentEl).display !== "none";
-    return visible && notDisplayNone;
+  function isActuallyVisible(el) {
+    if (!el) return false;
+    const style = getComputedStyle(el);
+    if (style.display === "none" || style.visibility === "hidden") return false;
+    const rect = el.getBoundingClientRect();
+    return rect.width > 20 && rect.height > 20;
   }
 
   window.addEventListener("DOMContentLoaded", () => {
@@ -382,18 +396,20 @@
     if (!btn || !content) return;
 
     btn.addEventListener("click", () => {
-      // Wait longer than your accordion animation/toggle
+      // wait for your accordion animation / max-height transition
       setTimeout(() => {
-        const isOpen = openCheck(content);
+        const open = isActuallyVisible(content);
+        if (!open) {
+          resetToStart();
+          return;
+        }
 
-        if (isOpen) {
-          // 🔥 Key: always remount fresh when opening to avoid black iframe
+        waitForYT(() => {
+          // always remount fresh on open
           destroyPlayer();
           createPlayer();
-        } else {
-          resetToStart();
-        }
-      }, 350);
+        });
+      }, 400);
     });
   });
 </script>
