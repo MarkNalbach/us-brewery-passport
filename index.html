@@ -299,60 +299,28 @@
     </form>
   </div>
 
-  <script src="main.js"></script>
-  <script src="https://www.youtube.com/iframe_api"></script>
+  <script type="module" src="main.js"></script>
+
 <script>
-  let ytPlayer = null;
-  let stopTimer = null;
-  let ytReadyInterval = null;
+  // define callback BEFORE loading the API script
+  let ytPlayer;
+  let stopTimer;
 
-  function waitForYT(cb) {
-    if (window.YT && YT.Player) return cb();
-
-    // prevent stacking multiple intervals if this runs twice
-    if (ytReadyInterval) return;
-
-    ytReadyInterval = setInterval(() => {
-      if (window.YT && YT.Player) {
-        clearInterval(ytReadyInterval);
-        ytReadyInterval = null;
-        cb();
-      }
-    }, 50);
-  }
-
-  function destroyPlayer() {
-    if (stopTimer) {
-      clearInterval(stopTimer);
-      stopTimer = null;
-    }
-    if (ytPlayer && typeof ytPlayer.destroy === "function") {
-      ytPlayer.destroy();
-    }
-    ytPlayer = null;
-
-    const host = document.getElementById("yt-player");
-    if (host) host.replaceWith(Object.assign(document.createElement("div"), { id: "yt-player" }));
-  }
-
-  function createPlayer() {
-    if (ytPlayer) return;
-
+  function onYouTubeIframeAPIReady() {
     ytPlayer = new YT.Player("yt-player", {
       videoId: "M0Q5QvIyd3c",
       playerVars: { rel: 0, modestbranding: 1, playsinline: 1 },
-      events: { onStateChange: onYTStateChange }
-    });
+      events: {
+        onReady: () => {
+          // optional: if you want to reset when closing
+          bindRedemptionAccordionReset();
 
-    // repaint nudge
-    setTimeout(() => {
-      try {
-        const iframe = ytPlayer.getIframe();
-        iframe.style.visibility = "hidden";
-        void iframe.offsetHeight;
-        iframe.style.visibility = "visible";
-      } catch (e) {}
-    }, 80);
+          // key: if accordion starts closed, create a repaint after first open
+          bindRepaintOnOpen();
+        },
+        onStateChange: onYTStateChange
+      }
+    });
   }
 
   function resetToStart() {
@@ -382,37 +350,51 @@
     if (event.data === YT.PlayerState.ENDED) resetToStart();
   }
 
-  function isActuallyVisible(el) {
-    if (!el) return false;
-    const style = getComputedStyle(el);
-    if (style.display === "none" || style.visibility === "hidden") return false;
-    const rect = el.getBoundingClientRect();
-    return rect.width > 20 && rect.height > 20;
-  }
-
-  window.addEventListener("DOMContentLoaded", () => {
+  function bindRedemptionAccordionReset() {
     const btn = document.querySelector(".redemption-accordion-btn");
     const content = document.querySelector(".redemption-accordion-content");
     if (!btn || !content) return;
 
     btn.addEventListener("click", () => {
-      // wait for your accordion animation / max-height transition
       setTimeout(() => {
-        const open = isActuallyVisible(content);
-        if (!open) {
-          resetToStart();
-          return;
-        }
+        const display = getComputedStyle(content).display;
+        const maxH = getComputedStyle(content).maxHeight;
+        const isClosed =
+          display === "none" || maxH === "0px" || content.offsetHeight === 0;
 
-        waitForYT(() => {
-          // always remount fresh on open
-          destroyPlayer();
-          createPlayer();
-        });
-      }, 400);
+        if (isClosed) resetToStart();
+      }, 250);
     });
-  });
+  }
+
+  // ✅ This is the “black screen on reload” fix:
+  // when it opens, force the iframe to repaint after it becomes visible.
+  function bindRepaintOnOpen() {
+    const btn = document.querySelector(".redemption-accordion-btn");
+    const content = document.querySelector(".redemption-accordion-content");
+    if (!btn || !content) return;
+
+    btn.addEventListener("click", () => {
+      setTimeout(() => {
+        const isOpen =
+          getComputedStyle(content).display !== "none" && content.offsetHeight > 0;
+
+        if (!isOpen || !ytPlayer || !ytPlayer.getIframe) return;
+
+        const iframe = ytPlayer.getIframe();
+
+        // repaint nudge (works better than display:none toggles)
+        iframe.style.transform = "translateZ(0)";
+        iframe.style.opacity = "0.99";
+        requestAnimationFrame(() => {
+          iframe.style.opacity = "";
+        });
+      }, 350);
+    });
+  }
 </script>
+
+<script src="https://www.youtube.com/iframe_api"></script>
 
 
 
