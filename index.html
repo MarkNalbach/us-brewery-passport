@@ -302,32 +302,43 @@
   <script type="module" src="main.js"></script>
   <script src="https://www.youtube.com/iframe_api"></script>
 <script>
-  let ytPlayer = null;
   let ytApiReady = false;
+  let ytPlayer = null;
   let stopTimer = null;
 
   function onYouTubeIframeAPIReady() {
     ytApiReady = true;
   }
 
-  function createPlayerIfNeeded() {
+  function destroyPlayer() {
+    if (stopTimer) {
+      clearInterval(stopTimer);
+      stopTimer = null;
+    }
+    if (ytPlayer && typeof ytPlayer.destroy === "function") {
+      ytPlayer.destroy();
+    }
+    ytPlayer = null;
+
+    // Re-create the container div so YouTube always gets a fresh mount point
+    const host = document.getElementById("yt-player");
+    if (host) host.replaceWith(Object.assign(document.createElement("div"), { id: "yt-player" }));
+  }
+
+  function createPlayer() {
     if (!ytApiReady || ytPlayer) return;
 
     ytPlayer = new YT.Player("yt-player", {
       videoId: "M0Q5QvIyd3c",
-      playerVars: { rel: 0, modestbranding: 1, playsinline: 1 },
-      events: { onStateChange: onYTStateChange }
+      playerVars: {
+        rel: 0,
+        modestbranding: 1,
+        playsinline: 1
+      },
+      events: {
+        onStateChange: onYTStateChange
+      }
     });
-
-    // repaint nudge (helps with “black” render)
-    setTimeout(() => {
-      try {
-        const iframe = ytPlayer.getIframe();
-        iframe.style.display = "none";
-        void iframe.offsetHeight; // force reflow
-        iframe.style.display = "";
-      } catch (e) {}
-    }, 50);
   }
 
   function resetToStart() {
@@ -357,20 +368,32 @@
     if (event.data === YT.PlayerState.ENDED) resetToStart();
   }
 
-  // Bind to accordion button: create player ONLY when open
+  function openCheck(contentEl) {
+    // Works regardless of whether you use display:none, max-height, visibility, etc.
+    const rect = contentEl.getBoundingClientRect();
+    const visible = rect.height > 5 && rect.width > 5;
+    const notDisplayNone = getComputedStyle(contentEl).display !== "none";
+    return visible && notDisplayNone;
+  }
+
   window.addEventListener("DOMContentLoaded", () => {
     const btn = document.querySelector(".redemption-accordion-btn");
     const content = document.querySelector(".redemption-accordion-content");
     if (!btn || !content) return;
 
     btn.addEventListener("click", () => {
+      // Wait longer than your accordion animation/toggle
       setTimeout(() => {
-        const maxH = getComputedStyle(content).maxHeight;
-        const isOpen = maxH !== "0px" && content.offsetHeight > 0;
+        const isOpen = openCheck(content);
 
-        if (isOpen) createPlayerIfNeeded();
-        else resetToStart();
-      }, 250);
+        if (isOpen) {
+          // 🔥 Key: always remount fresh when opening to avoid black iframe
+          destroyPlayer();
+          createPlayer();
+        } else {
+          resetToStart();
+        }
+      }, 350);
     });
   });
 </script>
