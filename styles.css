@@ -9,7 +9,7 @@ body {
 
 .header {
     text-align: center;
-    padding: 40px 20px;
+    padding: 20px 20px;
     background: #101327;
     color: white;
   }
@@ -21,7 +21,7 @@ body {
 
 .store-buttons {
   text-align: center;
-  margin: 40px 0;
+  margin: 20px 0;
 }
 
 .store-availability {
