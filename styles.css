@@ -19,6 +19,35 @@ body {
     margin-bottom: 10px;
   }
 
+.store-buttons {
+  text-align: center;
+  margin: 40px 0;
+}
+
+.store-availability {
+  color: #ffffff;
+  font-size: 16px;
+  margin-bottom: 20px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+.store-badges {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.store-badge {
+  height: 55px;
+  transition: transform 0.2s ease;
+}
+
+.store-badge:hover {
+  transform: scale(1.05);
+}
+
 .brewery-note-wrap{
   max-width: 640px;        /* narrower than your main container */
   margin: 12px auto 18px;  /* centered, with spacing below */
