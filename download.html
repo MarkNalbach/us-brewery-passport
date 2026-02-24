@@ -24,8 +24,19 @@
       return /android/i.test(navigator.userAgent || "");
     }
     function isIOS() {
-      return /iPad|iPhone|iPod/.test(navigator.userAgent || "") ||
-        (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
+      const ua = navigator.userAgent || "";
+    
+      // True iPhone/iPod
+      if (/iPhone|iPod/i.test(ua)) return true;
+    
+      // iPadOS 13+ sometimes reports as MacIntel, so detect iPad by touch + no "Safari" desktop patterns
+      const isIpad =
+        /iPad/i.test(ua) ||
+        (navigator.platform === "MacIntel" &&
+          navigator.maxTouchPoints > 1 &&
+          /Mobile/i.test(ua)); // <-- key: iPadOS includes "Mobile" in UA, desktop Macs do not
+    
+      return isIpad;
     }
 
     // Auto-redirect only when links exist
