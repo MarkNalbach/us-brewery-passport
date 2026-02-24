@@ -30,23 +30,25 @@
 
     // Auto-redirect only when links exist
     window.addEventListener("DOMContentLoaded", () => {
-      const statusEl = document.getElementById("download-status");
-
-      if (isIOS() && IOS_URL) {
-        statusEl.textContent = "Sending you to the App Store…";
-        window.location.replace(IOS_URL);
-        return;
-      }
-
-      if (isAndroid() && ANDROID_URL) {
-        statusEl.textContent = "Sending you to Google Play…";
-        window.location.replace(ANDROID_URL);
-        return;
-      }
-
-      // No store links yet / desktop / unknown device
-      statusEl.textContent = "The app is launching February 2026. Check back here when it goes live.";
-    });
+    const statusEl = document.getElementById("download-status");
+    const buttonsEl = document.getElementById("download-buttons");
+  
+    if (isIOS()) {
+      statusEl.textContent = "Sending you to the App Store…";
+      window.location.replace(IOS_URL);
+      return;
+    }
+  
+    if (isAndroid()) {
+      statusEl.textContent = "Sending you to Google Play…";
+      window.location.replace(ANDROID_URL);
+      return;
+    }
+  
+    // Desktop or unknown device
+    statusEl.textContent = "Choose your device to download:";
+    if (buttonsEl) buttonsEl.style.display = "block";
+  });
   </script>
 </head>
 
@@ -58,9 +60,23 @@
   </header>
 
   <div class="container">
-    <p class="form-intro" style="text-align:center;">
-      This page will automatically send you to the correct app store once the download links are live.
+    <div id="download-buttons" style="display:none; text-align:center; margin-top:30px;">
+    <a href="https://apps.apple.com/us/app/us-brew-passport/id6756192953" 
+       class="download-btn" 
+       style="display:inline-block; margin:10px;">
+       Download on the App Store
+    </a>
+  
+    <a href="https://play.google.com/store/apps/details?id=com.usbrewerypassport.app" 
+       class="download-btn" 
+       style="display:inline-block; margin:10px;">
+       Get it on Google Play
+    </a>
+  
+    <p style="margin-top:20px; font-size:14px; color:#666;">
+      On a mobile device? You’ll be redirected automatically.
     </p>
+  </div>
 
     <div style="max-width:520px; margin: 0 auto;">
       
