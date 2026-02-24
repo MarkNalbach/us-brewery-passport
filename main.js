@@ -94,6 +94,11 @@ if (form) {
       });
 
       if (response.ok) {
+        // Track a conversion (Lead) if Meta Pixel is present
+        if (typeof window.fbq === "function") {
+          window.fbq("track", "Lead", { source: "partner_signup" });
+        }
+        
         status.textContent = "";
         form.reset();
         if (modal) modal.style.display = "flex";
