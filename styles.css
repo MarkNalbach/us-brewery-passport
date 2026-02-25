@@ -28,7 +28,7 @@ body {
 .partner-btn {
   border: none;
   cursor: pointer;
-  padding: 14px 18px;
+  padding: 0px 18px 14px 18px;
   border-radius: 10px;
   font-weight: 700;
   font-size: 16px;
