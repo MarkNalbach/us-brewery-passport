@@ -19,6 +19,36 @@ body {
     margin-bottom: 10px;
   }
 
+.partner-cta {
+  display: flex;
+  justify-content: center;
+  margin: 16px 0 10px;
+}
+
+.partner-btn {
+  border: none;
+  cursor: pointer;
+  padding: 14px 18px;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 16px;
+  width: min(360px, 92%);
+}
+
+/* Use same color/feel as submit button */
+.partner-btn {
+  background: #1a73e8; /* Google-ish blue */
+  color: #fff;
+}
+
+.partner-btn:hover {
+  filter: brightness(0.95);
+}
+
+.partner-btn:active {
+  transform: translateY(1px);
+}
+
 .store-buttons {
   text-align: center;
   margin: 20px 0;
