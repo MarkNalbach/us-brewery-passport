@@ -17,6 +17,16 @@ const customOfferWrap = byId("customOfferWrap");
 const customOfferInput = byId("customOfferInput");
 const offerDetailsHidden = byId("offerDetails");
 
+// Scroll to partner signup form
+const partnerBtn = document.getElementById("partnerSignupBtn");
+const partnerTarget = document.getElementById("partner-signup-form");
+
+if (partnerBtn && partnerTarget) {
+  partnerBtn.addEventListener("click", () => {
+    partnerTarget.scrollIntoView({ behavior: "smooth", block: "start" });
+  });
+}
+
 function syncOfferDetails() {
   if (!offerSelect || !offerDetailsHidden) return;
 
