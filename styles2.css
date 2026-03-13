@@ -54,9 +54,12 @@ header.site-header {
 }
 
 .logo {
-  height: 52px;
+  height: 90px;
   width: auto;
   display: block;
+  border: none;
+  background: none;
+  box-shadow: none;
 }
 
 .brand {
