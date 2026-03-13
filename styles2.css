@@ -337,11 +337,16 @@ section {
   color: rgba(255,255,255,.8);
 }
 
+.store-badge {
+  height: 55px;
+  width: auto;
+}
+
 .download-row {
   display: flex;
+  gap: 12px;
   flex-wrap: wrap;
-  gap: .8rem;
-  margin-top: 1rem;
+  margin-top: 18px;
 }
 
 .store-link {
