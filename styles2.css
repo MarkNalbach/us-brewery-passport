@@ -53,10 +53,16 @@ header.site-header {
   gap: 1rem;
 }
 
+.logo {
+  height: 52px;
+  width: auto;
+  display: block;
+}
+
 .brand {
   display: flex;
-  gap: .85rem;
   align-items: center;
+  gap: .9rem;
 }
 
 .brand-mark {
@@ -138,7 +144,7 @@ header.site-header {
 }
 
 .hero {
-  padding: 5rem 0 4rem;
+  padding: 6rem 0 4.5rem;
 }
 
 .hero-grid {
@@ -150,7 +156,8 @@ header.site-header {
 
 h1 {
   margin: .95rem 0 1rem;
-  font-size: clamp(2.6rem, 6vw, 5rem);
+  font-size: clamp(2.8rem, 6vw, 5.4rem);
+  max-width: 10ch;
   line-height: .98;
   letter-spacing: -.045em;
 }
