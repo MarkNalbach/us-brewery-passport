@@ -488,4 +488,30 @@ footer.site-footer {
   .btn {
     width: 100%;
   }
+
+  .app-preview {
+  padding: 90px 0;
+}
+
+.phone-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 40px;
+  margin-top: 50px;
+  justify-items: center;
+}
+
+.phone-frame {
+  width: 220px;
+  border-radius: 28px;
+  overflow: hidden;
+  background: #000;
+  padding: 10px;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.18);
+}
+
+.phone-frame img {
+  width: 100%;
+  border-radius: 20px;
+}
 }
