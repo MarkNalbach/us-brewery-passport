@@ -696,3 +696,130 @@ footer.site-footer {
     padding: 1.5rem;
   }
 }
+
+.brewery-page {
+  background:
+    radial-gradient(circle at top right, rgba(158, 123, 68, 0.14), transparent 26%),
+    linear-gradient(180deg, #efe2cc 0%, #e6d4b6 100%);
+  color: #2f2418;
+}
+
+.brewery-page header.site-header {
+  background: rgba(244, 234, 216, 0.88);
+  border-bottom: 1px solid rgba(158, 123, 68, 0.22);
+}
+
+.brewery-page .brand-copy strong {
+  color: #2f2418;
+}
+
+.brewery-page .brand-copy span {
+  color: #6f6558;
+}
+
+.brewery-page .nav-links {
+  color: #6f6558;
+}
+
+.brewery-page .nav-links a:hover,
+.brewery-page .nav-links a.active {
+  color: #2f2418;
+}
+
+.brewery-page .btn-secondary {
+  background: rgba(158, 123, 68, 0.08);
+  border-color: rgba(158, 123, 68, 0.25);
+  color: #2f2418;
+}
+
+.brewery-page .hero {
+  background:
+    linear-gradient(rgba(244, 234, 216, 0.78), rgba(233, 219, 195, 0.88)),
+    url("assets/bg-brewery.png") center/cover no-repeat;
+}
+
+.brewery-page .hero::after {
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(158, 123, 68, 0.32),
+    transparent
+  );
+}
+
+.brewery-page .hero-copy {
+  background: rgba(251, 244, 231, 0.76);
+  border: 1px solid rgba(158, 123, 68, 0.24);
+  color: #2f2418;
+}
+
+.brewery-page .hero-copy h1,
+.brewery-page .hero-copy p,
+.brewery-page .hero-copy .lead {
+  color: #2f2418;
+}
+
+.brewery-page .badge {
+  background: rgba(158, 123, 68, 0.14);
+  color: #7a5424;
+  border: 1px solid rgba(158, 123, 68, 0.25);
+}
+
+.brewery-page .brewery-pill {
+  background: rgba(158, 123, 68, 0.10);
+  color: #5f4527;
+  border: 1px solid rgba(158, 123, 68, 0.22);
+}
+
+.brewery-page .brewery-pill strong {
+  color: #7a5424;
+}
+
+.brewery-page .hero-phone {
+  background: linear-gradient(180deg, #f4ead8 0%, #e9dbc3 100%);
+  border: 1px solid rgba(158, 123, 68, 0.35);
+}
+
+.brewery-page .phone-shell {
+  background: #6b4a28;
+}
+
+.brewery-page .phone-screen {
+  background: linear-gradient(180deg, #f7efe3 0%, #efe2cc 100%);
+}
+
+.brewery-page .screen-card {
+  background: linear-gradient(180deg, #fbf4e7 0%, #f1e3cc 100%);
+  border: 1px solid rgba(158, 123, 68, 0.28);
+  box-shadow: 0 8px 18px rgba(74, 45, 18, 0.10);
+}
+
+.brewery-page .screen-card h3,
+.brewery-page .screen-card p {
+  color: #2f2418;
+}
+
+.brewery-page .screen-pill {
+  background: rgba(158, 123, 68, 0.14);
+  color: #6b3b1e;
+  border: 1px solid rgba(158, 123, 68, 0.24);
+}
+
+.brewery-page .feature-band {
+  border-top: 1px solid rgba(158, 123, 68, 0.18);
+  border-bottom: 1px solid rgba(158, 123, 68, 0.18);
+  background: linear-gradient(180deg, rgba(255,255,255,.18), rgba(255,255,255,.08));
+}
+
+.brewery-page .cta-panel {
+  background: linear-gradient(180deg, #b89256 0%, #9e7b44 55%, #876533 100%);
+  color: #fff6e6;
+}
+
+.brewery-page footer.site-footer {
+  color: #6f6558;
+}
+
+.brewery-page .footer-grid {
+  border-top: 1px solid rgba(158, 123, 68, 0.2);
+}
