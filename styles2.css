@@ -401,26 +401,31 @@ section {
   color: rgba(247, 240, 228, .82);
 }
 .cta-panel {
-  background: linear-gradient(180deg, #f4ead8 0%, #e9dbc3 100%);
-  color: #2f2118;
-  border: 1px solid rgba(185,157,115,.6);
+  background: linear-gradient(
+    180deg,
+    #b89256 0%,
+    #9e7b44 55%,
+    #876533 100%
+  );
+  color: #fff6e6;
+  border: 1px solid rgba(255, 236, 206, .25);
   border-radius: 30px;
   padding: 2rem;
-  box-shadow: 0 16px 40px rgba(0,0,0,.18);
+  box-shadow: 0 20px 45px rgba(0,0,0,.35);
 }
 
 .cta-panel h2 {
-  color: #2f2118;
+  color: #fff3dc;
 }
 
 .cta-panel p {
-  color: #5c4b3a;
+  color: rgba(255,240,210,.85);
 }
 
 .cta-panel .btn-primary {
-  background: linear-gradient(180deg, #d6a861 0%, #b9873d 100%);
+  background: #f2c230;
   color: #2f2118;
-  box-shadow: 0 8px 18px rgba(0,0,0,.18);
+  box-shadow: 0 8px 20px rgba(0,0,0,.35);
 }
 
 .cta-panel .badge {
