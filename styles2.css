@@ -704,7 +704,6 @@ footer.site-footer {
     #9e7b44 55%,
     #876533 100%
   );
-  color: #fff6e6;
 }
 
 .brewery-page header.site-header {
@@ -741,7 +740,11 @@ footer.site-footer {
 }
 
 .brewery-page .hero {
-  background: none;
+  background: linear-gradient(
+    180deg,
+    #171b45 0%,
+    #121538 100%
+  );
 }
 
 .brewery-page .hero::after {
@@ -754,9 +757,8 @@ footer.site-footer {
 }
 
 .brewery-page .hero-copy {
-  background: rgba(255, 244, 220, 0.85);
-  border: 1px solid rgba(120, 80, 35, 0.25);
-  color: #2f2418;
+  background: rgba(18,21,56,.55);
+  border: 1px solid rgba(242,194,48,.2);
 }
 
 .brewery-page .hero-copy h1,
