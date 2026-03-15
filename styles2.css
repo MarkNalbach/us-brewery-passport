@@ -173,9 +173,9 @@ header.site-header {
 .hero {
   position: relative;
   padding: 6rem 0 4.5rem;
-  background:
+  /* background:
     linear-gradient(rgba(12, 16, 40, 0.55), rgba(12, 16, 40, 0.70)),
-    url("assets/bg-brewery.png") center/cover no-repeat;
+    url("assets/bg-brewery.png") center/cover no-repeat; */
 }
 
 .hero-copy {
