@@ -401,20 +401,32 @@ section {
   color: rgba(247, 240, 228, .82);
 }
 .cta-panel {
-  background: linear-gradient(180deg, #5b3216 0%, #3e2210 100%);
-  color: #f6e6cf;
-  border: 1px solid rgba(217,194,154,.35);
+  background: linear-gradient(180deg, #f4ead8 0%, #e9dbc3 100%);
+  color: #2f2118;
+  border: 1px solid rgba(185,157,115,.6);
   border-radius: 30px;
   padding: 2rem;
-  box-shadow: 0 20px 50px rgba(0,0,0,.35);
+  box-shadow: 0 16px 40px rgba(0,0,0,.18);
 }
 
 .cta-panel h2 {
-  color: #fff3dc;
+  color: #2f2118;
 }
 
 .cta-panel p {
-  color: rgba(255,236,206,.85);
+  color: #5c4b3a;
+}
+
+.cta-panel .btn-primary {
+  background: linear-gradient(180deg, #d6a861 0%, #b9873d 100%);
+  color: #2f2118;
+  box-shadow: 0 8px 18px rgba(0,0,0,.18);
+}
+
+.cta-panel .badge {
+  background: rgba(210,161,94,.18);
+  color: #7a5424;
+  border: 1px solid rgba(210,161,94,.35);
 }
 
 .store-badge {
