@@ -327,11 +327,6 @@ label,
   margin-bottom: .2rem;
 }
 
-.brewery-pill::before {
-  content: "🍺";
-  margin-right: .45rem;
-}
-
 section {
   padding: 4.2rem 0;
 }
