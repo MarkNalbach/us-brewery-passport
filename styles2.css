@@ -271,7 +271,7 @@ label,
 }
 
 .hero-phone {
-  padding: 1rem;
+  padding: .5rem;
   border-radius: 34px;
   background: linear-gradient(180deg, rgba(251, 244, 231, 0.95), rgba(239, 226, 204, 0.94));
   border: 1px solid rgba(185, 157, 115, 0.6);
@@ -281,14 +281,14 @@ label,
 .phone-shell {
   background: #1a1f4a;
   border-radius: 30px;
-  padding: .8rem;
+  padding: .45rem;
 }
 
 .phone-screen {
-  min-height: 510px;
+  min-height: 470px;
   border-radius: 24px;
   background: linear-gradient(180deg, #1a1e4e 0%, #111539 100%);
-  padding: 1rem;
+  padding: .8rem;
   display: grid;
   gap: .9rem;
 }
