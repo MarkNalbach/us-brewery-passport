@@ -10,83 +10,160 @@
 <body>
   <header class="site-header">
     <div class="container navbar">
-      <a class="brand" href="index.html">
+      <a class="brand" href="passport.html">
         <img src="assets/brew-passport-logo.png" alt="US Brew Passport Logo" class="logo">
         <div class="brand-copy">
           <strong>US Brew Passport</strong>
-          <span>Discover breweries. Reward visits.</span>
+          <span>Frequently asked questions</span>
         </div>
       </a>
+
       <nav class="nav-links">
-        <a href="index2.html">Home</a>
-        <a href="passport2.html">For Users</a>
-        <a href="breweries.html">For Breweries</a>
+        <a href="passport.html">For Users</a>
+        <a href="index.html">For Breweries</a>
         <a class="active" href="faq.html">FAQ</a>
       </nav>
+
       <div class="actions">
-        <a class="btn btn-secondary" href="passport2.html">App page</a>
-        <a class="btn btn-primary" href="breweries.html#signup">Join as a Brewery</a>
+        <a class="btn btn-secondary" href="passport.html">User Page</a>
+        <a class="btn btn-primary" href="index.html">Brewery Page</a>
       </div>
     </div>
   </header>
 
   <main>
-    <section class="hero" style="padding-bottom:2rem;">
+    <section class="hero">
       <div class="container text-center">
         <span class="badge">FAQ</span>
-        <h1 style="max-width:16ch;margin-left:auto;margin-right:auto;">Questions from app users and brewery partners.</h1>
-        <p class="lead" style="margin-left:auto;margin-right:auto;">This page brings together the most important explanations from your current pages so visitors can find answers quickly.</p>
+        <h2 style="max-width: 16ch; margin: 1rem auto 0;">
+          Questions from app users and brewery partners.
+        </h2>
+        <p class="lead" style="margin: 1rem auto 0;">
+          Find quick answers about how US Brew Passport works, how rewards are redeemed,
+          and what brewery partners can expect.
+        </p>
       </div>
     </section>
 
-    <section style="padding-top:1rem;">
+    <section class="feature-band">
       <div class="container">
-        <div class="grid-2">
-          <div class="panel">
+        <div class="section-head">
+          <div>
             <div class="kicker">For users</div>
-            <h2 style="font-size:2rem;">App questions</h2>
-            <div class="faq-list" style="display:grid;gap:1rem;margin-top:1rem;">
-              <details class="faq-item" open>
-                <summary>How do I redeem an offer?</summary>
-                <p>Open the app, tap <strong>Redeem Offer</strong>, scan the brewery’s QR code, and show the confirmation screen to staff.</p>
-              </details>
-              <details class="faq-item">
-                <summary>Can I redeem the same brewery offer more than once?</summary>
-                <p>No. The offer is designed to be one-time per user for that brewery location and is stamped with a date and timestamp after confirmation.</p>
-              </details>
-              <details class="faq-item">
-                <summary>Are all rewards beer discounts?</summary>
-                <p>No. Rewards vary by brewery and state law. Some locations may offer discounts on food, merchandise, or another taproom perk instead.</p>
-              </details>
-              <details class="faq-item">
-                <summary>Do I need to be at the brewery to use the QR code?</summary>
-                <p>Yes. The QR flow is meant for in-person redemption during checkout or while staff can verify the confirmation screen.</p>
-              </details>
-            </div>
+            <h2>App and reward questions</h2>
           </div>
+          <p class="lead">
+            These answers help users understand how rewards work, how to redeem them, and what to expect at a brewery.
+          </p>
+        </div>
 
-          <div class="panel">
+        <div class="grid-2 faq-list">
+          <details class="faq-item" open>
+            <summary>How do I redeem an offer?</summary>
+            <p>
+              Open the app, tap <strong>Redeem Offer</strong>, scan the brewery’s QR code,
+              and show the confirmation screen to staff.
+            </p>
+          </details>
+
+          <details class="faq-item">
+            <summary>Can I redeem the same brewery offer more than once?</summary>
+            <p>
+              No. Offers are designed to be one-time per user for that brewery location
+              and are stamped after confirmation.
+            </p>
+          </details>
+
+          <details class="faq-item">
+            <summary>What kinds of rewards are offered?</summary>
+            <p>
+              Rewards vary by brewery and state law. Depending on the location, rewards may include
+              BOGO beers, discounted beer, food discounts, merchandise perks, or another special taproom offer.
+            </p>
+          </details>
+
+          <details class="faq-item">
+            <summary>Do I need to be at the brewery to use the QR code?</summary>
+            <p>
+              Yes. The QR redemption flow is meant for in-person use while staff can verify the confirmation screen.
+            </p>
+          </details>
+
+          <details class="faq-item">
+            <summary>What happens after I tap Yes, Confirm?</summary>
+            <p>
+              The reward is marked redeemed and timestamped so it cannot be used again for that same brewery location.
+            </p>
+          </details>
+
+          <details class="faq-item">
+            <summary>Where can I download the app?</summary>
+            <p>
+              US Brew Passport is available on iOS and Android through the App Store and Google Play.
+            </p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="section-head">
+          <div>
             <div class="kicker">For breweries</div>
-            <h2 style="font-size:2rem;">Partner questions</h2>
-            <div class="faq-list" style="display:grid;gap:1rem;margin-top:1rem;">
-              <details class="faq-item" open>
-                <summary>Do we need any special equipment?</summary>
-                <p>No. The program is designed to work without POS integration or special hardware.</p>
-              </details>
-              <details class="faq-item">
-                <summary>Can we choose our own offer?</summary>
-                <p>Yes. Breweries choose their own offer, which can be adjusted to fit state rules and their preferred promotion style.</p>
-              </details>
-              <details class="faq-item">
-                <summary>Should each location submit separately?</summary>
-                <p>Yes. The current setup asks for a separate signup for each brewery location so each listing can be handled correctly.</p>
-              </details>
-              <details class="faq-item">
-                <summary>Can brewery partners download the app?</summary>
-                <p>Yes. Partners can download the app to view their listing. The printed QR code is for customer redemption inside the app, not a standalone coupon.</p>
-              </details>
-            </div>
+            <h2>Partner program questions</h2>
           </div>
+          <p class="lead">
+            These answers are designed for brewery owners, managers, and staff who want to understand how the partner program works.
+          </p>
+        </div>
+
+        <div class="grid-2 faq-list">
+          <details class="faq-item" open>
+            <summary>Do we need any special equipment?</summary>
+            <p>
+              No. There is no POS integration or special hardware required.
+              Redemption is handled through the guest’s phone and verified by staff.
+            </p>
+          </details>
+
+          <details class="faq-item">
+            <summary>How does staff verify a redemption?</summary>
+            <p>
+              After the guest scans the brewery QR code, the app shows a confirmation screen with the brewery’s name.
+              Staff can verify that screen before the reward is confirmed.
+            </p>
+          </details>
+
+          <details class="faq-item">
+            <summary>Can our brewery choose its own offer?</summary>
+            <p>
+              Yes. Breweries choose the reward they want to offer, as long as it fits local laws and the program guidelines.
+            </p>
+          </details>
+
+          <details class="faq-item">
+            <summary>What if our state has restrictions on beer discounts?</summary>
+            <p>
+              In those cases, breweries can offer an alternative reward such as discounted food,
+              merchandise, or another approved taproom perk.
+            </p>
+          </details>
+
+          <details class="faq-item">
+            <summary>Can brewery partners download the app too?</summary>
+            <p>
+              Yes. Brewery partners are welcome to download the app to view their listing.
+              The printed QR code is for customer redemption inside the app and does not act like a standalone coupon.
+            </p>
+          </details>
+
+          <details class="faq-item">
+            <summary>Should each brewery location sign up separately?</summary>
+            <p>
+              Yes. Each location should submit separately so the correct address, QR code, and redemption details can be tied to that taproom.
+            </p>
+          </details>
         </div>
       </div>
     </section>
@@ -94,12 +171,16 @@
     <section>
       <div class="container">
         <div class="cta-panel">
-          <div class="badge" style="background:rgba(255,255,255,.12);color:#fff;">Still have questions?</div>
-          <h2 style="color:white;">Need a more direct next step?</h2>
-          <p>Send users to the passport page for downloads, or send brewery owners to the partner signup page.</p>
+          <div class="badge" style="background:rgba(255,255,255,.12);color:#fff;">Need the next step?</div>
+          <h2 style="color:white;">Go straight to the page that fits you.</h2>
+          <p>
+            Looking to download and use the app? Start on the user page.
+            Looking to join as a brewery partner? Head to the brewery page.
+          </p>
+
           <div class="actions" style="margin-top:1rem;">
-            <a class="btn btn-primary" style="background:white;color:#2f2118;" href="passport.html">Go to passport page</a>
-            <a class="btn btn-secondary" style="background:transparent;border-color:rgba(255,255,255,.25);color:white;" href="breweries.html#signup">Open brewery signup</a>
+            <a class="btn btn-primary" style="background:white;color:#332015;" href="passport.html">Go to user page</a>
+            <a class="btn btn-secondary" style="background:transparent;border-color:rgba(255,255,255,.25);color:white;" href="index.html">Go to brewery page</a>
           </div>
         </div>
       </div>
@@ -113,7 +194,8 @@
         <span>Support: usbrewpassport@gmail.com</span>
       </div>
       <div>
-        <a href="index.html">Home</a>
+        <a href="passport.html">For Users</a> ·
+        <a href="index.html">For Breweries</a>
       </div>
     </div>
   </footer>
