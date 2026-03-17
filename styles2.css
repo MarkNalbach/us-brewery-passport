@@ -290,8 +290,16 @@ p.lead,
 .panel li,
 label,
 .small,
+}
+
+/* default (light bg) */
 .kicker {
-  color: var(--text-dark);
+  color: var(--accent);
+}
+
+/* dark sections */
+.feature-band .kicker {
+  color: #f3e7d7; /* warm light tan */
 }
 
 .muted {
