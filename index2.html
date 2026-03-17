@@ -10,7 +10,7 @@
 <body class="brewery-page">
   <header class="site-header">
     <div class="container navbar">
-      <a class="brand" href="index.html">
+      <a class="brand" href="index2.html">
         <img src="assets/brew-passport-logo.png" alt="US Brew Passport Logo" class="logo">
         <div class="brand-copy">
           <strong>US Brew Passport</strong>
@@ -19,13 +19,13 @@
       </a>
 
       <nav class="nav-links">
-        <a class="active" href="passport2.html">Passport Holders</a>
-        <a href="index2.html">Brewery Partners</a>
+        <a href="passport2.html">Passport Holders</a>
+        <a class="active" href="index2.html">Brewery Partners</a>
         <a href="faq.html">FAQ</a>
       </nav>
 
       <div class="actions">
-        <a class="btn btn-secondary" href="passport.html">View App Page</a>
+        <a class="btn btn-secondary" href="passport2.html">View App Page</a>
         <a class="btn btn-primary" href="#signup">Join as a Brewery</a>
       </div>
     </div>
@@ -42,8 +42,8 @@
           </p>
 
           <div class="actions" style="margin-top:1.25rem;">
-            <a class="btn btn-primary" href="#signup">Start Partner Signup</a>
-            <a class="btn btn-secondary" href="passport.html">See the User Experience</a>
+            <a class="btn btn-primary" href="#partner-signup-form">Start Partner Signup</a>
+            <a class="btn btn-secondary" href="passport2.html">See the User Experience</a>
           </div>
 
           <div class="brewery-pill">
@@ -185,13 +185,12 @@
           </div>
 
           <div class="card">
-            <h3>What breweries like about it</h3>
+            <h3>What to submit</h3>
             <ul class="simple-list">
-              <li>Easy to explain to staff</li>
-              <li>Designed to prevent reuse</li>
-              <li>Works with in-person verification</li>
-              <li>Simple for customers to understand</li>
-              <li>Easy to join and participate</li>
+              <li>Brewery name and address</li>
+              <li>Main contact information</li>
+              <li>Your chosen offer details</li>
+              <li>Submit a separate form for each location</li>
             </ul>
           </div>
         </div>
@@ -231,8 +230,93 @@
           </p>
           <div class="actions" style="margin-top:1rem;">
             <a class="btn btn-primary" style="background:white;color:#332015;" href="#partner-signup-form">Start partner signup</a>
-            <a class="btn btn-secondary" style="background:transparent;border-color:rgba(255,255,255,.25);color:white;" href="passport.html">View the user experience</a>
+            <a class="btn btn-secondary" style="background:transparent;border-color:rgba(255,255,255,.25);color:white;" href="passport2.html">View the user experience</a>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="partner-signup-form">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <div class="kicker">Partner signup</div>
+            <h2>Complete your brewery submission</h2>
+          </div>
+          <p class="lead">
+            Fill out the form below to add your brewery to the 2026 US Brew Passport. Please submit a separate form for each location.
+          </p>
+        </div>
+
+        <div class="panel">
+          <form class="form-shell" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+            <div class="form-grid">
+              <label>Brewery Name *
+                <input type="text" name="brewery_name" required />
+              </label>
+
+              <label>Street Address *
+                <input type="text" name="street_address" required />
+              </label>
+
+              <label>City *
+                <input type="text" name="city" required />
+              </label>
+
+              <label>State *
+                <input type="text" name="state" required />
+              </label>
+
+              <label>Zip Code *
+                <input type="text" name="zip_code" required />
+              </label>
+
+              <label>Contact Name *
+                <input type="text" name="contact_name" required />
+              </label>
+
+              <label>Contact Email *
+                <input type="email" name="contact_email" required />
+              </label>
+
+              <label>Contact Phone
+                <input type="tel" name="contact_phone" />
+              </label>
+
+              <label>Brewery Website
+                <input type="url" name="brewery_website" />
+              </label>
+
+              <label>Offer Details *
+                <select name="offer_details" required>
+                  <option value="">Select an offer…</option>
+                  <option>Buy one beer, get one beer FREE</option>
+                  <option>50% off the 2 beers</option>
+                  <option>50% off the second beer</option>
+                  <option>Other (enter custom offer below)</option>
+                </select>
+              </label>
+            </div>
+
+            <label>Custom Offer
+              <textarea name="custom_offer" placeholder="Enter your custom offer if needed"></textarea>
+            </label>
+
+            <label>Signature Name *
+              <input type="text" name="signature_name" required />
+            </label>
+
+            <label style="display:flex;align-items:flex-start;gap:.75rem;">
+              <input style="width:auto;margin-top:.2rem;" type="checkbox" name="agreed_to_terms" required />
+              <span>I have read and agree to the US Brew Passport Partner Program Terms.</span>
+            </label>
+
+            <div>
+              <button class="btn btn-primary" type="submit">Submit Partner Signup</button>
+            </div>
+
+            <p class="small">Questions? Email usbrewpassport@gmail.com</p>
+          </form>
         </div>
       </div>
     </section>
