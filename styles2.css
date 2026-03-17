@@ -55,6 +55,8 @@ a {
   margin: 0 auto;
 }
 
+/* Header */
+
 header.site-header {
   position: sticky;
   top: 0;
@@ -84,7 +86,7 @@ header.site-header {
 .brand {
   display: flex;
   align-items: center;
-  gap: .9rem;
+  gap: 0.9rem;
 }
 
 .brand-mark {
@@ -101,12 +103,12 @@ header.site-header {
 
 .brand-copy strong {
   display: block;
-  letter-spacing: -.02em;
+  letter-spacing: -0.02em;
   color: #fff4df;
 }
 
 .brand-copy span {
-  font-size: .88rem;
+  font-size: 0.88rem;
   color: var(--muted);
 }
 
@@ -126,19 +128,21 @@ header.site-header {
 
 .actions {
   display: flex;
-  gap: .75rem;
+  gap: 0.75rem;
   flex-wrap: wrap;
 }
+
+/* Buttons */
 
 .btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: .45rem;
+  gap: 0.45rem;
   border-radius: 999px;
-  padding: .95rem 1.25rem;
+  padding: 0.95rem 1.25rem;
   font-weight: 700;
-  transition: .2s ease;
+  transition: 0.2s ease;
   border: 1px solid transparent;
   cursor: pointer;
 }
@@ -155,28 +159,46 @@ header.site-header {
 
 .btn-secondary {
   background: rgba(244, 234, 216, 0.10);
-  border-color: rgba(242, 194, 48, 0.35);
-  color: #fff4df;
+  border: 1px solid rgba(242, 194, 48, 0.35);
+  color: #f7ead5;
 }
+
+.btn-secondary:hover {
+  background: rgba(255, 244, 220, 0.14);
+}
+
+/* Labels / small text */
 
 .badge {
   display: inline-flex;
-  padding: .45rem .85rem;
+  padding: 0.45rem 0.85rem;
   border-radius: 999px;
   background: var(--gold-soft);
   color: #ffd85a;
-  font-size: .9rem;
+  font-size: 0.9rem;
   font-weight: 700;
   border: 1px solid rgba(242, 194, 48, 0.28);
 }
 
+.kicker {
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.small {
+  font-size: 0.92rem;
+  color: #5f5a54;
+  line-height: 1.5;
+}
+
+/* Hero */
+
 .hero {
   position: relative;
   padding: 5.5rem 0 4.2rem;
-  /* Uncomment if using the brewery image */
-  /* background:
-    linear-gradient(rgba(12, 16, 40, 0.55), rgba(12, 16, 40, 0.70)),
-    url("assets/bg-brewery.png") center/cover no-repeat; */
 }
 
 .hero::after {
@@ -189,14 +211,14 @@ header.site-header {
   background: linear-gradient(
     to right,
     transparent,
-    rgba(242,194,48,0.25),
+    rgba(242, 194, 48, 0.25),
     transparent
   );
 }
 
 .hero-grid {
   display: grid;
-  grid-template-columns: 1.08fr .92fr;
+  grid-template-columns: 1.08fr 0.92fr;
   gap: 2.25rem;
   align-items: stretch;
 }
@@ -213,19 +235,29 @@ header.site-header {
   height: 100%;
 }
 
+.hero-copy h1,
+.hero-copy h2 {
+  color: #fff6e6;
+}
+
+.hero-copy p,
+.hero-copy .lead {
+  color: rgba(243, 231, 215, 0.88);
+}
+
 .hero-phone {
-  padding: .35rem;
+  padding: 0.35rem;
   border-radius: 34px;
   background: #efe2cc;
   border: 1px solid rgba(185, 157, 115, 0.55);
-  box-shadow: 0 18px 45px rgba(0,0,0,0.28);
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.28);
   height: 100%;
 }
 
 .phone-shell {
   background: #151a45;
   border-radius: 28px;
-  padding: .45rem;
+  padding: 0.45rem;
   height: 100%;
 }
 
@@ -233,29 +265,31 @@ header.site-header {
   min-height: 100%;
   border-radius: 24px;
   background: linear-gradient(180deg, #171b45 0%, #101437 100%);
-  padding: .75rem;
+  padding: 0.75rem;
   display: grid;
-  gap: .75rem;
+  gap: 0.75rem;
 }
 
+/* Type */
+
 h1 {
-  margin: .95rem 0 1rem;
+  margin: 0.95rem 0 1rem;
   font-size: clamp(2.6rem, 5.4vw, 4.8rem);
   max-width: 9ch;
-  line-height: .97;
-  letter-spacing: -.045em;
+  line-height: 0.97;
+  letter-spacing: -0.045em;
 }
 
 h2 {
-  margin: .4rem 0 0;
+  margin: 0.4rem 0 0;
   font-size: clamp(2rem, 4vw, 3rem);
   line-height: 1.04;
-  letter-spacing: -.04em;
+  letter-spacing: -0.04em;
 }
 
 h3 {
-  margin: 0 0 .5rem;
-  letter-spacing: -.02em;
+  margin: 0 0 0.5rem;
+  letter-spacing: -0.02em;
 }
 
 p.lead,
@@ -264,6 +298,12 @@ p.lead,
   font-size: 1.05rem;
   max-width: 64ch;
 }
+
+.muted {
+  color: var(--muted-dark);
+}
+
+/* Cards / panels */
 
 .card,
 .panel {
@@ -288,62 +328,53 @@ p.lead,
 .panel p,
 .card li,
 .panel li,
-label,
-.small,
+label {
+  color: var(--text-dark);
 }
 
-/* default (light bg) */
-.kicker {
-  color: var(--accent);
-}
-
-.feature-band.dark .kicker {
-  color: #f3e7d7; /* warm tan (best match for your theme) */
-}
-
-.muted {
-  color: var(--muted-dark);
-}
+/* Phone cards */
 
 .screen-card {
   background: linear-gradient(180deg, #f6edde 0%, #efe2cc 100%);
   border: 1px solid rgba(185, 157, 115, 0.65);
   border-radius: 18px;
-  padding: .95rem 1rem;
-  box-shadow: 0 8px 18px rgba(0,0,0,.12);
+  padding: 0.95rem 1rem;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
   color: var(--text-dark);
 }
 
 .screen-card h3 {
   font-size: 1rem;
-  margin-bottom: .3rem;
+  margin-bottom: 0.3rem;
 }
 
 .screen-card p {
-  font-size: .92rem;
+  font-size: 0.92rem;
   color: var(--muted-dark);
   margin: 0;
 }
 
 .screen-pill {
   display: inline-block;
-  padding: .35rem .65rem;
+  padding: 0.35rem 0.65rem;
   border-radius: 999px;
-  background: rgba(143,79,37,.12);
+  background: rgba(143, 79, 37, 0.12);
   color: #6b3b1e;
-  border: 1px solid rgba(143,79,37,.25);
-  font-size: .78rem;
+  border: 1px solid rgba(143, 79, 37, 0.25);
+  font-size: 0.78rem;
   font-weight: 700;
 }
+
+/* Info pill */
 
 .brewery-pill {
   margin-top: 1.25rem;
   display: block;
   padding: 1rem 1.1rem;
   border-radius: 18px;
-  background: rgba(244, 234, 216, 0.16);
-  color: #f3e7d0;
-  border: 1px solid rgba(242, 194, 48, 0.20);
+  background: rgba(255, 244, 220, 0.10);
+  color: #f1e3c8;
+  border: 1px solid rgba(242, 194, 48, 0.22);
   font-size: 1rem;
   line-height: 1.45;
   max-width: 100%;
@@ -352,9 +383,11 @@ label,
 .brewery-pill strong {
   display: block;
   color: #ffd85a;
-  margin-bottom: .35rem;
-  font-size: 1.5rem;
+  margin-bottom: 0.35rem;
+  font-size: 1.15rem;
 }
+
+/* Layout sections */
 
 section {
   padding: 4.2rem 0;
@@ -397,15 +430,21 @@ section {
 .stat strong {
   display: block;
   font-size: 1.35rem;
-  margin-bottom: .2rem;
+  margin-bottom: 0.2rem;
   color: var(--text-dark);
 }
 
 .feature-band {
   border-top: 1px solid rgba(242, 194, 48, 0.18);
   border-bottom: 1px solid rgba(242, 194, 48, 0.18);
-  background: linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.02));
 }
+
+.feature-band .kicker {
+  color: #f3e7d7;
+}
+
+/* Steps */
 
 .steps {
   counter-reset: step;
@@ -432,6 +471,8 @@ section {
   background: linear-gradient(135deg, var(--gold), #f0ad1f);
 }
 
+/* Lists */
+
 .list-checks,
 .faq-list,
 .simple-list {
@@ -441,8 +482,10 @@ section {
 
 .list-checks li,
 .simple-list li {
-  margin-bottom: .55rem;
+  margin-bottom: 0.55rem;
 }
+
+/* Logo grid */
 
 .logo-grid {
   grid-template-columns: repeat(5, 1fr);
@@ -458,18 +501,15 @@ section {
   font-weight: 700;
 }
 
+/* CTA */
+
 .cta-panel {
-  background: linear-gradient(
-    180deg,
-    #b89256 0%,
-    #9e7b44 55%,
-    #876533 100%
-  );
+  background: linear-gradient(180deg, #b89256 0%, #9e7b44 55%, #876533 100%);
   color: #fff6e6;
-  border: 1px solid rgba(255, 236, 206, .25);
+  border: 1px solid rgba(255, 236, 206, 0.25);
   border-radius: 30px;
   padding: 2rem;
-  box-shadow: 0 20px 45px rgba(0,0,0,.35);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.35);
 }
 
 .cta-panel h2 {
@@ -478,20 +518,22 @@ section {
 
 .cta-panel p,
 .cta-panel .lead {
-  color: rgba(255,240,210,.85);
+  color: rgba(255, 240, 210, 0.85);
 }
 
 .cta-panel .btn-primary {
   background: #f2c230;
   color: #2f2118;
-  box-shadow: 0 8px 20px rgba(0,0,0,.35);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
 }
 
 .cta-panel .badge {
-  background: rgba(210,161,94,.18);
+  background: rgba(210, 161, 94, 0.18);
   color: #7a5424;
-  border: 1px solid rgba(210,161,94,.35);
+  border: 1px solid rgba(210, 161, 94, 0.35);
 }
+
+/* App store row */
 
 .store-badge {
   height: 55px;
@@ -509,12 +551,17 @@ section {
   text-align: center;
 }
 
+.download-row + .small {
+  color: #d9cfbe;
+  text-align: center;
+}
+
 .store-link {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   min-width: 180px;
-  padding: .95rem 1.1rem;
+  padding: 0.95rem 1.1rem;
   border-radius: 18px;
   background: #111;
   color: white;
@@ -526,6 +573,8 @@ section {
   color: #111;
 }
 
+/* Notice */
+
 .notice {
   border: 2px solid var(--success-line);
   padding: 1rem 1rem 1rem 1.15rem;
@@ -533,6 +582,8 @@ section {
   border-radius: 18px;
   color: var(--success-text);
 }
+
+/* FAQ */
 
 .faq-item {
   border-radius: 18px;
@@ -558,6 +609,8 @@ section {
   margin-bottom: 0;
 }
 
+/* Forms */
+
 .form-shell {
   display: grid;
   gap: 1rem;
@@ -574,9 +627,9 @@ select,
 textarea {
   width: 100%;
   border: 1px solid rgba(185, 157, 115, 0.7);
-  background: rgba(255,255,255,0.82);
+  background: rgba(255, 255, 255, 0.82);
   border-radius: 14px;
-  padding: .9rem .95rem;
+  padding: 0.9rem 0.95rem;
   font: inherit;
   color: var(--text-dark);
 }
@@ -585,6 +638,8 @@ textarea {
   min-height: 130px;
   resize: vertical;
 }
+
+/* Footer */
 
 footer.site-footer {
   padding: 2.4rem 0 3rem;
@@ -603,6 +658,8 @@ footer.site-footer {
 .text-center {
   text-align: center;
 }
+
+/* App preview */
 
 .app-preview {
   padding: 90px 0;
@@ -623,16 +680,16 @@ footer.site-footer {
   background: #eadbc1;
   border: 2px solid rgba(242, 194, 48, 0.35);
   box-shadow:
-    0 10px 22px rgba(0,0,0,0.18),
-    0 22px 50px rgba(0,0,0,0.26);
+    0 10px 22px rgba(0, 0, 0, 0.18),
+    0 22px 50px rgba(0, 0, 0, 0.26);
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .phone-frame:hover {
   transform: translateY(-6px);
   box-shadow:
-    0 14px 28px rgba(0,0,0,0.22),
-    0 28px 60px rgba(0,0,0,0.30);
+    0 14px 28px rgba(0, 0, 0, 0.22),
+    0 28px 60px rgba(0, 0, 0, 0.30);
 }
 
 .phone-frame img {
@@ -640,6 +697,177 @@ footer.site-footer {
   border-radius: 20px;
   display: block;
 }
+
+/* Video */
+
+.redemption-video-section {
+  padding: 4.2rem 0;
+}
+
+.redemption-video-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 1.4rem;
+  align-items: start;
+}
+
+.video-card {
+  background: linear-gradient(180deg, var(--surface-strong) 0%, var(--surface-soft) 100%);
+  border: 1px solid rgba(185, 157, 115, 0.7);
+  border-radius: 24px;
+  padding: 1rem;
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.18);
+}
+
+.video-embed {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border-radius: 18px;
+  background: #000;
+  box-shadow: 0 16px 34px rgba(0, 0, 0, 0.24);
+}
+
+.video-embed iframe,
+.video-embed #yt-player,
+.video-embed > div {
+  width: 100%;
+  height: 100%;
+}
+
+/* Brewery page overrides */
+
+.brewery-page {
+  background: linear-gradient(180deg, #b89256 0%, #9e7b44 55%, #876533 100%);
+}
+
+.brewery-page header.site-header {
+  background: rgba(158, 123, 68, 0.92);
+  border-bottom: 1px solid rgba(255, 236, 206, 0.25);
+}
+
+.brewery-page .brand-copy strong {
+  color: #fff6e6;
+}
+
+.brewery-page .brand-copy span {
+  color: rgba(255, 240, 210, 0.72);
+}
+
+.brewery-page .nav-links {
+  color: rgba(255, 240, 210, 0.85);
+}
+
+.brewery-page .nav-links a:hover,
+.brewery-page .nav-links a.active {
+  color: #ffffff;
+}
+
+.brewery-page .btn-secondary {
+  background: rgba(255, 244, 220, 0.10);
+  border: 1px solid rgba(255, 236, 206, 0.30);
+  color: #fff4df;
+}
+
+.brewery-page section {
+  background: rgba(255, 255, 255, 0.08);
+  border-top: 1px solid rgba(255, 236, 206, 0.18);
+}
+
+.brewery-page .hero {
+  background: linear-gradient(180deg, #171b45 0%, #121538 100%);
+}
+
+.brewery-page .hero::after {
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(255, 236, 206, 0.35),
+    transparent
+  );
+}
+
+.brewery-page .hero-copy {
+  background: rgba(18, 21, 56, 0.72);
+  border: 1px solid rgba(242, 194, 48, 0.16);
+}
+
+.brewery-page .hero-copy h1,
+.brewery-page .hero-copy h2 {
+  color: #fff6e6;
+}
+
+.brewery-page .hero-copy p,
+.brewery-page .hero-copy .lead {
+  color: rgba(243, 231, 215, 0.90);
+}
+
+.brewery-page .badge {
+  background: rgba(242, 194, 48, 0.14);
+  color: #ffd85a;
+  border: 1px solid rgba(242, 194, 48, 0.22);
+}
+
+.brewery-page .brewery-pill {
+  background: rgba(255, 244, 220, 0.10);
+  color: #f1e3c8;
+  border: 1px solid rgba(242, 194, 48, 0.22);
+}
+
+.brewery-page .brewery-pill strong {
+  color: #ffd85a;
+}
+
+.brewery-page .hero-phone {
+  background: linear-gradient(180deg, #f4ead8 0%, #e9dbc3 100%);
+  border: 1px solid rgba(158, 123, 68, 0.35);
+}
+
+.brewery-page .phone-shell {
+  background: #6b4a28;
+}
+
+.brewery-page .phone-screen {
+  background: linear-gradient(180deg, #f7efe3 0%, #efe2cc 100%);
+}
+
+.brewery-page .screen-card {
+  background: linear-gradient(180deg, #fbf4e7 0%, #f1e3cc 100%);
+  border: 1px solid rgba(158, 123, 68, 0.28);
+  box-shadow: 0 8px 18px rgba(74, 45, 18, 0.10);
+}
+
+.brewery-page .screen-card h3,
+.brewery-page .screen-card p {
+  color: #2f2418;
+}
+
+.brewery-page .screen-pill {
+  background: rgba(158, 123, 68, 0.14);
+  color: #6b3b1e;
+  border: 1px solid rgba(158, 123, 68, 0.24);
+}
+
+.brewery-page .feature-band {
+  border-top: 1px solid rgba(255, 236, 206, 0.18);
+  border-bottom: 1px solid rgba(255, 236, 206, 0.18);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.18), rgba(255, 255, 255, 0.08));
+}
+
+.brewery-page .feature-band .kicker {
+  color: #7a5424;
+}
+
+.brewery-page footer.site-footer {
+  color: #f0dfc4;
+}
+
+.brewery-page .footer-grid {
+  border-top: 1px solid rgba(255, 236, 206, 0.18);
+}
+
+/* Responsive */
 
 @media (max-width: 1024px) {
   .hero-grid,
@@ -657,9 +885,15 @@ footer.site-footer {
   }
 }
 
+@media (max-width: 900px) {
+  .redemption-video-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 @media (max-width: 760px) {
   .navbar {
-    padding: .8rem 0 1rem;
+    padding: 0.8rem 0 1rem;
     align-items: flex-start;
     flex-direction: column;
   }
@@ -701,182 +935,5 @@ footer.site-footer {
 
   .hero-copy {
     padding: 1.5rem;
-  }
-}
-
-.brewery-page {
-  background: linear-gradient(
-    180deg,
-    #b89256 0%,
-    #9e7b44 55%,
-    #876533 100%
-  );
-}
-
-.brewery-page header.site-header {
-  background: rgba(158,123,68,.92);
-  border-bottom: 1px solid rgba(255,236,206,.25);
-}
-
-.brewery-page .nav-links {
-  color: rgba(255,240,210,.85);
-}
-
-.brewery-page .nav-links a:hover,
-.brewery-page .nav-links a.active {
-  color: #ffffff;
-}
-
-.brewery-page .brand-copy strong {
-  color: #fff6e6;
-}
-
-.brewery-page section {
-  background: rgba(255,255,255,.08);
-  border-top: 1px solid rgba(255,236,206,.18);
-}
-
-.brewery-page .brand-copy span {
-  color: rgba(255,240,210,.7);
-}
-
-.brewery-page .btn-secondary {
-  background: rgba(158, 123, 68, 0.08);
-  border-color: rgba(158, 123, 68, 0.25);
-  color: #2f2418;
-}
-
-.brewery-page .hero {
-  background: linear-gradient(
-    180deg,
-    #171b45 0%,
-    #121538 100%
-  );
-}
-
-.brewery-page .hero::after {
-  background: linear-gradient(
-    to right,
-    transparent,
-    rgba(255,236,206,.35),
-    transparent
-  );
-}
-
-.brewery-page .hero-copy {
-  background: rgba(18,21,56,.55);
-  border: 1px solid rgba(242,194,48,.2);
-}
-
-.brewery-page .hero-copy h1,
-.brewery-page .hero-copy p,
-.brewery-page .hero-copy .lead {
-  color: #2f2418;
-}
-
-.brewery-page .badge {
-  background: rgba(158, 123, 68, 0.14);
-  color: #7a5424;
-  border: 1px solid rgba(158, 123, 68, 0.25);
-}
-
-.brewery-page .brewery-pill {
-  background: rgba(158, 123, 68, 0.10);
-  color: #5f4527;
-  border: 1px solid rgba(158, 123, 68, 0.22);
-}
-
-.brewery-page .brewery-pill strong {
-  color: #7a5424;
-}
-
-.brewery-page .hero-phone {
-  background: linear-gradient(180deg, #f4ead8 0%, #e9dbc3 100%);
-  border: 1px solid rgba(158, 123, 68, 0.35);
-}
-
-.brewery-page .phone-shell {
-  background: #6b4a28;
-}
-
-.brewery-page .phone-screen {
-  background: linear-gradient(180deg, #f7efe3 0%, #efe2cc 100%);
-}
-
-.brewery-page .screen-card {
-  background: linear-gradient(180deg, #fbf4e7 0%, #f1e3cc 100%);
-  border: 1px solid rgba(158, 123, 68, 0.28);
-  box-shadow: 0 8px 18px rgba(74, 45, 18, 0.10);
-}
-
-.brewery-page .screen-card h3,
-.brewery-page .screen-card p {
-  color: #2f2418;
-}
-
-.brewery-page .screen-pill {
-  background: rgba(158, 123, 68, 0.14);
-  color: #6b3b1e;
-  border: 1px solid rgba(158, 123, 68, 0.24);
-}
-
-.brewery-page .feature-band {
-  border-top: 1px solid rgba(158, 123, 68, 0.18);
-  border-bottom: 1px solid rgba(158, 123, 68, 0.18);
-  background: linear-gradient(180deg, rgba(255,255,255,.18), rgba(255,255,255,.08));
-}
-
-.brewery-page .cta-panel {
-  background: linear-gradient(180deg, #b89256 0%, #9e7b44 55%, #876533 100%);
-  color: #fff6e6;
-}
-
-.brewery-page footer.site-footer {
-  color: #6f6558;
-}
-
-.brewery-page .footer-grid {
-  border-top: 1px solid rgba(158, 123, 68, 0.2);
-}
-
-.redemption-video-section {
-  padding: 4.2rem 0;
-}
-
-.redemption-video-grid {
-  display: grid;
-  grid-template-columns: 1.2fr .8fr;
-  gap: 1.4rem;
-  align-items: start;
-}
-
-.video-card {
-  background: linear-gradient(180deg, var(--surface-strong) 0%, var(--surface-soft) 100%);
-  border: 1px solid rgba(185, 157, 115, 0.7);
-  border-radius: 24px;
-  padding: 1rem;
-  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.18);
-}
-
-.video-embed {
-  position: relative;
-  width: 100%;
-  aspect-ratio: 16 / 9;
-  overflow: hidden;
-  border-radius: 18px;
-  background: #000;
-  box-shadow: 0 16px 34px rgba(0,0,0,.24);
-}
-
-.video-embed iframe,
-.video-embed #yt-player,
-.video-embed > div {
-  width: 100%;
-  height: 100%;
-}
-
-@media (max-width: 900px) {
-  .redemption-video-grid {
-    grid-template-columns: 1fr;
   }
 }
