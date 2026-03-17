@@ -937,3 +937,54 @@ footer.site-footer {
     padding: 1.5rem;
   }
 }
+/* =========================
+   Brewery page accents ONLY
+   ========================= */
+
+.index2 .kicker {
+  color: var(--gold);
+}
+
+.index2 .feature-band {
+  border-top: 1px solid rgba(242, 194, 48, 0.25);
+  border-bottom: 1px solid rgba(242, 194, 48, 0.25);
+}
+
+/* cards slightly warmer */
+.index2 .card,
+.index2 .panel {
+  border: 1px solid rgba(242, 194, 48, 0.35);
+}
+
+/* hero box accent */
+.index2 .hero-copy {
+  border: 1px solid rgba(242, 194, 48, 0.25);
+}
+
+/* phone frame accent */
+.index2 .hero-phone {
+  border: 1px solid rgba(242, 194, 48, 0.45);
+}
+
+/* step pills */
+.index2 .screen-pill {
+  background: rgba(242, 194, 48, 0.15);
+  color: #ffd85a;
+  border: 1px solid rgba(242, 194, 48, 0.35);
+}
+
+/* brewery info pill */
+.index2 .brewery-pill {
+  border: 1px solid rgba(242, 194, 48, 0.25);
+  background: rgba(244, 234, 216, 0.06);
+}
+
+/* CTA stays gold-focused */
+.index2 .cta-panel {
+  background: linear-gradient(
+    180deg,
+    #b89256 0%,
+    #9e7b44 55%,
+    #876533 100%
+  );
+}
