@@ -297,9 +297,8 @@ label,
   color: var(--accent);
 }
 
-/* dark sections */
-.feature-band .kicker {
-  color: #f3e7d7; /* warm light tan */
+.feature-band.dark .kicker {
+  color: #f3e7d7; /* warm tan (best match for your theme) */
 }
 
 .muted {
