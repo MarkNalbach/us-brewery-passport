@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>US Brew Passport | Brewery Partner Signup</title>
+  <meta name="description" content="Complete your brewery partner signup for the 2026 US Brew Passport." />
+  <link rel="stylesheet" href="styles2.css" />
+</head>
+<body class="brewery-page">
+  <header class="site-header">
+    <div class="container navbar">
+      <a class="brand" href="index2.html">
+        <img src="assets/brew-passport-logo.png" alt="US Brew Passport Logo" class="logo">
+        <div class="brand-copy">
+          <strong>US Brew Passport</strong>
+          <span>Brewery Partner Signup</span>
+        </div>
+      </a>
+
+      <nav class="nav-links">
+        <a href="passport2.html">Passport Holders</a>
+        <a href="index2.html">Brewery Partners</a>
+        <a href="faq.html">FAQ</a>
+      </nav>
+
+      <div class="actions">
+        <a class="btn btn-secondary" href="index2.html">Back to Brewery Page</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <div class="hero-copy" style="max-width:900px;margin:0 auto;">
+          <span class="badge">Partner signup</span>
+          <h2>Complete your brewery submission.</h2>
+          <p class="lead">
+            Fill out the form below to add your brewery to the 2026 US Brew Passport.
+            Please submit a separate form for each location.
+          </p>
+
+          <div class="brewery-pill">
+            <strong>Before you submit:</strong>
+            Have your brewery name, address, contact information, and chosen offer ready.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="partner-signup-form">
+      <div class="container">
+        <div class="panel">
+          <form class="form-shell" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+            <div class="form-grid">
+              <label>Brewery Name *
+                <input type="text" name="brewery_name" required />
+              </label>
+
+              <label>Street Address *
+                <input type="text" name="street_address" required />
+              </label>
+
+              <label>City *
+                <input type="text" name="city" required />
+              </label>
+
+              <label>State *
+                <input type="text" name="state" required />
+              </label>
+
+              <label>Zip Code *
+                <input type="text" name="zip_code" required />
+              </label>
+
+              <label>Contact Name *
+                <input type="text" name="contact_name" required />
+              </label>
+
+              <label>Contact Email *
+                <input type="email" name="contact_email" required />
+              </label>
+
+              <label>Contact Phone
+                <input type="tel" name="contact_phone" />
+              </label>
+
+              <label>Brewery Website
+                <input type="url" name="brewery_website" />
+              </label>
+
+              <label>Offer Details *
+                <select name="offer_details" required>
+                  <option value="">Select an offer…</option>
+                  <option>Buy one beer, get one beer FREE</option>
+                  <option>50% off the 2 beers</option>
+                  <option>50% off the second beer</option>
+                  <option>Other (enter custom offer below)</option>
+                </select>
+              </label>
+            </div>
+
+            <label>Custom Offer
+              <textarea name="custom_offer" placeholder="Enter your custom offer if needed"></textarea>
+            </label>
+
+            <label>Signature Name *
+              <input type="text" name="signature_name" required />
+            </label>
+
+            <label style="display:flex;align-items:flex-start;gap:.75rem;">
+              <input style="width:auto;margin-top:.2rem;" type="checkbox" name="agreed_to_terms" required />
+              <span>I have read and agree to the US Brew Passport Partner Program Terms.</span>
+            </label>
+
+            <div>
+              <button class="btn btn-primary" type="submit">Submit Partner Signup</button>
+            </div>
+
+            <p class="small">Questions? Email usbrewpassport@gmail.com</p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <strong>US Brew Passport</strong><br />
+        <span>For brewery questions: usbrewpassport@gmail.com</span>
+      </div>
+      <div>
+        <a href="index2.html">Back to Brewery Partners</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
