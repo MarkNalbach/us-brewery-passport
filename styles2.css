@@ -441,7 +441,7 @@ section {
 }
 
 .feature-band .kicker {
-  color: #f3e7d7;
+  color: var(--gold);
 }
 
 /* Steps */
@@ -856,7 +856,7 @@ footer.site-footer {
 }
 
 .brewery-page .feature-band .kicker {
-  color: #7a5424;
+  color: var(--gold);
 }
 
 .brewery-page footer.site-footer {
