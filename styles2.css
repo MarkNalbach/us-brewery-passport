@@ -62,7 +62,7 @@ header.site-header {
   top: 0;
   z-index: 25;
   backdrop-filter: blur(12px);
-  background: rgba(18, 21, 56, 0.88);
+  background: rgba(18, 21, 56, 0.9);
   border-bottom: 1px solid rgba(242, 194, 48, 0.18);
 }
 
@@ -75,7 +75,7 @@ header.site-header {
 }
 
 .logo {
-  height: 80px;
+  height: 96px;
   width: auto;
   display: block;
   border: none;
@@ -86,19 +86,7 @@ header.site-header {
 .brand {
   display: flex;
   align-items: center;
-  gap: 0.9rem;
-}
-
-.brand-mark {
-  width: 42px;
-  height: 42px;
-  border-radius: 14px;
-  display: grid;
-  place-items: center;
-  font-weight: 800;
-  color: white;
-  background: linear-gradient(135deg, var(--gold), #c98a13);
-  box-shadow: var(--shadow);
+  gap: 0.8rem;
 }
 
 .brand-copy strong {
@@ -109,7 +97,7 @@ header.site-header {
 
 .brand-copy span {
   font-size: 0.88rem;
-  color: var(--muted);
+  color: rgba(243, 231, 215, 0.78);
 }
 
 .nav-links {
@@ -117,7 +105,7 @@ header.site-header {
   align-items: center;
   gap: 1.1rem;
   flex-wrap: wrap;
-  color: var(--muted);
+  color: rgba(243, 231, 215, 0.82);
   font-weight: 600;
 }
 
@@ -158,16 +146,16 @@ header.site-header {
 }
 
 .btn-secondary {
-  background: rgba(244, 234, 216, 0.10);
-  border: 1px solid rgba(242, 194, 48, 0.35);
-  color: #f7ead5;
+  background: rgba(255, 244, 220, 0.08);
+  border: 1px solid rgba(242, 194, 48, 0.30);
+  color: #f6ead6;
 }
 
 .btn-secondary:hover {
   background: rgba(255, 244, 220, 0.14);
 }
 
-/* Labels / small text */
+/* Labels */
 
 .badge {
   display: inline-flex;
@@ -185,12 +173,12 @@ header.site-header {
   letter-spacing: 0.08em;
   text-transform: uppercase;
   font-weight: 700;
-  color: var(--accent);
+  color: var(--gold);
 }
 
 .small {
   font-size: 0.92rem;
-  color: #5f5a54;
+  color: rgba(243, 231, 215, 0.78);
   line-height: 1.5;
 }
 
@@ -198,7 +186,7 @@ header.site-header {
 
 .hero {
   position: relative;
-  padding: 5.5rem 0 4.2rem;
+  padding: 5rem 0 3.8rem;
 }
 
 .hero::after {
@@ -211,54 +199,55 @@ header.site-header {
   background: linear-gradient(
     to right,
     transparent,
-    rgba(242, 194, 48, 0.25),
+    rgba(242, 194, 48, 0.28),
     transparent
   );
 }
 
 .hero-grid {
   display: grid;
-  grid-template-columns: 1.08fr 0.92fr;
-  gap: 2.25rem;
-  align-items: stretch;
+  grid-template-columns: 1.04fr 0.96fr;
+  gap: 1.6rem;
+  align-items: start;
 }
 
 .hero-copy {
   background: rgba(18, 21, 56, 0.78);
-  border: 1px solid rgba(242, 194, 48, 0.14);
+  border: 1px solid rgba(242, 194, 48, 0.18);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   border-radius: 28px;
-  padding: 2rem 2rem 1.6rem;
+  padding: 1.5rem 1.5rem 1.25rem;
   box-shadow: 0 18px 45px rgba(0, 0, 0, 0.28);
-  max-width: 700px;
-  height: 100%;
+  max-width: none;
+  height: auto;
 }
 
 .hero-copy h1,
 .hero-copy h2 {
   color: #fff6e6;
+  margin-top: 0.7rem;
 }
 
 .hero-copy p,
 .hero-copy .lead {
-  color: rgba(243, 231, 215, 0.88);
+  color: rgba(243, 231, 215, 0.9);
 }
 
 .hero-phone {
   padding: 0.35rem;
   border-radius: 34px;
   background: #efe2cc;
-  border: 1px solid rgba(185, 157, 115, 0.55);
+  border: 1px solid rgba(242, 194, 48, 0.38);
   box-shadow: 0 18px 45px rgba(0, 0, 0, 0.28);
-  height: 100%;
+  height: auto;
 }
 
 .phone-shell {
   background: #151a45;
   border-radius: 28px;
   padding: 0.45rem;
-  height: 100%;
+  height: auto;
 }
 
 .phone-screen {
@@ -294,7 +283,7 @@ h3 {
 
 p.lead,
 .lead {
-  color: var(--muted);
+  color: rgba(243, 231, 215, 0.88);
   font-size: 1.05rem;
   max-width: 64ch;
 }
@@ -368,11 +357,11 @@ label {
 /* Info pill */
 
 .brewery-pill {
-  margin-top: 1.25rem;
+  margin-top: 1rem;
   display: block;
   padding: 1rem 1.1rem;
   border-radius: 18px;
-  background: rgba(255, 244, 220, 0.10);
+  background: rgba(255, 244, 220, 0.08);
   color: #f1e3c8;
   border: 1px solid rgba(242, 194, 48, 0.22);
   font-size: 1rem;
@@ -384,10 +373,10 @@ label {
   display: block;
   color: #ffd85a;
   margin-bottom: 0.35rem;
-  font-size: 1.15rem;
+  font-size: 1.02rem;
 }
 
-/* Layout sections */
+/* Layout */
 
 section {
   padding: 4.2rem 0;
@@ -424,19 +413,25 @@ section {
 
 .stats {
   grid-template-columns: repeat(3, 1fr);
-  margin-top: 1.5rem;
+  margin-top: 1rem;
+  gap: 0.85rem;
+}
+
+.stat {
+  padding: 1rem 1rem 0.95rem;
 }
 
 .stat strong {
   display: block;
-  font-size: 1.35rem;
+  font-size: 1.05rem;
   margin-bottom: 0.2rem;
   color: var(--text-dark);
+  line-height: 1.2;
 }
 
 .feature-band {
-  border-top: 1px solid rgba(242, 194, 48, 0.18);
-  border-bottom: 1px solid rgba(242, 194, 48, 0.18);
+  border-top: 1px solid rgba(242, 194, 48, 0.22);
+  border-bottom: 1px solid rgba(242, 194, 48, 0.22);
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.02));
 }
 
@@ -533,7 +528,7 @@ section {
   border: 1px solid rgba(210, 161, 94, 0.35);
 }
 
-/* App store row */
+/* App row */
 
 .store-badge {
   height: 55px;
@@ -643,7 +638,7 @@ textarea {
 
 footer.site-footer {
   padding: 2.4rem 0 3rem;
-  color: var(--muted);
+  color: rgba(243, 231, 215, 0.76);
 }
 
 .footer-grid {
@@ -736,135 +731,70 @@ footer.site-footer {
   height: 100%;
 }
 
-/* Brewery page overrides */
+/* INDEX2 accents only */
 
-.brewery-page {
-  background: linear-gradient(180deg, #b89256 0%, #9e7b44 55%, #876533 100%);
+.index2 .hero-copy {
+  border-color: rgba(242, 194, 48, 0.22);
 }
 
-.brewery-page header.site-header {
-  background: rgba(158, 123, 68, 0.92);
-  border-bottom: 1px solid rgba(255, 236, 206, 0.25);
+.index2 .hero-phone {
+  border-color: rgba(242, 194, 48, 0.38);
 }
 
-.brewery-page .brand-copy strong {
-  color: #fff6e6;
+.index2 .card,
+.index2 .panel,
+.index2 .video-card {
+  border-color: rgba(242, 194, 48, 0.24);
 }
 
-.brewery-page .brand-copy span {
-  color: rgba(255, 240, 210, 0.72);
+.index2 .feature-band {
+  border-top: 1px solid rgba(242, 194, 48, 0.25);
+  border-bottom: 1px solid rgba(242, 194, 48, 0.25);
 }
 
-.brewery-page .nav-links {
-  color: rgba(255, 240, 210, 0.85);
-}
-
-.brewery-page .nav-links a:hover,
-.brewery-page .nav-links a.active {
-  color: #ffffff;
-}
-
-.brewery-page .btn-secondary {
-  background: rgba(255, 244, 220, 0.10);
-  border: 1px solid rgba(255, 236, 206, 0.30);
-  color: #fff4df;
-}
-
-.brewery-page section {
-  background: rgba(255, 255, 255, 0.08);
-  border-top: 1px solid rgba(255, 236, 206, 0.18);
-}
-
-.brewery-page .hero {
-  background: linear-gradient(180deg, #171b45 0%, #121538 100%);
-}
-
-.brewery-page .hero::after {
+.index2 section:not(.hero)::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
   background: linear-gradient(
     to right,
     transparent,
-    rgba(255, 236, 206, 0.35),
+    rgba(242, 194, 48, 0.16),
     transparent
   );
 }
 
-.brewery-page .hero-copy {
-  background: rgba(18, 21, 56, 0.72);
-  border: 1px solid rgba(242, 194, 48, 0.16);
+.index2 section {
+  position: relative;
 }
 
-.brewery-page .hero-copy h1,
-.brewery-page .hero-copy h2 {
-  color: #fff6e6;
+/* Hero right stack for index2 */
+
+.index2 .hero-right {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
-.brewery-page .hero-copy p,
-.brewery-page .hero-copy .lead {
-  color: rgba(243, 231, 215, 0.90);
+.index2 .qr-hero {
+  padding: 0.35rem;
+  border-radius: 34px;
+  background: #efe2cc;
+  border: 1px solid rgba(242, 194, 48, 0.38);
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.28);
+  overflow: hidden;
 }
 
-.brewery-page .badge {
-  background: rgba(242, 194, 48, 0.14);
-  color: #ffd85a;
-  border: 1px solid rgba(242, 194, 48, 0.22);
-}
-
-.brewery-page .brewery-pill {
-  background: rgba(255, 244, 220, 0.10);
-  color: #f1e3c8;
-  border: 1px solid rgba(242, 194, 48, 0.22);
-}
-
-.brewery-page .brewery-pill strong {
-  color: #ffd85a;
-}
-
-.brewery-page .hero-phone {
-  background: linear-gradient(180deg, #f4ead8 0%, #e9dbc3 100%);
-  border: 1px solid rgba(158, 123, 68, 0.35);
-}
-
-.brewery-page .phone-shell {
-  background: #6b4a28;
-}
-
-.brewery-page .phone-screen {
-  background: linear-gradient(180deg, #f7efe3 0%, #efe2cc 100%);
-}
-
-.brewery-page .screen-card {
-  background: linear-gradient(180deg, #fbf4e7 0%, #f1e3cc 100%);
-  border: 1px solid rgba(158, 123, 68, 0.28);
-  box-shadow: 0 8px 18px rgba(74, 45, 18, 0.10);
-}
-
-.brewery-page .screen-card h3,
-.brewery-page .screen-card p {
-  color: #2f2418;
-}
-
-.brewery-page .screen-pill {
-  background: rgba(158, 123, 68, 0.14);
-  color: #6b3b1e;
-  border: 1px solid rgba(158, 123, 68, 0.24);
-}
-
-.brewery-page .feature-band {
-  border-top: 1px solid rgba(255, 236, 206, 0.18);
-  border-bottom: 1px solid rgba(255, 236, 206, 0.18);
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.18), rgba(255, 255, 255, 0.08));
-}
-
-.brewery-page .feature-band .kicker {
-  color: var(--gold);
-}
-
-.brewery-page footer.site-footer {
-  color: #f0dfc4;
-}
-
-.brewery-page .footer-grid {
-  border-top: 1px solid rgba(255, 236, 206, 0.18);
+.index2 .qr-hero img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: contain;
+  border-radius: 28px;
+  background: white;
 }
 
 /* Responsive */
@@ -883,6 +813,10 @@ footer.site-footer {
   .hero-copy {
     max-width: 100%;
   }
+
+  .index2 .hero-copy h2 {
+    max-width: 12ch;
+  }
 }
 
 @media (max-width: 900px) {
@@ -899,7 +833,7 @@ footer.site-footer {
   }
 
   .hero {
-    padding-top: 3.3rem;
+    padding: 3.4rem 0 2.8rem;
   }
 
   .hero-grid,
@@ -926,7 +860,7 @@ footer.site-footer {
   }
 
   .logo {
-    height: 68px;
+    height: 72px;
   }
 
   .phone-frame {
@@ -934,462 +868,10 @@ footer.site-footer {
   }
 
   .hero-copy {
-    padding: 1.5rem;
-  }
-}
-/* =========================
-   Brewery page accents ONLY
-   ========================= */
-
-.index2 .kicker {
-  color: var(--gold);
-}
-
-.index2 .feature-band {
-  border-top: 1px solid rgba(242, 194, 48, 0.25);
-  border-bottom: 1px solid rgba(242, 194, 48, 0.25);
-}
-
-/* cards slightly warmer */
-.index2 .card,
-.index2 .panel {
-  border: 1px solid rgba(242, 194, 48, 0.35);
-}
-
-/* hero box accent */
-.index2 .hero-copy {
-  border: 1px solid rgba(242, 194, 48, 0.25);
-}
-
-/* phone frame accent */
-.index2 .hero-phone {
-  border: 1px solid rgba(242, 194, 48, 0.45);
-}
-
-/* step pills */
-.index2 .screen-pill {
-  background: rgba(242, 194, 48, 0.15);
-  color: #ffd85a;
-  border: 1px solid rgba(242, 194, 48, 0.35);
-}
-
-/* brewery info pill */
-.index2 .brewery-pill {
-  border: 1px solid rgba(242, 194, 48, 0.25);
-  background: rgba(244, 234, 216, 0.06);
-}
-
-/* CTA stays gold-focused */
-.index2 .cta-panel {
-  background: linear-gradient(
-    180deg,
-    #b89256 0%,
-    #9e7b44 55%,
-    #876533 100%
-  );
-}
-/* =========================================
-   INDEX2 PAGE OVERRIDES
-   Paste at very bottom of styles2.css
-   ========================================= */
-
-.index2 .logo {
-  height: 96px;
-  width: auto;
-}
-
-.index2 header.site-header {
-  background: rgba(18, 21, 56, 0.9);
-  border-bottom: 1px solid rgba(242, 194, 48, 0.18);
-}
-
-.index2 .brand-copy strong {
-  color: #fff4df;
-}
-
-.index2 .brand-copy span {
-  color: rgba(243, 231, 215, 0.78);
-}
-
-.index2 .nav-links {
-  color: rgba(243, 231, 215, 0.82);
-}
-
-.index2 .nav-links a:hover,
-.index2 .nav-links a.active {
-  color: #ffffff;
-}
-
-.index2 .hero {
-  padding: 4.5rem 0 3.4rem;
-}
-
-.index2 .hero::after {
-  background: linear-gradient(
-    to right,
-    transparent,
-    rgba(242, 194, 48, 0.28),
-    transparent
-  );
-}
-
-.index2 .hero-grid {
-  grid-template-columns: 1.04fr 0.96fr;
-  gap: 1.6rem;
-  align-items: start;
-}
-
-.index2 .hero-copy {
-  background: rgba(18, 21, 56, 0.78);
-  border: 1px solid rgba(242, 194, 48, 0.22);
-  border-radius: 28px;
-  padding: 1.5rem 1.5rem 1.25rem;
-  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.28);
-  max-width: none;
-  height: auto;
-}
-
-.index2 .hero-copy h1,
-.index2 .hero-copy h2 {
-  color: #fff6e6;
-  font-size: clamp(2.5rem, 5vw, 4.4rem);
-  max-width: 11ch;
-  margin-top: 0.7rem;
-}
-
-.index2 .hero-copy p,
-.index2 .hero-copy .lead {
-  color: rgba(243, 231, 215, 0.9);
-}
-
-.index2 .hero-copy .actions {
-  margin-top: 1rem !important;
-}
-
-.index2 .btn-primary {
-  color: white;
-  background: linear-gradient(180deg, var(--accent) 0%, var(--accent-dark) 100%);
-  box-shadow: 0 12px 28px rgba(17, 104, 201, 0.32);
-}
-
-.index2 .btn-secondary {
-  background: rgba(255, 244, 220, 0.08);
-  border: 1px solid rgba(242, 194, 48, 0.30);
-  color: #f6ead6;
-}
-
-.index2 .btn-secondary:hover {
-  background: rgba(255, 244, 220, 0.14);
-}
-
-.index2 .badge {
-  background: rgba(242, 194, 48, 0.14);
-  color: #ffd85a;
-  border: 1px solid rgba(242, 194, 48, 0.25);
-}
-
-.index2 .brewery-pill {
-  margin-top: 1rem;
-  display: block;
-  padding: 1rem 1.1rem;
-  border-radius: 18px;
-  background: rgba(255, 244, 220, 0.08);
-  color: #f1e3c8;
-  border: 1px solid rgba(242, 194, 48, 0.22);
-  font-size: 1rem;
-  line-height: 1.45;
-  max-width: 100%;
-}
-
-.index2 .brewery-pill strong {
-  display: block;
-  color: #ffd85a;
-  margin-bottom: 0.35rem;
-  font-size: 1.02rem;
-}
-
-.index2 .stats {
-  margin-top: 1rem;
-  gap: 0.85rem;
-  grid-template-columns: repeat(3, 1fr);
-}
-
-.index2 .stat {
-  padding: 1rem 1rem 0.95rem;
-  border: 1px solid rgba(242, 194, 48, 0.28);
-}
-
-.index2 .stat strong {
-  font-size: 1.05rem;
-  line-height: 1.2;
-  color: var(--text-dark);
-}
-
-.index2 .stat .muted,
-.index2 .stat span {
-  font-size: 0.95rem;
-  line-height: 1.45;
-  color: var(--muted-dark);
-}
-
-/* Make step 1–3 mockup match passport page more closely */
-.index2 .hero-phone {
-  padding: 0.35rem;
-  border-radius: 34px;
-  background: #efe2cc;
-  border: 1px solid rgba(242, 194, 48, 0.38);
-  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.28);
-  height: auto;
-}
-
-.index2 .phone-shell {
-  background: #151a45;
-  border-radius: 28px;
-  padding: 0.45rem;
-  height: auto;
-}
-
-.index2 .phone-screen {
-  min-height: 100%;
-  border-radius: 24px;
-  background: linear-gradient(180deg, #171b45 0%, #101437 100%);
-  padding: 0.75rem;
-  display: grid;
-  gap: 0.75rem;
-}
-
-.index2 .screen-card {
-  background: linear-gradient(180deg, #f6edde 0%, #efe2cc 100%);
-  border: 1px solid rgba(185, 157, 115, 0.65);
-  border-radius: 18px;
-  padding: 0.95rem 1rem;
-  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
-  color: var(--text-dark);
-}
-
-.index2 .screen-card h3 {
-  font-size: 1rem;
-  margin-bottom: 0.3rem;
-  color: var(--text-dark);
-}
-
-.index2 .screen-card p {
-  font-size: 0.92rem;
-  color: var(--muted-dark);
-  margin: 0;
-}
-
-.index2 .screen-pill {
-  display: inline-block;
-  padding: 0.35rem 0.65rem;
-  border-radius: 999px;
-  background: rgba(143, 79, 37, 0.12);
-  color: #6b3b1e;
-  border: 1px solid rgba(143, 79, 37, 0.25);
-  font-size: 0.78rem;
-  font-weight: 700;
-}
-
-/* Section accents */
-.index2 .kicker {
-  color: #f2c230;
-}
-
-.index2 .feature-band {
-  border-top: 1px solid rgba(242, 194, 48, 0.25);
-  border-bottom: 1px solid rgba(242, 194, 48, 0.25);
-  background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.02));
-}
-
-.index2 section {
-  position: relative;
-}
-
-.index2 section:not(.hero)::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 1px;
-  background: linear-gradient(
-    to right,
-    transparent,
-    rgba(242, 194, 48, 0.16),
-    transparent
-  );
-}
-
-.index2 .card,
-.index2 .panel,
-.index2 .video-card {
-  border: 1px solid rgba(242, 194, 48, 0.22);
-}
-
-.index2 .video-card {
-  background: linear-gradient(180deg, var(--surface-strong) 0%, var(--surface-soft) 100%);
-}
-
-/* CTA */
-.index2 .cta-panel {
-  background: linear-gradient(
-    180deg,
-    #b89256 0%,
-    #9e7b44 55%,
-    #876533 100%
-  );
-  border: 1px solid rgba(255, 236, 206, 0.24);
-}
-
-.index2 .cta-panel .btn-primary {
-  background: white;
-  color: #332015;
-  box-shadow: 0 8px 20px rgba(0,0,0,.22);
-}
-
-.index2 .cta-panel .btn-secondary {
-  background: transparent;
-  border-color: rgba(255,255,255,.25);
-  color: white;
-}
-
-/* Footer */
-.index2 footer.site-footer {
-  color: rgba(243, 231, 215, 0.76);
-}
-
-.index2 .footer-grid {
-  border-top: 1px solid rgba(242, 194, 48, 0.18);
-}
-
-/* Readability tune-ups */
-.index2 .muted {
-  color: var(--muted-dark);
-}
-
-.index2 .hero-copy .muted,
-.index2 .hero-copy .small {
-  color: rgba(243, 231, 215, 0.78);
-}
-
-/* Responsive */
-@media (max-width: 1024px) {
-  .index2 .hero-grid {
-    grid-template-columns: 1fr 1fr;
-    gap: 1.25rem;
-  }
-
-  .index2 .hero-copy h2 {
-    max-width: 12ch;
-  }
-}
-
-@media (max-width: 760px) {
-  .index2 .logo {
-    height: 72px;
-  }
-
-  .index2 .hero {
-    padding: 3.4rem 0 2.8rem;
-  }
-
-  .index2 .hero-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .index2 .hero-copy {
     padding: 1.25rem;
   }
 
-  .index2 .stats {
+  .stats {
     grid-template-columns: 1fr;
   }
-}
-
-/* QR card under phone mockup */
-.index2 .qr-card {
-  margin-top: 1rem;
-  background: linear-gradient(180deg, #f6edde 0%, #efe2cc 100%);
-  border: 1px solid rgba(242, 194, 48, 0.35);
-  border-radius: 24px;
-  padding: 1rem;
-  box-shadow: 0 12px 28px rgba(0,0,0,0.18);
-  text-align: center;
-}
-
-.index2 .qr-card img {
-  width: 100%;
-  max-width: 220px;
-  margin: 0 auto 0.6rem;
-  border-radius: 12px;
-  background: white;
-  padding: 6px;
-}
-
-.index2 .qr-card p {
-  font-size: 0.9rem;
-  color: var(--muted-dark);
-  margin: 0;
-}
-
-.index2 .qr-stat {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 1rem;
-}
-
-.index2 .qr-stat img {
-  width: 100%;
-  max-width: 120px;
-  margin-bottom: 0.5rem;
-  border-radius: 10px;
-  background: white;
-  padding: 6px;
-}
-
-.index2 .stats {
-  grid-template-columns: repeat(4, 1fr);
-}
-
-.index2 .stats {
-  grid-template-columns: repeat(4, 1fr);
-}
-/* Right column stack */
-.index2 .hero-right {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-/* QR block styled like hero-copy (dark glass) */
-.index2 .qr-hero {
-  background: rgba(18, 21, 56, 0.78);
-  border: 1px solid rgba(242, 194, 48, 0.22);
-  border-radius: 28px;
-  padding: 1.2rem 1.2rem 1rem;
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.28);
-  text-align: center;
-}
-
-/* QR image */
-.index2 .qr-hero img {
-  width: 100%;
-  max-width: 180px;
-  margin: 0 auto 0.6rem;
-  display: block;
-  border-radius: 14px;
-  background: white;
-  padding: 6px;
-}
-
-/* Caption */
-.index2 .qr-hero p {
-  margin: 0;
-  font-size: 0.95rem;
-  color: rgba(243, 231, 215, 0.85);
 }
