@@ -1349,3 +1349,12 @@ footer.site-footer {
   background: white;
   padding: 6px;
 }
+
+.index2 .stats {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.index2 .stats {
+  grid-template-columns: repeat(4, 1fr);
+}
+
