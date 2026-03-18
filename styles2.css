@@ -1331,3 +1331,21 @@ footer.site-footer {
   color: var(--muted-dark);
   margin: 0;
 }
+
+.index2 .qr-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 1rem;
+}
+
+.index2 .qr-stat img {
+  width: 100%;
+  max-width: 120px;
+  margin-bottom: 0.5rem;
+  border-radius: 10px;
+  background: white;
+  padding: 6px;
+}
