@@ -1305,3 +1305,29 @@ footer.site-footer {
     grid-template-columns: 1fr;
   }
 }
+
+/* QR card under phone mockup */
+.index2 .qr-card {
+  margin-top: 1rem;
+  background: linear-gradient(180deg, #f6edde 0%, #efe2cc 100%);
+  border: 1px solid rgba(242, 194, 48, 0.35);
+  border-radius: 24px;
+  padding: 1rem;
+  box-shadow: 0 12px 28px rgba(0,0,0,0.18);
+  text-align: center;
+}
+
+.index2 .qr-card img {
+  width: 100%;
+  max-width: 220px;
+  margin: 0 auto 0.6rem;
+  border-radius: 12px;
+  background: white;
+  padding: 6px;
+}
+
+.index2 .qr-card p {
+  font-size: 0.9rem;
+  color: var(--muted-dark);
+  margin: 0;
+}
