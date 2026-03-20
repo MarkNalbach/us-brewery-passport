@@ -874,3 +874,17 @@ footer.site-footer {
     grid-template-columns: 1fr;
   }
 }
+
+.index2 .hero-logo {
+  width: min(260px, 70%);
+  height: auto;
+  margin: 0 auto 1rem;
+  display: block;
+}
+
+@media (max-width: 760px) {
+  .index2 .hero-logo {
+    width: min(220px, 75%);
+    margin-bottom: 0.85rem;
+  }
+}
