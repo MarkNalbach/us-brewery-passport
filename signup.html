@@ -58,20 +58,18 @@
               <label for="middleName">Leave this field blank</label>
               <input
                 type="text"
-                id="middleName"
                 name="middleName"
-                tabindex="-1"
                 autocomplete="off"
               />
             </div>
 
             <div class="form-grid">
               <label>Brewery Name *
-                <input type="text" name="brewery_name" required />
+                <input type="text" name="breweryName" required />
               </label>
 
               <label>Street Address *
-                <input type="text" name="street_address" required />
+                <input type="text" name="address" required />
               </label>
 
               <label>City *
@@ -83,23 +81,23 @@
               </label>
 
               <label>Zip Code *
-                <input type="text" name="zip_code" pattern="\d{5}" required />
+                <input type="text" name="zip" pattern="\d{5}" required />
               </label>
 
               <label>Contact Name *
-                <input type="text" name="contact_name" required />
+                <input type="text" name="contactName" required />
               </label>
 
               <label>Contact Email *
-                <input type="email" name="contact_email" required />
+                <input type="email" name="email" required />
               </label>
 
               <label>Contact Phone
-                <input type="tel" name="contact_phone" />
+                <input type="tel" name="phone" />
               </label>
 
               <label>Brewery Website
-                <input type="url" name="brewery_website" />
+                <input type="url" name="website" />
               </label>
 
               <label>Offer Details *
@@ -127,15 +125,14 @@
             </label>
 
             <label>Signature Name *
-              <input type="text" name="signature_name" required />
+              <input type="text" name="signature" required />
             </label>
 
             <label style="display:flex;align-items:flex-start;gap:.75rem;">
               <input
-                id="agreeCheckbox"
+                id="agree"
                 style="width:auto;margin-top:.2rem;"
                 type="checkbox"
-                name="agreed_to_terms"
                 required
               />
               <span>
