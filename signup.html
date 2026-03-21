@@ -52,7 +52,18 @@
     <section id="partner-signup-form">
       <div class="container">
         <div class="panel">
-          <form class="form-shell" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+          <form
+            id="breweryForm"
+            class="form-shell"
+            action="https://formspree.io/f/YOUR_FORM_ID"
+            method="POST"
+          >
+            <!-- Honeypot -->
+            <div style="position:absolute;left:-9999px;opacity:0;pointer-events:none;" aria-hidden="true">
+              <label for="middleName">Leave this field blank</label>
+              <input type="text" id="middleName" name="middleName" tabindex="-1" autocomplete="off" />
+            </div>
+
             <div class="form-grid">
               <label>Brewery Name *
                 <input type="text" name="brewery_name" required />
@@ -67,11 +78,11 @@
               </label>
 
               <label>State *
-                <input type="text" name="state" required />
+                <input type="text" name="state" maxlength="2" required />
               </label>
 
               <label>Zip Code *
-                <input type="text" name="zip_code" required />
+                <input type="text" name="zip_code" pattern="\d{5}" required />
               </label>
 
               <label>Contact Name *
@@ -91,18 +102,28 @@
               </label>
 
               <label>Offer Details *
-                <select name="offer_details" required>
+                <select id="offerSelect" required>
                   <option value="">Select an offer…</option>
-                  <option>Buy one beer, get one beer FREE</option>
-                  <option>50% off the 2 beers</option>
-                  <option>50% off the second beer</option>
-                  <option>Other (enter custom offer below)</option>
+                  <option value="Buy one beer, get one beer FREE">Buy one beer, get one beer FREE</option>
+                  <option value="50% off the 2 beers">50% off the 2 beers</option>
+                  <option value="50% off the second beer">50% off the second beer</option>
+                  <option value="CUSTOM">Other (enter custom offer below)</option>
                 </select>
               </label>
             </div>
 
-            <label>Custom Offer
-              <textarea name="custom_offer" placeholder="Enter your custom offer if needed"></textarea>
+            <label id="customOfferWrap" style="display:none;">Custom Offer *
+              <textarea
+                id="customOfferInput"
+                placeholder="Enter your custom offer if needed"
+              ></textarea>
+            </label>
+
+            <!-- Hidden field actually submitted -->
+            <input type="hidden" id="offerDetails" name="offer_details" />
+
+            <label>Verify you’re human — what is 2 + 3? *
+              <input type="number" name="captcha" required />
             </label>
 
             <label>Signature Name *
@@ -110,14 +131,26 @@
             </label>
 
             <label style="display:flex;align-items:flex-start;gap:.75rem;">
-              <input style="width:auto;margin-top:.2rem;" type="checkbox" name="agreed_to_terms" required />
-              <span>I have read and agree to the US Brew Passport Partner Program Terms.</span>
+              <input
+                id="agreeCheckbox"
+                style="width:auto;margin-top:.2rem;"
+                type="checkbox"
+                name="agreed_to_terms"
+                required
+              />
+              <span>
+                I have read and agree to the
+                <a href="2026-brewery-us-brew-passport-terms.pdf" target="_blank" rel="noopener">
+                  US Brew Passport Partner Program Terms
+                </a>.
+              </span>
             </label>
 
             <div>
-              <button class="btn btn-primary" type="submit">Submit Partner Signup</button>
+              <button id="submitBtn" class="btn btn-primary" type="submit">Submit Partner Signup</button>
             </div>
 
+            <p id="form-status" class="small" aria-live="polite"></p>
             <p class="small">Questions? Email usbrewpassport@gmail.com</p>
           </form>
         </div>
@@ -136,5 +169,130 @@
       </div>
     </div>
   </footer>
+
+  <!-- Success Modal -->
+  <div id="successModal" class="modal" aria-hidden="true">
+    <div class="modal-content">
+      <h2>Successfully Submitted!</h2>
+      <p>
+        Cheers — you’re officially on tap! 🍻
+        We’ll send a confirmation email within 24 hours once your brewery has been added to the app.
+        If you don’t receive it, please contact us.
+      </p>
+      <p>usbrewpassport@gmail.com</p>
+      <button id="closeModal" type="button" class="btn btn-primary">Close</button>
+    </div>
+  </div>
+
+  <script>
+    const form = document.getElementById("breweryForm");
+    const offerSelect = document.getElementById("offerSelect");
+    const customOfferWrap = document.getElementById("customOfferWrap");
+    const customOfferInput = document.getElementById("customOfferInput");
+    const offerDetailsInput = document.getElementById("offerDetails");
+    const successModal = document.getElementById("successModal");
+    const closeModal = document.getElementById("closeModal");
+    const formStatus = document.getElementById("form-status");
+    const submitBtn = document.getElementById("submitBtn");
+
+    function openModal() {
+      successModal.classList.add("is-open");
+      successModal.setAttribute("aria-hidden", "false");
+      document.body.classList.add("modal-open");
+    }
+
+    function closeModalFn() {
+      successModal.classList.remove("is-open");
+      successModal.setAttribute("aria-hidden", "true");
+      document.body.classList.remove("modal-open");
+    }
+
+    offerSelect.addEventListener("change", () => {
+      if (offerSelect.value === "CUSTOM") {
+        customOfferWrap.style.display = "block";
+        customOfferInput.setAttribute("required", "required");
+        offerDetailsInput.value = "";
+      } else {
+        customOfferWrap.style.display = "none";
+        customOfferInput.removeAttribute("required");
+        customOfferInput.value = "";
+        offerDetailsInput.value = offerSelect.value;
+      }
+    });
+
+    closeModal.addEventListener("click", closeModalFn);
+
+    successModal.addEventListener("click", (e) => {
+      if (e.target === successModal) {
+        closeModalFn();
+      }
+    });
+
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" && successModal.classList.contains("is-open")) {
+        closeModalFn();
+      }
+    });
+
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      formStatus.textContent = "";
+
+      const honeypot = form.querySelector('input[name="middleName"]').value.trim();
+      if (honeypot) {
+        return;
+      }
+
+      const captchaValue = form.querySelector('input[name="captcha"]').value.trim();
+      if (captchaValue !== "5") {
+        formStatus.textContent = "Please answer the human verification question correctly.";
+        return;
+      }
+
+      if (offerSelect.value === "CUSTOM") {
+        const customValue = customOfferInput.value.trim();
+        if (!customValue) {
+          formStatus.textContent = "Please enter your custom offer.";
+          customOfferInput.focus();
+          return;
+        }
+        offerDetailsInput.value = customValue;
+      } else {
+        offerDetailsInput.value = offerSelect.value;
+      }
+
+      submitBtn.disabled = true;
+      submitBtn.textContent = "Submitting...";
+
+      try {
+        const response = await fetch(form.action, {
+          method: "POST",
+          body: new FormData(form),
+          headers: {
+            "Accept": "application/json"
+          }
+        });
+
+        if (response.ok) {
+          form.reset();
+          customOfferWrap.style.display = "none";
+          customOfferInput.removeAttribute("required");
+          offerDetailsInput.value = "";
+          formStatus.textContent = "";
+          openModal();
+        } else {
+          const data = await response.json().catch(() => ({}));
+          formStatus.textContent =
+            data.errors?.map(err => err.message).join(", ") ||
+            "Something went wrong. Please try again.";
+        }
+      } catch (error) {
+        formStatus.textContent = "Something went wrong. Please check your connection and try again.";
+      } finally {
+        submitBtn.disabled = false;
+        submitBtn.textContent = "Submit Partner Signup";
+      }
+    });
+  </script>
 </body>
 </html>
