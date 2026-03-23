@@ -875,7 +875,7 @@ footer.site-footer {
   }
 }
 
-.index2 .hero-logo {
+.hero-logo {
   width: min(260px, 70%);
   height: auto;
   margin: 0 auto 1rem;
