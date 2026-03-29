@@ -376,7 +376,7 @@ label {
   font-size: 1.02rem;
 }
 
-.brewery-pill strong hero-right {
+.hero-right .brewery-pill strong {
   display: block;
   color: #ffd85a;
   margin-bottom: 0.35rem;
