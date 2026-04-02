@@ -1014,3 +1014,21 @@ body.modal-open {
   margin-bottom: 0.35rem;
   line-height: 1.25;
 }
+
+.steps-style .screen-card {
+  padding: 1rem 1rem 1.1rem;
+}
+
+.steps-style .screen-pill {
+  margin-bottom: 0.4rem;
+}
+
+.steps-style strong {
+  display: block;
+  margin-bottom: 0.3rem;
+  line-height: 1.25;
+}
+
+.steps-style .muted {
+  display: block;
+}
