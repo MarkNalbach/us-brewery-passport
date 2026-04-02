@@ -1032,3 +1032,18 @@ body.modal-open {
 .steps-style .muted {
   display: block;
 }
+
+.brewery-note {
+  margin-top: 1.5rem;
+  padding: 0.9rem 1.1rem;
+  border-radius: 14px;
+  background: rgba(185, 157, 115, 0.08);
+  border: 1px solid rgba(185, 157, 115, 0.35);
+  color: var(--muted-dark);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.brewery-note strong {
+  color: var(--text-dark);
+}
