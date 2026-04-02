@@ -937,3 +937,69 @@ footer.site-footer {
 body.modal-open {
   overflow: hidden;
 }
+
+.states-panel {
+  padding: 0.75rem;
+}
+
+.states-container {
+  display: grid;
+  gap: 0.9rem;
+}
+
+.state {
+  border: 1px solid rgba(185, 157, 115, 0.65);
+  border-radius: 18px;
+  overflow: hidden;
+  background: linear-gradient(180deg, var(--surface-strong) 0%, var(--surface-soft) 100%);
+}
+
+.state button {
+  width: 100%;
+  border: 0;
+  background: transparent;
+  color: var(--text-dark);
+  font: inherit;
+  font-weight: 700;
+  padding: 1rem 1.1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  text-align: left;
+}
+
+.state button:hover {
+  background: rgba(185, 157, 115, 0.08);
+}
+
+.state .arrow {
+  transition: transform 0.2s ease;
+}
+
+.state.open .arrow {
+  transform: rotate(90deg);
+}
+
+.brewery-list {
+  display: none;
+  padding: 0 1.1rem 1rem;
+  color: var(--muted-dark);
+}
+
+.brewery-list p {
+  margin: 0.45rem 0;
+  padding-bottom: 0.45rem;
+  border-bottom: 1px solid rgba(185, 157, 115, 0.25);
+}
+
+.brewery-list p:last-child {
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+
+.brewery-list em {
+  color: var(--muted-dark);
+  display: block;
+  padding-top: 0.25rem;
+}
