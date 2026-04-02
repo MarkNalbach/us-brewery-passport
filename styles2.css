@@ -1003,3 +1003,14 @@ body.modal-open {
   display: block;
   padding-top: 0.25rem;
 }
+
+.stat {
+  padding: 1rem 1rem 1rem;
+}
+
+.stat strong {
+  display: block;
+  font-size: 1rem;
+  margin-bottom: 0.35rem;
+  line-height: 1.25;
+}
