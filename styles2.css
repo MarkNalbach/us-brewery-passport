@@ -1037,13 +1037,17 @@ body.modal-open {
   margin-top: 1.5rem;
   padding: 0.9rem 1.1rem;
   border-radius: 14px;
-  background: rgba(185, 157, 115, 0.08);
-  border: 1px solid rgba(185, 157, 115, 0.35);
-  color: var(--muted-dark);
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: rgba(255, 255, 255, 0.85);
   font-size: 0.95rem;
   line-height: 1.5;
 }
 
 .brewery-note strong {
-  color: var(--text-dark);
+  color: #ffffff;
+}
+
+.brewery-note em {
+  color: #ffffff;
 }
