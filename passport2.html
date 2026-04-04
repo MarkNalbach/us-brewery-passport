@@ -336,69 +336,73 @@
 
 <script>
   document.addEventListener("DOMContentLoaded", () => {
+  
     const container = document.getElementById("states-container");
+    const toggleBtn = document.getElementById("toggleStatesBtn");
+  
     if (!container || typeof breweriesByState === "undefined") return;
-
+  
+    // ---------- BUILD STATE LIST ----------
     Object.entries(breweriesByState).forEach(([state, breweries]) => {
-      const wrapper = document.createElement("div");
-      wrapper.className = "state";
-
+  
+      const stateDiv = document.createElement("div");
+      stateDiv.className = "state";
+  
       const btn = document.createElement("button");
       btn.type = "button";
       btn.className = "state-accordion-btn";
       btn.innerHTML = `
-        <span class="state-title">${state} (${breweries.length})</span>
+        <span>${state} (${breweries.length})</span>
         <span class="state-caret">▸</span>
       `;
-
-      const content = document.createElement("div");
-      content.className = "state-accordion-content";
-
+  
+      const list = document.createElement("div");
+      list.className = "state-accordion-content";
+  
       if (breweries.length === 0) {
-        content.innerHTML = "<p style='margin:12px 0;'>Coming soon</p>";
+        list.innerHTML = "<p style='margin:12px 0;'>Coming soon</p>";
       } else {
         const ul = document.createElement("ul");
-        breweries.forEach((brewery) => {
+        breweries.forEach(b => {
           const li = document.createElement("li");
-          li.textContent = brewery;
+          li.textContent = b;
           ul.appendChild(li);
         });
-        content.appendChild(ul);
+        list.appendChild(ul);
       }
-
+  
+      // Toggle individual state
       btn.addEventListener("click", () => {
-        const isOpen = !!content.style.maxHeight;
-
+        const isOpen = !!list.style.maxHeight;
+  
+        list.style.maxHeight = isOpen ? null : list.scrollHeight + "px";
         btn.querySelector(".state-caret").textContent = isOpen ? "▸" : "▾";
-        content.style.maxHeight = isOpen ? null : content.scrollHeight + "px";
       });
-
-      wrapper.appendChild(btn);
-      wrapper.appendChild(content);
-      container.appendChild(wrapper);
+  
+      stateDiv.appendChild(btn);
+      stateDiv.appendChild(list);
+      container.appendChild(stateDiv);
     });
-
-    const toggleBtn = document.getElementById("toggleStatesBtn");
-  const statesContainer = document.getElementById("states-container");
-
-  if (toggleBtn && statesContainer) {
-    toggleBtn.addEventListener("click", () => {
-      const isOpen = statesContainer.classList.contains("is-open");
-
-      if (isOpen) {
-        statesContainer.classList.remove("is-open");
-        statesContainer.classList.add("is-collapsed");
-        toggleBtn.textContent = "Show breweries";
-      } else {
-        statesContainer.classList.remove("is-collapsed");
-        statesContainer.classList.add("is-open");
-        toggleBtn.textContent = "Hide breweries";
-      }
-    });
-  }
-    
+  
+    // ---------- GLOBAL SHOW / HIDE ----------
+    if (toggleBtn) {
+      toggleBtn.addEventListener("click", () => {
+        const isOpen = container.classList.contains("is-open");
+  
+        if (isOpen) {
+          container.classList.remove("is-open");
+          container.classList.add("is-collapsed");
+          toggleBtn.textContent = "Show breweries";
+        } else {
+          container.classList.remove("is-collapsed");
+          container.classList.add("is-open");
+          toggleBtn.textContent = "Hide breweries";
+        }
+      });
+    }
+  
   });
-</script>
+  </script>
 
 <script src="main.js"></script>
   
