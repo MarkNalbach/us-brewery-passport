@@ -1112,3 +1112,22 @@ body.modal-open {
 .state-accordion-content p {
   color: var(--muted-dark);
 }
+
+.states-toggle {
+  margin: 0.75rem 0 0.5rem;
+}
+
+.states-container {
+  overflow: hidden;
+  transition: max-height 0.35s ease, opacity 0.25s ease;
+}
+
+.states-container.is-collapsed {
+  max-height: 0;
+  opacity: 0;
+}
+
+.states-container.is-open {
+  max-height: 2000px; /* big enough to fit content */
+  opacity: 1;
+}
