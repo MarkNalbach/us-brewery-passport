@@ -1052,9 +1052,14 @@ body.modal-open {
   color: #fff;
 }
 
+.states-panel {
+  padding: 1rem;
+}
+
 .states-container {
   display: grid;
   gap: 0.85rem;
+  margin-top: 0.75rem;
 }
 
 .state {
@@ -1079,6 +1084,14 @@ body.modal-open {
   text-align: left;
 }
 
+.state-accordion-btn:hover {
+  background: rgba(185, 157, 115, 0.08);
+}
+
+.state-caret {
+  transition: transform 0.2s ease;
+}
+
 .state-accordion-content {
   max-height: 0;
   overflow: hidden;
@@ -1089,8 +1102,13 @@ body.modal-open {
 .state-accordion-content ul {
   margin: 0.25rem 0 1rem;
   padding-left: 1.1rem;
+  color: var(--muted-dark);
 }
 
 .state-accordion-content li {
   margin-bottom: 0.45rem;
+}
+
+.state-accordion-content p {
+  color: var(--muted-dark);
 }
