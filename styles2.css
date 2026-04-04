@@ -1129,3 +1129,12 @@ body.modal-open {
 .state-accordion-content p {
   color: var(--muted-dark);
 }
+
+.pill-btn .caret {
+  margin-left: 0.4rem;
+  transition: transform 0.2s ease;
+}
+
+.pill-btn.open .caret {
+  transform: rotate(180deg);
+}
