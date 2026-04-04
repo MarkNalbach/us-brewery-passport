@@ -1147,3 +1147,32 @@ body.modal-open {
   background: rgba(185, 157, 115, 0.12);
   border-color: rgba(185, 157, 115, 0.9);
 }
+
+.brewery-directory-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 1.25rem;
+  align-items: start;
+}
+
+.brewery-side-panel {
+  position: sticky;
+  top: 100px;
+}
+
+.brewery-side-image {
+  width: 100%;
+  display: block;
+  border-radius: 20px;
+  background: white;
+}
+
+@media (max-width: 900px) {
+  .brewery-directory-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .brewery-side-panel {
+    position: static;
+  }
+}
