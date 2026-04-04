@@ -163,15 +163,7 @@ document.querySelectorAll(".accordion-btn").forEach((btn) => {
       content.classList.remove("is-open");
     } else {
       content.style.maxHeight = content.scrollHeight + "px";
-
-      // After open animation, allow natural height
-      content.addEventListener(
-        "transitionend",
-        () => {
-          content.classList.add("is-open");
-        },
-        { once: true }
-      );
+      content.classList.add("is-open");
     }
   });
 });
