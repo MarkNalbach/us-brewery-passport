@@ -153,32 +153,29 @@
       </div>
     </section>
 
+    <section class="feature-band">
       <div class="container">
-    <div class="section-head">
-      <div>
-        <div class="kicker">Participating breweries</div>
-        <h2>See where you can use Brew Passport</h2>
+        <div class="section-head">
+          <div>
+            <div class="kicker">Participating breweries</div>
+            <h2>See where you can use Brew Passport</h2>
+          </div>
+          <p class="lead">
+            Browse participating breweries by state and see where your next stop could be.
+          </p>
+        </div>
+    
+        <div class="panel states-panel">
+          <p class="small"><strong>New breweries are being added regularly.</strong></p>
+    
+          <button id="toggleStatesBtn" class="btn btn-secondary states-toggle" type="button">
+            Show breweries
+          </button>
+    
+          <div id="states-container" class="states-container is-collapsed"></div>
+        </div>
       </div>
-      <p class="lead">
-        Browse participating breweries by state and see where your next stop could be.
-      </p>
-    </div>
-
-    <div class="panel states-panel">
-      <p class="small"><strong>New breweries are being added regularly.</strong></p>
-    
-      <button id="toggleStatesBtn" class="btn btn-secondary states-toggle">
-        Show breweries
-      </button>
-    
-      <div id="states-container" class="states-container is-collapsed"></div>
-    </div>
-
-    <div class="panel states-panel">
-      <div id="states-container" class="states-container"></div>
-    </div>
-  </div>
-</section>
+    </section>
 
     <section class="feature-band">
       <div class="container">
@@ -332,19 +329,16 @@
       </div>
     </div>
   </footer>
-  <script src="breweries-data.js"></script>
+ <script src="breweries-data.js"></script>
 
 <script>
   document.addEventListener("DOMContentLoaded", () => {
-  
     const container = document.getElementById("states-container");
     const toggleBtn = document.getElementById("toggleStatesBtn");
   
     if (!container || typeof breweriesByState === "undefined") return;
   
-    // ---------- BUILD STATE LIST ----------
     Object.entries(breweriesByState).forEach(([state, breweries]) => {
-  
       const stateDiv = document.createElement("div");
       stateDiv.className = "state";
   
@@ -363,18 +357,16 @@
         list.innerHTML = "<p style='margin:12px 0;'>Coming soon</p>";
       } else {
         const ul = document.createElement("ul");
-        breweries.forEach(b => {
+        breweries.forEach(brewery => {
           const li = document.createElement("li");
-          li.textContent = b;
+          li.textContent = brewery;
           ul.appendChild(li);
         });
         list.appendChild(ul);
       }
   
-      // Toggle individual state
       btn.addEventListener("click", () => {
         const isOpen = !!list.style.maxHeight;
-  
         list.style.maxHeight = isOpen ? null : list.scrollHeight + "px";
         btn.querySelector(".state-caret").textContent = isOpen ? "▸" : "▾";
       });
@@ -384,7 +376,6 @@
       container.appendChild(stateDiv);
     });
   
-    // ---------- GLOBAL SHOW / HIDE ----------
     if (toggleBtn) {
       toggleBtn.addEventListener("click", () => {
         const isOpen = container.classList.contains("is-open");
@@ -400,11 +391,10 @@
         }
       });
     }
-  
   });
   </script>
-
-<script src="main.js"></script>
+  
+  <script src="main.js"></script>
   
 </body>
 </html>
