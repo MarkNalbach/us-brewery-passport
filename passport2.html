@@ -379,16 +379,9 @@
     if (toggleBtn) {
       toggleBtn.addEventListener("click", () => {
         const isOpen = container.classList.contains("is-open");
-  
-        if (isOpen) {
-          container.classList.remove("is-open");
-          container.classList.add("is-collapsed");
-          toggleBtn.textContent = "Show breweries";
-        } else {
-          container.classList.remove("is-collapsed");
-          container.classList.add("is-open");
-          toggleBtn.textContent = "Hide breweries";
-        }
+    
+        container.classList.toggle("is-open", !isOpen);
+        toggleBtn.textContent = isOpen ? "Show breweries" : "Hide breweries";
       });
     }
   });
