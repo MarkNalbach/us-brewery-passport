@@ -377,6 +377,26 @@
       wrapper.appendChild(content);
       container.appendChild(wrapper);
     });
+
+    const toggleBtn = document.getElementById("toggleStatesBtn");
+  const statesContainer = document.getElementById("states-container");
+
+  if (toggleBtn && statesContainer) {
+    toggleBtn.addEventListener("click", () => {
+      const isOpen = statesContainer.classList.contains("is-open");
+
+      if (isOpen) {
+        statesContainer.classList.remove("is-open");
+        statesContainer.classList.add("is-collapsed");
+        toggleBtn.textContent = "Show breweries";
+      } else {
+        statesContainer.classList.remove("is-collapsed");
+        statesContainer.classList.add("is-open");
+        toggleBtn.textContent = "Hide breweries";
+      }
+    });
+  }
+    
   });
 </script>
 
