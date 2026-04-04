@@ -1130,11 +1130,24 @@ body.modal-open {
   color: var(--muted-dark);
 }
 
-.pill-btn .caret {
-  margin-left: 0.4rem;
-  transition: transform 0.2s ease;
+.pill-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.6rem 1.2rem;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+
+  background: rgba(28, 120, 220, 0.08);
+  border: 1px solid rgba(185, 157, 115, 0.6);
+  color: var(--text-dark);
+
+  transition: all 0.2s ease;
 }
 
-.pill-btn.open .caret {
-  transform: rotate(180deg);
+.pill-btn:hover {
+  background: rgba(185, 157, 115, 0.12);
+  border-color: rgba(185, 157, 115, 0.9);
 }
