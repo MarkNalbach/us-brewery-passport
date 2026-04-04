@@ -1278,3 +1278,16 @@ body.modal-open {
     grid-template-columns: 1fr;
   }
 }
+
+.brewery-section-head {
+  margin-bottom: 1.25rem;
+}
+
+.brewery-section-head-inner {
+  max-width: 520px; /* keeps it aligned with left column */
+}
+
+.brewery-section-lead {
+  color: rgba(255, 255, 255, 0.85);
+  margin-top: 0.6rem;
+}
