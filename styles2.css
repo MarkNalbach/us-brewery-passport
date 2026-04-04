@@ -1056,10 +1056,30 @@ body.modal-open {
   padding: 1rem;
 }
 
+.states-toggle {
+  margin: 0.75rem 0 0.5rem;
+}
+
+.states-panel .btn-secondary.states-toggle {
+  background: rgba(28, 120, 220, 0.08);
+  border: 1px solid rgba(28, 120, 220, 0.28);
+  color: var(--text-dark);
+}
+
 .states-container {
-  display: grid;
-  gap: 0.85rem;
-  margin-top: 0.75rem;
+  overflow: hidden;
+  transition: max-height 0.35s ease, opacity 0.25s ease;
+  margin-top: 0.5rem;
+}
+
+.states-container.is-collapsed {
+  max-height: 0;
+  opacity: 0;
+}
+
+.states-container.is-open {
+  max-height: 4000px;
+  opacity: 1;
 }
 
 .state {
@@ -1067,6 +1087,7 @@ body.modal-open {
   border-radius: 18px;
   overflow: hidden;
   background: linear-gradient(180deg, var(--surface-strong) 0%, var(--surface-soft) 100%);
+  margin-bottom: 0.75rem;
 }
 
 .state-accordion-btn {
@@ -1088,10 +1109,6 @@ body.modal-open {
   background: rgba(185, 157, 115, 0.08);
 }
 
-.state-caret {
-  transition: transform 0.2s ease;
-}
-
 .state-accordion-content {
   max-height: 0;
   overflow: hidden;
@@ -1111,23 +1128,4 @@ body.modal-open {
 
 .state-accordion-content p {
   color: var(--muted-dark);
-}
-
-.states-toggle {
-  margin: 0.75rem 0 0.5rem;
-}
-
-.states-container {
-  overflow: hidden;
-  transition: max-height 0.35s ease, opacity 0.25s ease;
-}
-
-.states-container.is-collapsed {
-  max-height: 0;
-  opacity: 0;
-}
-
-.states-container.is-open {
-  max-height: 2000px; /* big enough to fit content */
-  opacity: 1;
 }
