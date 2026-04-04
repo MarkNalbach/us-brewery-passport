@@ -1148,45 +1148,22 @@ body.modal-open {
   border-color: rgba(185, 157, 115, 0.9);
 }
 
+.brewery-section-lead {
+  color: rgba(255, 255, 255, 0.85);
+  margin-top: 0.6rem;
+}
+/////////////
 .brewery-directory-grid {
   display: grid;
-  grid-template-columns: 1.2fr 0.8fr;
-  gap: 1.25rem;
-  align-items: start;
-}
-
-.brewery-side-panel {
-  position: sticky;
-  top: 100px;
-}
-
-.brewery-side-image {
-  width: 100%;
-  display: block;
-  border-radius: 20px;
-  background: white;
-}
-
-@media (max-width: 900px) {
-  .brewery-directory-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .brewery-side-panel {
-    position: static;
-  }
-}
-
-.brewery-directory-grid {
-  display: grid;
-  grid-template-columns: 0.95fr 1.05fr; /* image slightly bigger */
+  grid-template-columns: 0.9fr 1.1fr;
   gap: 1.4rem;
-  align-items: stretch; /* 🔥 key */
+  align-items: stretch;
 }
 
 .states-panel {
-  padding: 1.6rem;
+  padding: 1.35rem;
   border-radius: 30px;
+  align-self: start;
 }
 
 .brewery-directory-note {
@@ -1251,22 +1228,14 @@ body.modal-open {
 }
 
 .brewery-side-panel {
+  display: flex;
   height: 100%;
-}
-
-.brewery-side-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 36px;
-  display: block;
-
-  /* Match your hero image style */
-  border: 1px solid rgba(242, 194, 48, 0.35);
-  box-shadow: 0 22px 55px rgba(0, 0, 0, 0.35);
 }
 
 .brewery-map-card {
+  width: 100%;
+  height: 100%;
+  min-height: 100%;
   border-radius: 34px;
   background: #efe2cc;
   border: 1px solid rgba(242, 194, 48, 0.38);
@@ -1274,10 +1243,14 @@ body.modal-open {
   overflow: hidden;
 }
 
-@media (max-width: 980px) {
-  .brewery-directory-grid {
-    grid-template-columns: 1fr;
-  }
+.brewery-side-image {
+  width: 100%;
+  height: 100%;
+  min-height: 100%;
+  display: block;
+  object-fit: cover;
+  border-radius: 28px;
+  background: white;
 }
 
 .brewery-section-head {
@@ -1285,10 +1258,26 @@ body.modal-open {
 }
 
 .brewery-section-head-inner {
-  max-width: 520px; /* keeps it aligned with left column */
+  max-width: 520px;
 }
 
 .brewery-section-lead {
   color: rgba(255, 255, 255, 0.85);
   margin-top: 0.6rem;
+}
+
+@media (max-width: 980px) {
+  .brewery-directory-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .brewery-side-panel {
+    height: auto;
+  }
+
+  .brewery-map-card,
+  .brewery-side-image {
+    min-height: 0;
+    height: auto;
+  }
 }
