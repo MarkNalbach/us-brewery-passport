@@ -1067,19 +1067,16 @@ body.modal-open {
 }
 
 .states-container {
-  overflow: hidden;
-  transition: max-height 0.35s ease, opacity 0.25s ease;
-  margin-top: 0.5rem;
+  display: none;
+}
+
+.states-container.is-open {
+  display: block;
 }
 
 .states-container.is-collapsed {
   max-height: 0;
   opacity: 0;
-}
-
-.states-container.is-open {
-  max-height: 4000px;
-  opacity: 1;
 }
 
 .state {
