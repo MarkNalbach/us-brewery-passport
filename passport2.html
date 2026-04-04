@@ -366,9 +366,25 @@
       }
   
       btn.addEventListener("click", () => {
-        const isOpen = !!list.style.maxHeight;
-        list.style.maxHeight = isOpen ? null : list.scrollHeight + "px";
-        btn.querySelector(".state-caret").textContent = isOpen ? "▸" : "▾";
+        const isOpen = list.style.display === "block";
+      
+        // close all other states first
+        container.querySelectorAll(".state-accordion-content").forEach((otherList) => {
+          otherList.style.display = "none";
+        });
+      
+        container.querySelectorAll(".state-caret").forEach((caret) => {
+          caret.textContent = "▸";
+        });
+      
+        // toggle current one
+        if (isOpen) {
+          list.style.display = "none";
+          btn.querySelector(".state-caret").textContent = "▸";
+        } else {
+          list.style.display = "block";
+          btn.querySelector(".state-caret").textContent = "▾";
+        }
       });
   
       stateDiv.appendChild(btn);
