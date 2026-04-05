@@ -1147,3 +1147,16 @@ body.modal-open {
   margin: 0.6rem 0 1.2rem;
   max-width: 42ch;
 }
+
+.terms-row {
+  display: flex;
+  align-items: flex-start;
+  gap: .5rem;
+  flex-wrap: wrap;
+}
+
+.terms-link {
+  color: var(--accent);
+  font-weight: 600;
+  text-decoration: underline;
+}
