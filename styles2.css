@@ -941,7 +941,7 @@ body.modal-open {
 .states-panel {
   padding: 1.35rem;
   border-radius: 30px;
-  align-self: start;
+  /* align-self: start; */
 }
 
 .brewery-directory-note {
