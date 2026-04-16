@@ -4,7 +4,7 @@ const breweriesByState = {
   "Arizona": ["Button Brew House"],
   "Arkansas": ["Southern Tail Brewing"],
   "California": ["3 Iron Brewing Co","All Points Brewing Co.","AudioGraph Beer Co.","Backyard Brewery","Farmers Brewing Co - Chico","Farmers Brewing Co - Princeton","Humdinger Brewing","Humdinger Brewing - SLO Taproom","Lincoln Beer Company","New Glory Craft Brewery","Noble Ale Works","Oak and Otter Brewing Co.","Porchlight Brewing Company","Protector Brewery","Protector Brewery Hide Site","Strum Brewing Company","TapRoom Beer Co.","The Brewhouse","The Keg Stand Brewing Co."],
-  "Colorado": ["Busey Brews Smokehouse & Brewery","Gilded Goat Brewing Company","Grimm Brothers","Otherwise Brewing","Peculier Brewing Co","River North Brewery - North Taproom","River North Brewery - RiNo Taproom","Salida Brewing Company","San Luis Valley Brewing Company","Wanderment Brewing","Westminster Brewing Company"],
+  "Colorado": ["Busey Brews Smokehouse & Brewery","Gilded Goat Brewing Company","Grimm Brothers","MainStage Brewing Company","Otherwise Brewing","Peculier Brewing Co","River North Brewery - North Taproom","River North Brewery - RiNo Taproom","Salida Brewing Company","San Luis Valley Brewing Company","Wanderment Brewing","Westminster Brewing Company"],
   "Connecticut": ["Greenwich Brewing Company","Hops on the Hill Brewery","Twelvenote Brew Co"],
   "Delaware": [],
   "Florida": ["Cayo Hueso Brewing","Coastal Dayz Brewery","GREAT CHICAGO FIRE BREWERY","Lake Tribe Brewing","Mocama Beer Company"],
