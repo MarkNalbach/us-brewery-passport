@@ -7,7 +7,7 @@ const breweriesByState = {
   "Colorado": ["Busey Brews Smokehouse & Brewery","Gilded Goat Brewing Company","Grimm Brothers","MainStage Brewing Company","MainStage Brewing Company - Gunbarrel","Otherwise Brewing","Peculier Brewing Co","River North Brewery - North Taproom","River North Brewery - RiNo Taproom","Salida Brewing Company","San Luis Valley Brewing Company","Wanderment Brewing","Westminster Brewing Company"],
   "Connecticut": ["Greenwich Brewing Company","Hops on the Hill Brewery","Twelvenote Brew Co"],
   "Delaware": [],
-  "Florida": ["Cayo Hueso Brewing","Coastal Dayz Brewery","GREAT CHICAGO FIRE BREWERY","Lake Tribe Brewing","Mocama Beer Company"],
+  "Florida": ["Cayo Hueso Brewing","Coastal Dayz Brewery","Good Liquid Brewery","GREAT CHICAGO FIRE BREWERY","Lake Tribe Brewing","Mocama Beer Company"],
   "Georgia": ["Six Bridges Brewing - Johns Creek","Six Bridges Brewing - Milton"],
   "Hawaii": [],
   "Idaho": ["Timber Town Beer Company","Two Saints Brewing Company"],
