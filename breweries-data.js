@@ -26,7 +26,7 @@ const breweriesByState = {
   "Missouri": ["Bluewood Brewing","Trail Stop Brewery"],
   "Montana": ["Backslope Brewing","FLATHEAD LAKE BREWING COMPANY PUBHOUSE","Outlaw Brewing"],
   "Nebraska": ["Boss City Brewing Co."],
-  "Nevada": ["Bad Beat Brewing"],
+  "Nevada": ["Bad Beat Brewing","BIG DOG'S BREWING COMPANY"],
   "New Hampshire": ["Republic Brewing Company","White Mountain Brewing Company"],
   "New Jersey": ["Bent Iron Brewing Co.","Bullhide Brewery","Raccoon Pubhaus - Swedesboro Brewing Company","Raccoon Taproom - Swedesboro Brewing Company","Seven Sons Brewing","Swedesboro Brewing Company","Toms River Brewing"],
   "New Mexico": ["Rowley Farmhouse Ales"],
