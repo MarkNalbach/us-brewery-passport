@@ -47,6 +47,6 @@ const breweriesByState = {
   "Virginia": ["Chef Life Brewery","Rockfish Brewing Company"],
   "Washington": ["Bardic Brewing and Cider - Spokane","Bardic Brewing and Cider - Spokane Valley"],
   "West Virginia": [],
-  "Wisconsin": ["Duesterbeck's Brewing Company","Fifth Ward Brewing Company","Fond du Lac Beer Company","Herbiery Brewing","Hubbleton Brewing Co","Hubbleton Brewing Taproom & Grill","Knuth Brewing Company","Lakefront Brewery","Lion's Tail Brewing Co. - Nenah","Lion's Tail Brewing Co. - Wauwatosa","McFleshman's Brewing Company","New Denmark Brewing Company","Rowland's Calumet Brewing","Sand Creek Brewing Company","Stubborn Brothers Brewery","Stillmank Brewing Co.","Swinging Bridge Brewery & Cocktail Lounge","The Grumpy Troll"],
+  "Wisconsin": ["Commerce Street Brewery Hotel","Duesterbeck's Brewing Company","Fifth Ward Brewing Company","Fond du Lac Beer Company","Herbiery Brewing","Hubbleton Brewing Co","Hubbleton Brewing Taproom & Grill","Knuth Brewing Company","Lakefront Brewery","Lion's Tail Brewing Co. - Nenah","Lion's Tail Brewing Co. - Wauwatosa","McFleshman's Brewing Company","New Denmark Brewing Company","Rowland's Calumet Brewing","Sand Creek Brewing Company","Stubborn Brothers Brewery","Stillmank Brewing Co.","Swinging Bridge Brewery & Cocktail Lounge","The Grumpy Troll"],
   "Wyoming": []
 };
